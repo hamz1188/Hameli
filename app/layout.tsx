@@ -28,8 +28,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Ahmed Ali - Creative Developer',
-  description: 'Creative Developer crafting digital experiences that blend stunning aesthetics with seamless functionality.',
+  title: 'Hameli — Learn how work gets made',
+  description:
+    'Hameli is a learn-in-public studio: websites, apps, and video filmed as real work — desk cam, screen recording, and voiceover. Ask Ahmed to build something.',
 };
 
 export default function RootLayout({

@@ -2,10 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import { hameli } from '../data/hameli';
 
 export function Navigation() {
   const navRef = useRef<HTMLElement>(null);
@@ -22,9 +19,8 @@ export function Navigation() {
   }, []);
 
   const navItems = [
-    { label: 'Work', href: '#work' },
-    { label: 'About', href: '#about' },
-    { label: 'Process', href: '#process' },
+    { label: 'Watch', href: '#watch' },
+    { label: 'Learn', href: '#learn' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -37,14 +33,13 @@ export function Navigation() {
         }`}
       >
         <div className="container-wide flex items-center justify-between">
-          {/* Logo */}
           <Link href="/" className="relative z-10">
             <span className="text-xl md:text-2xl font-medium tracking-tight">
-              Ahmed<span className="text-[var(--color-accent)]">.</span>
+              {hameli.brand}
+              <span className="text-[var(--color-accent)]">.</span>
             </span>
           </Link>
 
-          {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-12">
             {navItems.map((item) => (
               <a
@@ -59,11 +54,10 @@ export function Navigation() {
               href="#contact"
               className="px-6 py-3 border border-[var(--color-border)] rounded-full text-sm hover:bg-[var(--color-foreground)] hover:text-[var(--color-background)] transition-all duration-300"
             >
-              Let&apos;s Talk
+              Say hello
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden relative z-10 w-10 h-10 flex flex-col items-center justify-center gap-1.5"
@@ -88,7 +82,6 @@ export function Navigation() {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 bg-[var(--color-background)] z-40 flex items-center justify-center transition-all duration-500 md:hidden ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
