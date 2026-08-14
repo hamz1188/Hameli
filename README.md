@@ -1,117 +1,114 @@
-# Ahmed Ali - Portfolio
+# Hameli
 
-A modern, animation-rich portfolio website built with **Next.js 16**, **TypeScript**, **Tailwind CSS**, and **GSAP**.
+Portfolio site + social channel for websites, apps, and video — show the work, show how it’s made, ship every week.
 
-Inspired by [Wokine.com](https://wokine.com) with smooth scroll animations, horizontal galleries, and dynamic interactions.
+**Live:** [hameli.io](https://hameli.io)  
+**Repo:** [github.com/hamz1188/Hameli](https://github.com/hamz1188/Hameli)  
+**Separate from Kalymeero.** One folder. Stay lean.
 
-**[Live Demo](https://my-portfolio-mocha-theta-79.vercel.app/)**
+## Promise
 
-## Features
+People who contact you can see finished work and *how* you work. The site is a place to **learn**; contact is calm and easy when someone wants you to build something.
 
-### Animations & Interactions
-- **Smooth Scrolling**: Lenis-powered butter-smooth scroll
-- **GSAP ScrollTrigger**: Scroll-linked animations throughout
-- **Horizontal Gallery**: Pinned horizontal scroll for projects
-- **Text Reveals**: Split-text animations with staggered word/character reveals
-- **Count-Up Stats**: Animated number counters triggered on scroll
-- **Floating Navigation**: Bottom pill nav with section-aware labels
-- **3D Animated Blob**: Organic shape with scroll-linked rotation
-- **Progress Indicators**: Visual scroll progress on horizontal sections
+## Format (channel)
 
-### Design
-- **Color Palette**: Lime green (#dcf48d) on charcoal (#181717)
-- **Typography**: Playfair Display (serif) + Inter (sans-serif)
-- **Auto Dark/Light Mode**: Follows system preference
-- **Glassmorphism**: Backdrop blur effects on cards and nav
-- **Responsive**: Mobile-first design
+**Series: Made in public** — start with **shorts** (30–90s) + voiceover. Natural desk filming (phone propped while working) + screen record. Longer YouTube only after shorts are shipping. Details: [FILM.md](FILM.md).
 
-### Content
-- **Centralized Data**: All content in `app/data/portfolio.ts`
-- **Markdown Blog**: Blog posts from `app/posts/`
-- **RSS Feed**: Auto-generated XML feed
+## Platforms
 
-## Tech Stack
+| Role | Platform | Use |
+|------|----------|-----|
+| Landing | [hameli.io](https://hameli.io) | Learn + contact |
+| Discovery | Instagram Reels + YouTube Shorts | Primary — 30–90s |
+| Home / depth | YouTube long-form | Later, from the same sessions |
 
-| Category | Technology |
-|----------|------------|
-| Framework | [Next.js 16](https://nextjs.org/) (App Router) |
-| Language | [TypeScript](https://www.typescriptlang.org/) |
-| Styling | [Tailwind CSS v4](https://tailwindcss.com/) |
-| Animations | [GSAP](https://greensock.com/gsap/) + ScrollTrigger |
-| Smooth Scroll | [Lenis](https://lenis.studiofreight.com/) |
-| Theme | [next-themes](https://github.com/pacocoursey/next-themes) |
-| Deployment | [Vercel](https://vercel.com/) |
+Shorts on IG + YT until **4 public posts** exist. Then consider LinkedIn/TikTok.
 
-## Project Structure
+## Links
 
-```
-app/
-├── components/        # UI Components
-│   ├── HeroSection.tsx
-│   ├── AboutSection.tsx
-│   ├── HorizontalGallery.tsx
-│   ├── ProcessSection.tsx
-│   ├── FloatingNav.tsx
-│   ├── AnimatedBlob.tsx
-│   ├── SplitText.tsx
-│   ├── RevealOnScroll.tsx
-│   ├── CountUp.tsx
-│   ├── ScrollText.tsx
-│   └── ...
-├── data/
-│   └── portfolio.ts   # All portfolio content
-├── posts/             # Markdown blog posts
-└── globals.css        # Global styles & animations
-```
+- Site: https://hameli.io
+- Email: hello@hameli.io (setup: [EMAIL.md](EMAIL.md))
+- YouTube: _TBD — paste after create_
+- Instagram: _TBD — paste after create_
 
-## Getting Started
+## Channel setup checklist (you click)
+
+### YouTube
+
+- [ ] Create channel named **Hameli** (Google account you control)
+- [ ] Custom URL / handle: prefer `@hameli` if free; otherwise closest available
+- [ ] Banner + avatar: simple wordmark later — blank/solid OK for day one
+- [ ] **About** blurb (paste):
+
+> Hameli — Made in public. Shorts from real desk work: websites, apps, video. Natural filming + screen + voiceover. hameli.io · hello@hameli.io
+
+- [ ] Add website link: https://hameli.io
+- [ ] Paste channel URL into README Links + `app/data/hameli.ts` → `socials.youtube`
+
+### Instagram
+
+- [ ] Create professional/creator account named **Hameli** (same handle if free)
+- [ ] Bio (paste):
+
+> Made in public · websites, apps, video  
+> Natural desk shorts + VO  
+> 🔗 hameli.io · hello@hameli.io
+
+- [ ] Paste profile URL into README Links + `app/data/hameli.ts` → `socials.instagram`
+
+## How I ship (anti-stall)
+
+1. **Ship before polish** — one public piece beats a perfect plan.
+2. **Living ops docs:** `CONTENT.md`, `FILM.md`, this README (+ `EMAIL.md` for one-time mail setup).
+3. **Weekly minimum:** 1 short (30–90s). Miss a week → 30s desk/progress VO, not zero.
+4. **Work first:** Natural filming while building. Cut shorts with VO the same day when you can.
+
+## Day 1–14 checklist
+
+### Days 1–2 — Setup
+
+- [ ] Finish channel checklist above
+- [ ] Follow [EMAIL.md](EMAIL.md) for Zoho → `hello@hameli.io`
+- [ ] List **5 portfolio pieces** in `CONTENT.md`
+- [ ] Skim `FILM.md` Short 01 shoot card
+
+### Days 3–5 — Short 01
+
+- [ ] Shoot/cut Short 01 (FILM.md shoot card — 45–75s)
+- [ ] Post IG Reel + YouTube Short
+- [ ] Set `ep-01` to `live` + URL in `app/data/hameli.ts`
+- [ ] Log in `CONTENT.md`
+
+### Days 6–14
+
+- [ ] Two more shorts (Short 02, Short 03)
+- [ ] Reply to inbound with hameli.io + hello@hameli.io
+
+**Two-week success:** 4 posts + working hello@ + learn-first site — not subscriber count.
+
+## Site (dev)
+
+Next.js 16 + TypeScript + Tailwind + GSAP. Content: `app/data/hameli.ts`.
 
 ```bash
-# Clone
-git clone https://github.com/hamz1188/my-portfolio.git
-cd my-portfolio
-
-# Install
 npm install
-
-# Run dev server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000)
+Optional contact form backend: set `NEXT_PUBLIC_FORMSPREE_ID` (Formspree). Without it, the form opens a mailto to `hello@hameli.io`.
 
-## Customization
+## Docs
 
-### Portfolio Content
-Edit `app/data/portfolio.ts`:
-- Personal info (name, bio, socials)
-- Projects (title, description, tags, links)
-- Skills
+| File | Job |
+|------|-----|
+| [CONTENT.md](CONTENT.md) | Pillars, cadence, ideas, inventory, posted log |
+| [FILM.md](FILM.md) | Capture recipe + Short 01 shoot card |
+| [EMAIL.md](EMAIL.md) | Zoho Mail Lite setup for hello@hameli.io |
 
-### Blog Posts
-Add markdown files to `app/posts/`:
+## Out of scope (for now)
 
-```markdown
----
-title: "Post Title"
-date: "2024-03-21"
-excerpt: "Short summary"
-tags: ["Tag1", "Tag2"]
----
+- Kalymeero migration
+- Notion boards beyond CONTENT.md
+- Extra platforms, gear deep-dives, fourth content pillar
 
-Post content here...
-```
-
-## Deployment
-
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-```
-
----
-
-Built by [Ahmed Ali](https://github.com/hamz1188)
+Ship the first four posts. Expand only after that.

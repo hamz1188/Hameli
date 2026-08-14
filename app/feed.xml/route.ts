@@ -1,19 +1,19 @@
 import RSS from 'rss';
 import { getSortedPostsData } from '../lib/posts';
-import { portfolioData } from '../data/portfolio';
+import { hameli } from '../data/hameli';
 
 export async function GET() {
   const posts = getSortedPostsData();
-  const siteUrl = 'https://my-portfolio-pta15p36a-duneswear.vercel.app'; // Update with your actual production URL
+  const siteUrl = hameli.siteUrl;
 
   const feed = new RSS({
-    title: `${portfolioData.personalInfo.name}'s Blog`,
-    description: "Thoughts, tutorials, and insights on software development.",
+    title: `${hameli.brand} — notes`,
+    description: hameli.tagline,
     site_url: siteUrl,
     feed_url: `${siteUrl}/feed.xml`,
     image_url: `${siteUrl}/favicon.ico`,
     pubDate: new Date(),
-    copyright: `All rights reserved ${new Date().getFullYear()}, ${portfolioData.personalInfo.name}`,
+    copyright: `All rights reserved ${new Date().getFullYear()}, ${hameli.person}`,
   });
 
   posts.forEach((post) => {
@@ -22,7 +22,7 @@ export async function GET() {
       description: post.excerpt,
       url: `${siteUrl}/blog/${post.slug}`,
       date: post.date,
-      author: portfolioData.personalInfo.name,
+      author: hameli.person,
       categories: post.tags,
     });
   });
@@ -33,4 +33,3 @@ export async function GET() {
     },
   });
 }
-
