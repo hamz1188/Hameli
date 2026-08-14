@@ -8,14 +8,14 @@ describe('HeroSection', () => {
     expect(screen.getByRole('heading', { name: hameli.brand })).toBeInTheDocument();
   });
 
-  it('renders the learn-in-public tagline', () => {
+  it('renders the tagline', () => {
     render(<HeroSection />);
     expect(screen.getByText(hameli.tagline)).toBeInTheDocument();
   });
 
   it('renders watch and contact CTAs', () => {
     render(<HeroSection />);
-    expect(screen.getByText(/^Watch$/i)).toBeInTheDocument();
-    expect(screen.getByText(/Ask me to build something/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Watch shorts/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Need something built/i })).toBeInTheDocument();
   });
 });

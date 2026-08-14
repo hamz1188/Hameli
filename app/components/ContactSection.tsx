@@ -15,7 +15,6 @@ export function ContactSection() {
     const name = String(data.get('name') || '').trim();
     const email = String(data.get('email') || '').trim();
     const message = String(data.get('message') || '').trim();
-
     if (!name || !email || !message) return;
 
     if (formspreeId) {
@@ -46,30 +45,27 @@ export function ContactSection() {
       id="contact"
       className="relative section-padding container-padding border-t border-[var(--color-border)]"
     >
-      <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24">
-        <div className="max-w-xl">
-          <span className="text-label text-[var(--color-accent)] block mb-4">Contact</span>
+      <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-14 lg:gap-20">
+        <div className="max-w-md">
+          <span className="text-label text-[var(--color-accent)] block mb-3">Contact</span>
           <h2
             className="text-section font-serif"
             style={{ fontVariationSettings: "'SOFT' 50, 'WONK' 1" }}
           >
             Need something built?
           </h2>
-          <p className="mt-6 text-[var(--color-foreground-muted)] text-subtitle leading-relaxed">
-            Websites, apps, video. Send a short note — no pitch deck required.
+          <p className="mt-5 text-[var(--color-foreground-muted)] leading-relaxed">
+            Websites, apps, video. A short note is enough.
           </p>
           <a
             href={`mailto:${hameli.email}`}
-            className="mt-8 inline-flex items-center gap-2 text-lg text-[var(--color-foreground)] hover:text-[var(--color-accent)] transition-colors"
+            className="mt-6 inline-block text-[var(--color-foreground)] hover:text-[var(--color-accent)] transition-colors"
           >
             {hameli.email}
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M7 17L17 7M17 7H7M17 7V17" />
-            </svg>
           </a>
         </div>
 
-        <form onSubmit={onSubmit} className="flex flex-col gap-6">
+        <form onSubmit={onSubmit} className="flex flex-col gap-5">
           <label className="block">
             <span className="text-caption text-[var(--color-foreground-subtle)] tracking-widest uppercase">
               Name
@@ -78,7 +74,7 @@ export function ContactSection() {
               name="name"
               required
               autoComplete="name"
-              className="mt-2 w-full bg-transparent border-b border-[var(--color-border-strong)] py-3 text-[var(--color-foreground)] outline-none focus:border-[var(--color-accent)] transition-colors"
+              className="mt-2 w-full bg-transparent border-b border-[var(--color-border-strong)] py-3 outline-none focus:border-[var(--color-accent)] transition-colors"
             />
           </label>
           <label className="block">
@@ -90,7 +86,7 @@ export function ContactSection() {
               type="email"
               required
               autoComplete="email"
-              className="mt-2 w-full bg-transparent border-b border-[var(--color-border-strong)] py-3 text-[var(--color-foreground)] outline-none focus:border-[var(--color-accent)] transition-colors"
+              className="mt-2 w-full bg-transparent border-b border-[var(--color-border-strong)] py-3 outline-none focus:border-[var(--color-accent)] transition-colors"
             />
           </label>
           <label className="block">
@@ -100,28 +96,25 @@ export function ContactSection() {
             <textarea
               name="message"
               required
-              rows={4}
-              className="mt-2 w-full bg-transparent border-b border-[var(--color-border-strong)] py-3 text-[var(--color-foreground)] outline-none focus:border-[var(--color-accent)] transition-colors resize-y min-h-[120px]"
+              rows={3}
+              className="mt-2 w-full bg-transparent border-b border-[var(--color-border-strong)] py-3 outline-none focus:border-[var(--color-accent)] transition-colors resize-y min-h-[100px]"
             />
           </label>
-
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          <div className="flex flex-wrap items-center gap-4 pt-1">
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="px-8 py-4 bg-[var(--color-accent)] text-[var(--color-background)] rounded-full text-sm font-medium hover:scale-105 transition-transform disabled:opacity-60"
+              className="px-7 py-3.5 bg-[var(--color-accent)] text-[var(--color-background)] rounded-full text-sm font-medium hover:scale-105 transition-transform disabled:opacity-60"
             >
               {status === 'sending' ? 'Sending…' : 'Send'}
             </button>
             {status === 'sent' && (
               <span className="text-sm text-[var(--color-foreground-muted)]">
-                {formspreeId ? 'Sent — I’ll reply soon.' : 'Opening your mail app…'}
+                {formspreeId ? 'Sent.' : 'Opening mail…'}
               </span>
             )}
             {status === 'error' && (
-              <span className="text-sm text-[var(--color-error)]">
-                Something went wrong — email {hameli.email} directly.
-              </span>
+              <span className="text-sm text-[var(--color-error)]">Email {hameli.email} instead.</span>
             )}
           </div>
         </form>

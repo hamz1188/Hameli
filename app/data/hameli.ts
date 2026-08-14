@@ -6,7 +6,7 @@ export interface Episode {
   title: string;
   lesson: string;
   status: EpisodeStatus;
-  /** YouTube (or other) URL when live — omit while upcoming */
+  /** YouTube / IG URL when live — omit while upcoming */
   url?: string;
 }
 
@@ -19,12 +19,14 @@ export const hameli = {
   brand: 'Hameli',
   person: 'Ahmed Ali',
   location: 'Abu Dhabi, UAE',
-  tagline: 'Learn how websites, apps, and video get made — by watching real work happen.',
+  seriesName: 'Made in public',
+  tagline:
+    'Shorts with voiceover from real desk work — websites, apps, and video. Learn here; ask when you need something built.',
   email: 'hello@hameli.io',
   siteUrl: 'https://hameli.io',
   socials: {
-    youtube: '' as string, // paste channel URL when live
-    instagram: '' as string, // paste profile URL when live
+    youtube: '' as string,
+    instagram: '' as string,
     github: 'https://github.com/hamz1188',
     linkedin: 'https://www.linkedin.com/in/ahmed-ali-406489394',
   },
@@ -32,42 +34,48 @@ export const hameli = {
     {
       id: 'ep-01',
       number: 1,
-      title: 'Portfolio deep-dive: one recent build',
-      lesson: 'Walk a finished piece with voiceover — what worked, what I’d change.',
+      title: 'One build, one decision I’d change',
+      lesson: '60s VO over a finished piece — natural desk + screen.',
       status: 'upcoming' as EpisodeStatus,
     },
     {
       id: 'ep-02',
       number: 2,
-      title: 'Brief → live landing page',
-      lesson: 'Speed-cut a real build session: desk cam + screen + VO.',
+      title: 'Ugly section → fixed',
+      lesson: 'Screen record the fix; voiceover the why.',
       status: 'upcoming' as EpisodeStatus,
     },
     {
       id: 'ep-03',
       number: 3,
       title: 'What I ask before I start',
-      lesson: 'The questions that save a project before design begins.',
+      lesson: 'Client-path short: the questions that save a project.',
+      status: 'upcoming' as EpisodeStatus,
+    },
+    {
+      id: 'ep-04',
+      number: 4,
+      title: 'Brief → live, speed cut',
+      lesson: 'One landing-page arc in under 90 seconds.',
       status: 'upcoming' as EpisodeStatus,
     },
   ] as Episode[],
   filmSteps: [
     {
-      title: 'Desk cam',
-      body: 'Phone pointed at the desk — you working, thinking, deciding.',
+      title: 'Natural desk cam',
+      body: 'Phone propped while you work. Imperfect light and ambient sound are OK.',
     },
     {
       title: 'Screen record',
-      body: 'Capture the real session: design, code, or edit timeline.',
+      body: 'Capture the real session — design, code, or edit timeline.',
     },
     {
       title: 'Voiceover',
-      body: '5–10 bullets the same day. Talk to one person, not a crowd.',
+      body: 'A few bullets same day. Shorts first (30–90s); longer cut only if it earns it.',
     },
   ] as FilmStep[],
 };
 
-/** Live episodes first, then upcoming — for Watch section */
 export function getEpisodesOrdered() {
   const live = hameli.episodes.filter((e) => e.status === 'live' && e.url);
   const upcoming = hameli.episodes.filter((e) => e.status !== 'live' || !e.url);

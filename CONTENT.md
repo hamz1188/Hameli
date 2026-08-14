@@ -1,45 +1,48 @@
 # Content
 
-Pillars, cadence, backlog, portfolio inventory, and posted log. Keep this file updated; don’t spawn new docs.
+Pillars, cadence, backlog, inventory, posted log. Shorts-first. Don’t spawn new docs.
+
+## Series
+
+**Made in public** — natural desk filming + screen + voiceover. See FILM.md.
 
 ## Pillars (3 only)
 
-1. **Portfolio drops** — Finished site / app / video. Walkthrough with VO: what we built, why it works.
-2. **Process / how I work** — Build sessions, design choices, edit timeline, problem → fix.
-3. **Client-path shorts** — Answers people already ask by email (timeline, process, what you need from them).
+1. **Portfolio drops** — Finished work, short walkthrough + VO.
+2. **Process** — Fix, build, decision moments.
+3. **Client-path** — Answers people already ask by email.
 
-No fourth pillar until each of these has **at least 2 posts**.
+No fourth pillar until each has **at least 2 posts**.
 
-## Cadence
+## Cadence (shorts-first)
 
-- **Minimum:** 1 short (30–90s) **or** 1 longer cut per week.
-- **Miss week fallback:** 30s desk / progress VO — still post.
-- **Every piece ends with:** one-line CTA — email or DM for websites, apps, video.
+- **Minimum:** 1 short (30–90s) per week.
+- **Miss week fallback:** 30s desk/progress VO — still post.
+- **Longer YouTube:** only after shorts are shipping, from the same session.
+- **Every piece ends with:** CTA → hameli.io / hello@hameli.io.
 
-## Idea backlog (first 10)
+**Short 01 = FILM.md shoot card** (not a 10-minute episode).
+
+## Idea backlog
 
 | # | Idea | Pillar | Notes |
 |---|------|--------|-------|
-| 1 | 3 sites I’ve shipped — 60s each, what I’d change | Portfolio | Good montage short |
-| 2 | Building a landing page from brief → live (speed cut + VO) | Process | Strong Video 1 option / Ep 02 |
-| 3 | App screen flow: before vs after | Portfolio | |
-| 4 | How I structure a client video edit | Process | |
-| 5 | VO over a real build: fixing one ugly section | Process | |
-| 6 | What I ask clients before I start | Client-path | Short / Ep 03 |
-| 7 | Portfolio piece deep-dive: [best recent project] | Portfolio | **Episode 01 default** |
-| 8 | Tools I actually use in a work day | Process | Honest, short |
-| 9 | Mistake I made on a project and how I fixed it | Process | |
-| 10 | How to send me a project request | Client-path | CTA for inbound |
+| 1 | One build, one decision I’d change | Portfolio | **Short 01** |
+| 2 | Ugly section → fixed | Process | Short 02 |
+| 3 | What I ask before I start | Client-path | Short 03 |
+| 4 | Brief → live, speed cut | Process | Short 04 |
+| 5 | Before / after screen flow | Portfolio | |
+| 6 | Mistake I fixed this week | Process | |
+| 7 | Tools on my desk today | Process | Natural filming friendly |
+| 8 | How to send me a project | Client-path | |
+| 9 | 3 sites in 60s each | Portfolio | Montage |
+| 10 | Client video edit structure | Process | |
 
-**Episode 01:** idea #7. **Episode 02:** idea #2.
-
-### Next ideas (add below; don’t invent a fourth pillar yet)
+### Next ideas
 
 -
 
 ## Portfolio inventory
-
-List pieces you can show publicly (or anonymize / get permission first).
 
 | # | Project | Type (site / app / video) | Can show? | Notes |
 |---|---------|---------------------------|-----------|-------|
@@ -53,9 +56,9 @@ List pieces you can show publicly (or anonymize / get permission first).
 
 | Date | Title | Pillar | Platform | URL |
 |------|-------|--------|----------|-----|
-| | | | YouTube / IG | |
+| | | | IG / YT Short | |
 | | | | | |
 | | | | | |
 | | | | | |
 
-Target after Day 14: **4 rows filled**.
+Target after Day 14: **4 shorts logged**.

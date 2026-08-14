@@ -12,17 +12,17 @@ People who contact you can see finished work and *how* you work. The site is a p
 
 ## Format (channel)
 
-Desk cam + screen record + **voiceover**. No on-camera personality show required to start.
+**Series: Made in public** — start with **shorts** (30–90s) + voiceover. Natural desk filming (phone propped while working) + screen record. Longer YouTube only after shorts are shipping. Details: [FILM.md](FILM.md).
 
 ## Platforms
 
 | Role | Platform | Use |
 |------|----------|-----|
 | Landing | [hameli.io](https://hameli.io) | Learn + contact |
-| Home / trust | YouTube | 5–12 min process + portfolio walkthroughs |
-| Discovery / DMs | Instagram (Reels + grid) | 30–90s cuts |
+| Discovery | Instagram Reels + YouTube Shorts | Primary — 30–90s |
+| Home / depth | YouTube long-form | Later, from the same sessions |
 
-YouTube + Instagram only until **4 public posts** exist. Then consider LinkedIn/TikTok.
+Shorts on IG + YT until **4 public posts** exist. Then consider LinkedIn/TikTok.
 
 ## Links
 
@@ -40,7 +40,7 @@ YouTube + Instagram only until **4 public posts** exist. Then consider LinkedIn/
 - [ ] Banner + avatar: simple wordmark later — blank/solid OK for day one
 - [ ] **About** blurb (paste):
 
-> Hameli — learn how websites, apps, and video get made. I film real work: desk cam + screen recording + voiceover. Based in Abu Dhabi. Site: hameli.io · Work inquiries: hello@hameli.io
+> Hameli — Made in public. Shorts from real desk work: websites, apps, video. Natural filming + screen + voiceover. hameli.io · hello@hameli.io
 
 - [ ] Add website link: https://hameli.io
 - [ ] Paste channel URL into README Links + `app/data/hameli.ts` → `socials.youtube`
@@ -50,8 +50,8 @@ YouTube + Instagram only until **4 public posts** exist. Then consider LinkedIn/
 - [ ] Create professional/creator account named **Hameli** (same handle if free)
 - [ ] Bio (paste):
 
-> Learn in public · websites, apps, video  
-> Process on camera + screen  
+> Made in public · websites, apps, video  
+> Natural desk shorts + VO  
 > 🔗 hameli.io · hello@hameli.io
 
 - [ ] Paste profile URL into README Links + `app/data/hameli.ts` → `socials.instagram`
@@ -60,8 +60,8 @@ YouTube + Instagram only until **4 public posts** exist. Then consider LinkedIn/
 
 1. **Ship before polish** — one public piece beats a perfect plan.
 2. **Living ops docs:** `CONTENT.md`, `FILM.md`, this README (+ `EMAIL.md` for one-time mail setup).
-3. **Weekly minimum:** 1 short (30–90s) **or** 1 longer process cut. Miss a week → 30s desk/progress VO, not zero.
-4. **Work first:** Film real build days. If no build day, cut an existing project with VO.
+3. **Weekly minimum:** 1 short (30–90s). Miss a week → 30s desk/progress VO, not zero.
+4. **Work first:** Natural filming while building. Cut shorts with VO the same day when you can.
 
 ## Day 1–14 checklist
 
@@ -72,10 +72,10 @@ YouTube + Instagram only until **4 public posts** exist. Then consider LinkedIn/
 - [ ] List **5 portfolio pieces** in `CONTENT.md`
 - [ ] Skim `FILM.md` Episode 01 shoot card
 
-### Days 3–5 — Video 1
+### Days 3–5 — Short 01
 
-- [ ] Shoot/cut Episode 01 (FILM.md shoot card)
-- [ ] Post YouTube + 1–2 IG shorts
+- [ ] Shoot/cut Short 01 (FILM.md shoot card — 45–75s)
+- [ ] Post IG Reel + YouTube Short
 - [ ] Set `ep-01` to `live` + URL in `app/data/hameli.ts`
 - [ ] Log in `CONTENT.md`
 

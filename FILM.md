@@ -1,86 +1,76 @@
-# Film
+# Film — Made in public
 
-One-page capture recipe + Episode 01 shoot card. Screen + desk cam + voiceover. Ship; don’t expand this into a gear bible.
+Shorts-first. Voiceover. Natural filming. Ship; don’t build a gear bible.
 
-## Capture (while working)
+**Series name:** Made in public  
+**Primary cut:** 30–90s (IG Reel / YouTube Short)  
+**Secondary:** longer cut only if the same session has a clear arc
 
-1. **Screen record** the real session (build, design, edit timeline).
-2. **Desk cam:** phone clips of you at the desk (hands, face optional, screen from the side).
-3. Don’t wait for a dedicated filming day. If you’re working, record.
+## Natural filming
 
-### Screen record basics
+- Phone propped on the desk while you work — not a studio day.
+- Imperfect light, ambient sound, messy desk: fine.
+- Don’t wait for perfect B-roll, music, or “filming mode.”
+- Glance at camera is optional; most of the time you’re just working.
+- If you’re building, you’re filming.
 
-- Clean desktop / hide private windows.
-- Record at a resolution you’re willing to post (1080p is enough).
-- Leave a few seconds of quiet at start/end for editing room.
+## Capture recipe (shorts)
 
-### Client / private work
+1. **Screen record** the real session (hide private windows).
+2. **Desk cam** — a few natural clips (hands, screen from the side, you thinking).
+3. **Same day VO** — 4–7 bullets, talk to one person, phone mic OK.
+4. Cut **one short** (30–90s). Pull a second short from leftovers if easy.
 
-Only publish what you’re allowed to show. Anonymize names, blur sensitive data, or ask first.
+### VO bullets (short)
 
-## Voiceover (same day or next)
+1. What this moment is  
+2. What was wrong / unclear  
+3. What I did (show on screen)  
+4. One takeaway  
+5. CTA → hameli.io / hello@hameli.io  
 
-- Write **5–10 bullets**, not a full script.
-- Record in a quiet spot; phone mic is fine to start.
-- Talk to one person who emailed you — clear, direct, no hype.
+## First 8 shorts (backlog)
 
-### Bullet template
+| # | Title | Hook | Pillar |
+|---|-------|------|--------|
+| 1 | One build, one decision I’d change | “Here’s the call I’d undo on this site.” | Portfolio |
+| 2 | Ugly section → fixed | “Watch this block go from broken to clear.” | Process |
+| 3 | What I ask before I start | “Three questions that save the project.” | Client-path |
+| 4 | Brief → live, speed cut | “Landing page arc in under 90 seconds.” | Process |
+| 5 | Before / after screen flow | “Same app, clearer path.” | Portfolio |
+| 6 | Mistake I fixed this week | “I shipped this wrong — here’s the repair.” | Process |
+| 7 | Tools on my desk today | “Only what I actually opened.” | Process |
+| 8 | How to send me a project | “Email me like this.” | Client-path |
 
-1. What this project / moment is
-2. What was wrong or unclear
-3. What I did
-4. What changed (show on screen)
-5. CTA: email / DM for websites, apps, video → hameli.io
+## Short 01 shoot card (start here)
 
-## Edit
-
-| Cut | Length | Where |
-|-----|--------|-------|
-| Short | 30–90s (up to ~2 min) | Instagram Reel |
-| Longer | 5–12 min if there’s a clear arc | YouTube |
-
-- Prefer one clear arc: problem → work → result.
-- Pull 1–2 shorts from a longer session when you can.
-- End on the CTA line.
-
-## Checklist before export
-
-- [ ] Allowed to show this work (or anonymized)
-- [ ] VO matches what’s on screen
-- [ ] CTA at the end
-- [ ] Title / caption names the project or lesson in plain language
-- [ ] Log the URL in `CONTENT.md` after posting
-- [ ] Paste YouTube URL into `app/data/hameli.ts` episode (`status: 'live'`, `url: '...'`)
-
-## Episode 01 shoot card
-
-**Title:** Portfolio deep-dive: one recent build  
-**Source idea:** CONTENT #7  
-**Goal:** Trust for people already emailing you — show finished work + how you think.
+**Title:** One build, one decision I’d change  
+**Length target:** 45–75s  
+**Goal:** Trust + natural process — not a portfolio sales reel.
 
 ### Capture
 
-1. Pick **one** project you can show (fill inventory row in CONTENT.md).
-2. Screen-record a walkthrough (pages/screens, 10–20 min raw is fine).
-3. Optional desk-cam: 5–10 short clips of you at the computer.
-4. Same day: VO bullets (template above) aimed at “what we built / why it works / what I’d change.”
+1. Pick one project you can show (CONTENT inventory).
+2. Screen-record a focused walkthrough (5–10 min raw).
+3. 3–5 desk clips while reviewing it.
+4. VO: what it is → one strong decision → what you’d change → CTA.
 
-### Cuts from this session
+### Cuts
 
-| Output | Length | Notes |
+| Output | Length | Where |
 |--------|--------|-------|
-| YouTube Ep 01 | 5–12 min | Full deep-dive + CTA to hello@hameli.io / hameli.io |
-| IG short A | 30–90s | Best “before → after” or one strong decision |
-| IG short B | 30–90s | One lesson or mistake-fix |
+| Primary short | 45–75s | IG Reel + YouTube Short |
+| Optional second short | 30–45s | One leftover beat from same session |
+| Longer cut | Skip unless the arc is clearly 5+ min | YouTube later |
 
 ### After upload
 
-1. Mark episode `ep-01` live in `app/data/hameli.ts` with the YouTube URL.
-2. Log posts in CONTENT.md.
-3. Pin hameli.io on YouTube/IG.
+1. Set matching episode in `app/data/hameli.ts` to `status: 'live'` + `url`.
+2. Log in CONTENT.md.
+3. Pin hameli.io on IG/YouTube.
 
 ## Don’t
 
-- Rebuild a Kalymeero-style gear / lighting / multi-doc system here
-- Block posting because B-roll or music isn’t perfect
-- Skip a week with zero — use the 30s progress fallback instead
+- Stall for lighting, music, or a “real” episode format
+- Start with long-form before you have 4 shorts shipped
+- Expand this file into a production manual

@@ -28,9 +28,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Hameli — Learn how work gets made',
+  title: 'Hameli — Made in public',
   description:
-    'Hameli is a learn-in-public studio: websites, apps, and video filmed as real work — desk cam, screen recording, and voiceover. Ask Ahmed to build something.',
+    'Shorts with voiceover from real desk work: websites, apps, and video. Learn how it’s made — ask when you need something built.',
 };
 
 export default function RootLayout({
