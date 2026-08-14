@@ -31,10 +31,10 @@ No fourth pillar until each has **at least 2 posts**.
 | 2 | Ugly section → fixed | Process | Short 02 |
 | 3 | What I ask before I start | Client-path | Short 03 |
 | 4 | Brief → live, speed cut | Process | Short 04 |
-| 5 | Before / after screen flow | Portfolio | |
-| 6 | Mistake I fixed this week | Process | |
-| 7 | Tools on my desk today | Process | Natural filming friendly |
-| 8 | How to send me a project | Client-path | |
+| 5 | Before / after screen flow | Portfolio | Short 05 |
+| 6 | Mistake I fixed this week | Process | Short 06 |
+| 7 | Tools on my desk today | Process | Short 07 — natural filming friendly |
+| 8 | How to send me a project | Client-path | Short 08 |
 | 9 | 3 sites in 60s each | Portfolio | Montage |
 | 10 | Client video edit structure | Process | |
 

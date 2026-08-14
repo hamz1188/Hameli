@@ -70,7 +70,7 @@ Shorts on IG + YT until **4 public posts** exist. Then consider LinkedIn/TikTok.
 - [ ] Finish channel checklist above
 - [ ] Follow [EMAIL.md](EMAIL.md) for Zoho → `hello@hameli.io`
 - [ ] List **5 portfolio pieces** in `CONTENT.md`
-- [ ] Skim `FILM.md` Episode 01 shoot card
+- [ ] Skim `FILM.md` Short 01 shoot card
 
 ### Days 3–5 — Short 01
 
@@ -81,7 +81,7 @@ Shorts on IG + YT until **4 public posts** exist. Then consider LinkedIn/TikTok.
 
 ### Days 6–14
 
-- [ ] Two more shorts or Episode 02
+- [ ] Two more shorts (Short 02, Short 03)
 - [ ] Reply to inbound with hameli.io + hello@hameli.io
 
 **Two-week success:** 4 posts + working hello@ + learn-first site — not subscriber count.
@@ -102,7 +102,7 @@ Optional contact form backend: set `NEXT_PUBLIC_FORMSPREE_ID` (Formspree). Witho
 | File | Job |
 |------|-----|
 | [CONTENT.md](CONTENT.md) | Pillars, cadence, ideas, inventory, posted log |
-| [FILM.md](FILM.md) | Capture recipe + Episode 01 shoot card |
+| [FILM.md](FILM.md) | Capture recipe + Short 01 shoot card |
 | [EMAIL.md](EMAIL.md) | Zoho Mail Lite setup for hello@hameli.io |
 
 ## Out of scope (for now)
