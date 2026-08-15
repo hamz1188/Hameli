@@ -8,11 +8,11 @@ Portfolio site + social channel for websites, apps, and video — show the work,
 
 ## Promise
 
-People who contact you can **try demos** and watch how the work is made. Site stays a working title on purpose. **Build demos before filming.** Write when you need something built.
+People who contact you can **try demos** and see how the work is made. Site stays a working title on purpose. **Demos first; VO-led shorts with a few filmed coverage shots.** Write when you need something built.
 
 ## Format (channel)
 
-**Series: Working title** — shorts (30–90s) from **live demos** (FX3 + FX30) + screen record. Film is deferred until Demo 1 ships. Details: [CONTENT.md](CONTENT.md) (order of work) · [FILM.md](FILM.md) (kit).
+**Series: Working title** — mostly **voiceover** + screen record + a short dual-cam **coverage bank** (FX3 / FX30). Not talk-heavy. Order: [CONTENT.md](CONTENT.md) · kit/coverage: [FILM.md](FILM.md).
 
 ## Platforms
 
