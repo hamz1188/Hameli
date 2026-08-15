@@ -11,7 +11,7 @@ export async function GET() {
     description: hameli.tagline,
     site_url: siteUrl,
     feed_url: `${siteUrl}/feed.xml`,
-    image_url: `${siteUrl}/favicon.ico`,
+    image_url: `${siteUrl}/icon.svg`,
     pubDate: new Date(),
     copyright: `All rights reserved ${new Date().getFullYear()}, ${hameli.person}`,
   });

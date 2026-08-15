@@ -1,54 +1,61 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { getSortedPostsData } from '../lib/posts';
+import { hameli } from '../data/hameli';
+
+export const metadata: Metadata = {
+  title: 'Notes',
+  description: `Field notes from ${hameli.brand} — process, shorts, and how the work is made.`,
+};
 
 export default function BlogPage() {
   const allPosts = getSortedPostsData();
 
   return (
-    <section className="py-24 bg-[var(--color-background)] min-h-screen">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-            Blog
-          </h1>
-          <p className="text-lg text-[var(--color-muted-foreground)] max-w-2xl mx-auto">
-            Thoughts, tutorials, and insights on software development.
-          </p>
-          <div className="w-24 h-1.5 bg-[var(--color-primary)] mx-auto rounded-full opacity-80 mt-6"></div>
-        </div>
+    <section className="section-pad min-h-screen">
+      <div className="shell max-w-3xl">
+        <p className="text-label text-[var(--color-olive)] mb-5">Field notes</p>
+        <h1 className="text-section max-w-xl">Notes</h1>
+        <p className="mt-5 text-lede text-[var(--color-ink-soft)] max-w-2xl mb-12">
+          Process, shorts, and how the work is made.
+        </p>
+        <hr className="rule mb-0" />
 
-        <div className="grid gap-8">
+        <div>
           {allPosts.map((post) => (
-            <article 
+            <article
               key={post.slug}
-              className="bg-[var(--color-secondary)]/30 rounded-3xl p-8 border border-[var(--color-muted)] hover:border-[var(--color-primary)]/30 transition-all hover:-translate-y-1 group"
+              className="grid gap-3 py-8 md:py-10 border-b border-[var(--color-rule)]"
             >
-              <div className="flex flex-col md:flex-row gap-6 justify-between items-start md:items-center mb-4">
-                <div className="flex gap-2">
-                  {post.tags.map(tag => (
-                    <span key={tag} className="px-3 py-1 text-xs font-medium rounded-full bg-[var(--color-background)] border border-[var(--color-muted)] text-[var(--color-foreground)]">
+              <div className="flex flex-wrap items-baseline justify-between gap-3">
+                <div className="flex flex-wrap gap-3">
+                  {post.tags.map((tag) => (
+                    <span key={tag} className="text-label text-[var(--color-olive)]">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <time className="text-sm text-[var(--color-muted-foreground)] font-medium">
-                  {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                <time className="text-label text-[var(--color-ink-faint)]">
+                  {new Date(post.date).toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric',
+                  })}
                 </time>
               </div>
-
-              <Link href={`/blog/${post.slug}`} className="block group-hover:opacity-80 transition-opacity">
-                <h2 className="text-2xl font-bold mb-3 text-[var(--color-foreground)]">
+              <Link href={`/blog/${post.slug}`} className="group block">
+                <h2
+                  className="font-serif text-2xl md:text-[1.85rem] leading-tight tracking-tight group-hover:text-[var(--color-olive)] transition-colors"
+                  style={{ fontVariationSettings: "'SOFT' 20" }}
+                >
                   {post.title}
                 </h2>
-                <p className="text-[var(--color-muted-foreground)] leading-relaxed mb-6">
+                <p className="mt-2 text-[var(--color-ink-soft)] text-body max-w-2xl italic">
                   {post.excerpt}
                 </p>
-                <div className="inline-flex items-center text-[var(--color-primary)] font-medium">
-                  Read Article 
-                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
+                <span className="mt-4 inline-block text-label text-[var(--color-ink-faint)] group-hover:text-[var(--color-olive)] transition-colors">
+                  Read →
+                </span>
               </Link>
             </article>
           ))}
@@ -57,4 +64,3 @@ export default function BlogPage() {
     </section>
   );
 }
-

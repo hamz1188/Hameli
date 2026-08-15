@@ -28,9 +28,40 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Hameli — Made in public',
+  metadataBase: new URL('https://hameli.io'),
+  title: {
+    default: 'Hameli — Made in public',
+    template: '%s · Hameli',
+  },
   description:
     'Shorts with voiceover from real desk work: websites, apps, and video. Learn how it’s made — ask when you need something built.',
+  applicationName: 'Hameli',
+  authors: [{ name: 'Ahmed Ali', url: 'https://hameli.io' }],
+  creator: 'Ahmed Ali',
+  keywords: ['Hameli', 'Made in public', 'websites', 'apps', 'video', 'Abu Dhabi'],
+  alternates: {
+    canonical: '/',
+    types: { 'application/rss+xml': '/feed.xml' },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://hameli.io',
+    siteName: 'Hameli',
+    title: 'Hameli — Made in public',
+    description:
+      'Shorts with voiceover from real desk work: websites, apps, and video. Learn how it’s made — ask when you need something built.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Hameli — Made in public',
+    description:
+      'Shorts with voiceover from real desk work: websites, apps, and video.',
+  },
+  icons: {
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+    apple: [{ url: '/apple-icon.svg', type: 'image/svg+xml' }],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
