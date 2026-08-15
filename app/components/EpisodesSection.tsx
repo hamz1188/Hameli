@@ -14,14 +14,14 @@ function SceneBlock({ episode }: { episode: Episode }) {
       <p className="slugline text-[var(--color-ink)]">
         SC. {String(episode.number).padStart(2, '0')}  {episode.slugline}
       </p>
-      <h3 className="mt-4 text-lg text-[var(--color-ink)]">
+      <h3 className="scene-title mt-4 text-[var(--color-ink)]">
         {episode.number === 1 ? <span className="hl hl-yellow">{episode.title}</span> : episode.title}
       </h3>
-      <p className="mt-3 text-[var(--color-ink-soft)] text-body max-w-xl">{episode.lesson}</p>
-      <p className="character mt-6 text-sm font-normal text-[var(--color-ink-faint)]">
+      <p className="mt-3 text-[var(--color-ink-soft)] text-body">{episode.lesson}</p>
+      <p className="character mt-6 font-normal text-[var(--color-ink-faint)]">
         Ahmed (V.O.)
       </p>
-      <p className="dialogue mt-1 text-sm text-[var(--color-ink-faint)]">
+      <p className="dialogue mt-1 text-[var(--color-ink-faint)]">
         {live ? (
           <span className="hl hl-blue">{hameli.copy.liveLine}</span>
         ) : (

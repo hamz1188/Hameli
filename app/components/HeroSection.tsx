@@ -45,7 +45,7 @@ export function HeroSection() {
 
   return (
     <section id="hero" ref={ref} className="relative min-h-[100svh] flex flex-col justify-center">
-      <div className="script-page relative py-28 md:py-32">
+      <div className="script-page title-page relative py-28 md:py-32">
         <p className="hero-rest transition-line mb-16">Fade in:</p>
 
         <h1 className="text-hero text-[var(--color-ink)]" aria-label={hameli.brand}>
@@ -70,7 +70,7 @@ export function HeroSection() {
         <p className="hero-rest character mt-2">{hameli.person}</p>
         <p className="hero-rest mt-6 text-center text-[var(--color-ink-faint)]">{hameli.location}</p>
 
-        <p className="hero-rest dialogue mt-16 text-[var(--color-ink-soft)] text-center max-w-md">
+        <p className="hero-rest dialogue mt-16 text-[var(--color-ink-soft)]">
           {hameli.tagline}
         </p>
 

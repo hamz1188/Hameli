@@ -45,7 +45,7 @@ export function HowIFilmSection() {
           {hameli.filmSteps.map((step) => (
             <div key={step.title} className="film-frame py-8 border-b border-[var(--color-rule)] last:border-b-0">
               <p className="slugline">{step.slugline}</p>
-              <h3 className="mt-4">{step.title}</h3>
+              <h3 className="scene-title mt-4">{step.title}</h3>
               <p className="mt-3 text-[var(--color-ink-soft)] text-body">{step.body}</p>
             </div>
           ))}

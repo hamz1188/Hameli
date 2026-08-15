@@ -56,9 +56,9 @@ export function ContactSection() {
           {hameli.copy.contactBody}
         </p>
 
-        <form onSubmit={onSubmit} className="mt-14">
+        <form onSubmit={onSubmit} className="script-form mt-14">
           <label className="block mb-8">
-            <span className="character block text-sm font-normal text-[var(--color-ink-faint)]">
+            <span className="character block font-normal text-[var(--color-ink-faint)]">
               Name
             </span>
             <input
@@ -69,7 +69,7 @@ export function ContactSection() {
             />
           </label>
           <label className="block mb-8">
-            <span className="character block text-sm font-normal text-[var(--color-ink-faint)]">
+            <span className="character block font-normal text-[var(--color-ink-faint)]">
               Email
             </span>
             <input
@@ -81,7 +81,7 @@ export function ContactSection() {
             />
           </label>
           <label className="block mb-10">
-            <span className="character block text-sm font-normal text-[var(--color-ink-faint)]">
+            <span className="character block font-normal text-[var(--color-ink-faint)]">
               {hameli.copy.contactMessageLabel}
             </span>
             <textarea

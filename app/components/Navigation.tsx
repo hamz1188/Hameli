@@ -28,7 +28,7 @@ export function Navigation() {
         }`}
       >
         <div className="script-page flex items-baseline justify-between gap-4">
-          <Link href="/" className="slugline text-sm">
+          <Link href="/" className="slugline">
             {hameli.brand}.
           </Link>
 

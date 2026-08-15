@@ -27,7 +27,7 @@ Shorts on IG + YT until **4 public posts** exist. Then consider LinkedIn/TikTok.
 ## Links
 
 - Site: https://hameli.io
-- Email: hello@hameli.io (setup: [EMAIL.md](EMAIL.md))
+- Email: hello@hameli.io (live — [EMAIL.md](EMAIL.md))
 - GitHub: https://github.com/hamz1188
 - LinkedIn: https://www.linkedin.com/in/ahmed-ali-406489394
 - YouTube: _TBD — create your channel first; do not paste a public `@hameli` that isn’t yours_
@@ -70,7 +70,7 @@ Shorts on IG + YT until **4 public posts** exist. Then consider LinkedIn/TikTok.
 ### Days 1–2 — Setup
 
 - [ ] Finish channel checklist above
-- [ ] Follow [EMAIL.md](EMAIL.md) for Zoho → `hello@hameli.io`
+- [x] Follow [EMAIL.md](EMAIL.md) for Zoho → `hello@hameli.io`
 - [x] List **5 portfolio pieces** in `CONTENT.md` (+ `app/data/hameli.ts` → `portfolio`)
 - [ ] Skim `FILM.md` Short 01 shoot card
 

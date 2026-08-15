@@ -40,7 +40,7 @@ export default function BlogPage() {
                 </time>
               </div>
               <Link href={`/blog/${post.slug}`} className="group block">
-                <h2 className="mt-4 text-lg group-hover:opacity-60 transition-opacity">{post.title}</h2>
+                <h2 className="scene-title mt-4 group-hover:opacity-60 transition-opacity">{post.title}</h2>
                 <p className="mt-2 text-[var(--color-ink-soft)] text-body">{post.excerpt}</p>
                 <span className="mt-4 inline-block text-label text-[var(--color-ink-faint)]">
                   More →
