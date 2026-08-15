@@ -8,51 +8,80 @@ import { hameli } from '../data/hameli';
 gsap.registerPlugin(ScrollTrigger);
 
 export function HowIFilmSection() {
-  const sectionRef = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (!sectionRef.current) return;
+    if (!ref.current) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(
-        '.film-head, .film-step',
-        { opacity: 0, y: 18 },
+        '.method-intro, .film-frame',
+        { opacity: 0, y: 20 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.65,
-          stagger: 0.06,
+          duration: 0.7,
+          stagger: 0.1,
           ease: 'power3.out',
-          scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
+          scrollTrigger: { trigger: ref.current, start: 'top 78%' },
         }
       );
-    }, sectionRef);
+    }, ref);
     return () => ctx.revert();
   }, []);
 
   return (
-    <section
-      id="learn"
-      ref={sectionRef}
-      className="relative section-padding container-padding border-t border-[var(--color-border)]"
-    >
-      <div className="max-w-[960px] mx-auto">
-        <div className="film-head mb-10 md:mb-12 max-w-xl">
-          <span className="text-label text-[var(--color-accent)] block mb-3">How it’s filmed</span>
-          <h2 className="text-section">Natural, not studio</h2>
-          <p className="mt-4 text-[var(--color-foreground-muted)] text-body-lg">
-            Phone on the desk, screen recording, voiceover later. Imperfect light and ambient sound are fine —
-            the point is real work, not a set.
-          </p>
+    <section id="learn" ref={ref} className="section-pad border-y border-[var(--color-rule)] bg-[var(--color-desk)]/35">
+      <div className="shell">
+        <div className="method-intro grid md:grid-cols-[minmax(0,14rem)_1fr] gap-6 md:gap-12 mb-12 md:mb-16">
+          <p className="text-label text-[var(--color-olive)] pt-2">Method</p>
+          <div>
+            <h2 className="text-section max-w-lg">Natural, not studio</h2>
+            <p className="mt-5 text-lede text-[var(--color-ink-soft)] max-w-2xl">
+              Three layers from one work session. Imperfect light stays. The point is the decision on screen.
+            </p>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 md:gap-10">
+        {/* Film strip */}
+        <div className="grid md:grid-cols-3 gap-px bg-[var(--color-rule)] border border-[var(--color-rule)]">
           {hameli.filmSteps.map((step, i) => (
-            <div key={step.title} className="film-step border-t border-[var(--color-border)] pt-5">
-              <span className="font-mono text-xs text-[var(--color-accent)] tabular-nums">
-                {String(i + 1).padStart(2, '0')}
-              </span>
-              <h3 className="mt-3 text-lg font-medium tracking-tight">{step.title}</h3>
-              <p className="mt-2 text-sm text-[var(--color-foreground-muted)] leading-relaxed">{step.body}</p>
+            <div
+              key={step.title}
+              className="film-frame bg-[var(--color-background-light)] p-7 md:p-9 min-h-[240px] flex flex-col"
+            >
+              <div className="flex items-center justify-between mb-8">
+                <span className="font-mono text-xs text-[var(--color-olive)]">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span className="flex gap-1" aria-hidden>
+                  <span className="w-2 h-2 rounded-full border border-[var(--color-rule-strong)]" />
+                  <span className="w-2 h-2 rounded-full border border-[var(--color-rule-strong)]" />
+                </span>
+              </div>
+              {/* Mini visual per step */}
+              <div className="mb-8 h-24 border border-[var(--color-rule)] bg-[var(--color-background)] relative overflow-hidden">
+                {i === 0 && (
+                  <div className="absolute right-4 bottom-3 w-8 h-14 border border-[var(--color-ink)]/40 rounded-sm rotate-[-12deg] bg-[var(--color-desk)]" />
+                )}
+                {i === 1 && (
+                  <div className="absolute inset-3 border border-[var(--color-ink)]/30 bg-[var(--color-screen)]">
+                    <div className="m-2 space-y-1.5 opacity-40">
+                      <div className="h-1 w-2/3 bg-[var(--color-olive)]" />
+                      <div className="h-1 w-1/2 bg-white/30" />
+                      <div className="h-1 w-3/5 bg-white/20" />
+                    </div>
+                  </div>
+                )}
+                {i === 2 && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-full border border-[var(--color-rule-strong)] flex items-center justify-center">
+                      <div className="w-0 h-0 border-l-[8px] border-l-[var(--color-olive)] border-y-[5px] border-y-transparent ml-0.5" />
+                    </div>
+                  </div>
+                )}
+              </div>
+              <h3 className="font-serif text-xl tracking-tight mb-2">{step.title}</h3>
+              <p className="text-[var(--color-ink-soft)] text-body mt-auto">{step.body}</p>
             </div>
           ))}
         </div>
