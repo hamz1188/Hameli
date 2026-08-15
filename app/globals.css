@@ -40,16 +40,20 @@
   --color-error: #8b3a3a;
   --color-background-elevated: var(--color-desk);
   --color-surface: #d9d3c2;
+  --color-hole: var(--color-desk);
   --mark-yellow: rgba(243, 214, 58, 0.72);
   --mark-blue: rgba(90, 168, 214, 0.45);
   --mark-red: #c43c32;
   --mark-blend: multiply;
+  color-scheme: light;
 }
 
 .dark,
 html[data-theme="dark"] {
-  --color-desk: #070706;
+  /* Same field as paper — no black desk band at the page end */
+  --color-desk: #1b1a16;
   --color-paper: #1b1a16;
+  --color-hole: #0c0b09;
   --color-background: var(--color-paper);
   --color-background-light: #222019;
   --color-ink: #efebe0;
@@ -76,12 +80,14 @@ html[data-theme="dark"] {
   --mark-blue: rgba(72, 140, 190, 0.4);
   --mark-red: #e07068;
   --mark-blend: overlay;
+  color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not(.light):not(.dark) {
-    --color-desk: #070706;
+    --color-desk: #1b1a16;
     --color-paper: #1b1a16;
+    --color-hole: #0c0b09;
     --color-background: var(--color-paper);
     --color-background-light: #222019;
     --color-ink: #efebe0;
@@ -108,11 +114,13 @@ html[data-theme="dark"] {
     --mark-blue: rgba(72, 140, 190, 0.4);
     --mark-red: #e07068;
     --mark-blend: overlay;
+    color-scheme: dark;
   }
 }
 
 html {
   scroll-behavior: auto;
+  background: var(--color-paper);
 }
 
 body,
@@ -126,6 +134,7 @@ body,
   letter-spacing: -0.02em;
   -webkit-font-smoothing: auto;
   overflow-x: hidden;
+  min-height: 100%;
 }
 
 ::selection {
@@ -485,23 +494,17 @@ html[data-theme="dark"] .script-sheet::after {
   width: clamp(2.4rem, 7vw, 3.4rem);
   z-index: 3;
   pointer-events: none;
+  overflow: hidden;
 }
 
-.script-holes-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: min(100svh, 52rem);
-  padding-block: 11.36%;
-}
-
-.script-holes-page span {
+.script-hole {
+  position: absolute;
+  left: 50%;
   width: clamp(11px, 2.05vw, 15px);
   height: clamp(11px, 2.05vw, 15px);
-  flex-shrink: 0;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: var(--color-desk);
+  background: var(--color-hole, var(--color-desk));
   box-shadow:
     0 0 0 1px color-mix(in srgb, var(--color-ink) 16%, transparent),
     0 1px 1px color-mix(in srgb, var(--color-ink) 22%, transparent),
@@ -602,11 +605,17 @@ html[data-theme="dark"] .script-sheet::after {
 }
 
 @media (max-width: 640px) {
+  body,
+  .desk {
+    background: var(--color-paper);
+  }
+
   .script-sheet {
     --sheet-pad-left: 2.85rem;
     --sheet-pad-right: 1.5rem;
     width: 100%;
     padding: 0 var(--sheet-pad-right) 3.25rem var(--sheet-pad-left);
+    box-shadow: none;
   }
 
   .section-pad {
