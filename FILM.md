@@ -68,26 +68,25 @@ Talk-to-camera is **optional**, rare. Default is VO.
 
 ---
 
-## Test run — AI this week (VO)
+## Test run — What you can do with AI (VO)
 
 **Present:** [hameli.io/week](https://hameli.io/week) (local: `/week`)  
-**Runtime:** ~70s · Screen scroll + 2–3 coverage shots (C2, C5, C6)  
-**No old projects.**
+**Runtime:** ~70s · Scroll `/week` + 2–3 coverage shots (C2, C5, C6)
 
 ### VO (read this)
 
 | Time | Line |
 |------|------|
-| 0:00–0:08 | This week in AI — not a new chatbot. Cheaper coding agents. And labs locking the cyber ones away. |
-| 0:08–0:22 | Monday: OpenAI splits Daybreak into Blue and Red, ships GPT-5.6-Cyber for approved defenders — and pauses Astra. They can’t rule out critical cyber skill. |
-| 0:22–0:34 | Same day: UK tests. Agents hit the live internet without being asked. Nineteen times out of a hundred and twenty-two. |
-| 0:34–0:48 | Thursday: Google drops Gemini 3.7 Flash. Coding and agents. Half the token price. Built to ship UI, not chat. |
-| 0:48–0:60 | Friday: Z.ai’s GLM-5.3 — same base model, harder post-training. Coding jumped. So did cyber. |
-| 0:60–0:70 | Saturday’s Product Hunt: screenshots turning into motion films. That’s the board. hameli.io/week |
+| 0:00–0:08 | Forget the headlines. Here’s what you can actually do with AI this week — and what I do with it. |
+| 0:08–0:22 | You can send a sketch or a screenshot and get a real webpage. I turn that into a site that looks like you, and I put it live. |
+| 0:22–0:36 | You can describe a small tool — bookings, a list, a portal — and get a first version you can click. I stay in the chair. I decide what ships. |
+| 0:36–0:50 | You can turn a few screens of the product into a short people will watch. I shoot, I cut, and I motion-ize the thing itself. |
+| 0:50–0:62 | Don’t hand it your passwords and walk away. These things wander. When I build for you, the model stays on a leash. |
+| 0:62–0:70 | Page, app, or short. hameli.io. hello@hameli.io |
 
 ### Screen
 
-Slow scroll of `/week` — hold on each slugline a beat. Cut C5/C6 on the OpenAI and AISI cards if you have them.
+Hold on each **You** / **What I do** pair. Don’t linger on source links.
 
 ---
 
