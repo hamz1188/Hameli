@@ -56,7 +56,7 @@ export function ContactSection() {
 
           <form
             onSubmit={onSubmit}
-            className="border border-[var(--color-rule)] bg-[var(--color-background-light)] p-6 md:p-8 paper-lines"
+            className="border border-[var(--color-rule)] bg-[var(--color-background-light)] p-6 md:p-8"
           >
             <label className="block mb-6">
               <span className="text-label text-[var(--color-ink-faint)]">Name</span>
