@@ -112,7 +112,7 @@ Contact form posts to `/api/contact` and lands in `hello@hameli.io`. First live 
 | File | Job |
 |------|-----|
 | [CONTENT.md](CONTENT.md) | Pillars, cadence, ideas, inventory, posted log |
-| [FILM.md](FILM.md) | Capture recipe + Today shoot cards |
+| [FILM.md](FILM.md) | Screenplays + shot lists for Shorts 01–04 |
 | [EMAIL.md](EMAIL.md) | Zoho Mail Lite setup for hello@hameli.io |
 
 ## Out of scope (for now)

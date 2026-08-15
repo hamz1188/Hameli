@@ -23,23 +23,21 @@ No fourth pillar until each has **at least 2 posts**.
 - **Longer YouTube:** only after shorts are shipping, from the same session.
 - **Every piece ends with:** CTA → hameli.io / hello@hameli.io.
 
-**Today’s runbook = FILM.md → Today shoot.** Current desk only — no old projects.
+**Today’s runbook = FILM.md** — full **screenplays + shot lists** (not one-liners). Current desk only — no old projects.
 
 ## Today shoot — film now, screen later
 
-Capture desk / talk / VO today. Screen records in a later edit session. Full checklists + VO bullets: [FILM.md](FILM.md).
+Open [FILM.md](FILM.md). Shoot BANK → Shorts 01–04 from the shot tables. Scripts are word-for-word under each short.
 
-| Priority | Short | Film today | Screen later |
-|----------|-------|------------|--------------|
-| 0 | Shared B-roll bank | 5–8 desk clips | — |
-| 1 | Questions Before Frame One | Talking-to-camera | Optional blank brief |
-| 2 | Tools on my desk today | Hands + desk | Cursor pans (tools only) |
-| 3 | The Decision I’d Take Back | VO on **this week’s** Hameli call | Current Hameli screen |
-| 4 | How to send me a project | Talking / phone prop | Optional sample email |
+| Priority | Short | Runtime | Film today | Screen later |
+|----------|-------|---------|------------|--------------|
+| 0 | Shared B-roll bank (B1–B10) | — | All bank shots | — |
+| 1 | Questions Before Frame One | ~60s | Talk MCU + bank | Optional blank brief |
+| 2 | Tools on my desk today | ~40s | Hands / tool opens + VO | Clean cursor pans |
+| 3 | The Decision I’d Take Back | ~60s | Talk on this week’s call | Current Hameli scroll |
+| 4 | How to send me a project | ~45s | Talk + phone prop | Sample email compose |
 
-**Post order (first 4 public posts):** Questions → Tools → Decision → How to send.
-
-**Skip until a current build is on screen:** Ugly Section, Brief to Live, Mistake I fixed.
+**Post order:** Questions → Tools → Decision → How to send.
 
 ## Idea backlog
 
