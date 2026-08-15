@@ -275,6 +275,7 @@ body,
 }
 
 .script-form {
+  position: relative;
   margin-left: 10ch;
   max-width: 42ch;
 }
@@ -285,6 +286,34 @@ body,
   font-weight: 700;
   text-transform: uppercase;
   color: var(--color-ink-faint);
+}
+
+.script-input {
+  display: block;
+}
+
+.script-message {
+  min-height: 2.6em;
+  field-sizing: content;
+  resize: none;
+  overflow: hidden;
+  line-height: 1.45;
+}
+
+.honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.script-input:-webkit-autofill,
+.script-input:-webkit-autofill:hover,
+.script-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-ink);
+  box-shadow: 0 0 0 1000px var(--color-paper) inset;
+  transition: background-color 9999s ease-out;
 }
 
 .title-page .character,

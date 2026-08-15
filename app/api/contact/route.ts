@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false }, { status: 400 });
   }
 
-  if (typeof body.website === 'string' && body.website.trim()) {
+  if (typeof body.company === 'string' && body.company.trim()) {
     return NextResponse.json({ ok: true });
   }
 
@@ -42,13 +42,27 @@ export async function POST(request: Request) {
           headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
           body: JSON.stringify({ name, email, message }),
         })
-      : await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(hameli.email)}`, {
+      : await fetch(`https://formsubmit.co/ajax/${hameli.email}`, {
           method: 'POST',
-          headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            Origin: hameli.siteUrl,
+            Referer: `${hameli.siteUrl}/`,
+          },
           body: JSON.stringify(payload),
         });
 
-    if (!res.ok) throw new Error('upstream');
+    const data = (await res.json().catch(() => null)) as { success?: boolean | string; message?: string } | null;
+    const success = data?.success === true || data?.success === 'true';
+    const activating = typeof data?.message === 'string' && /activat/i.test(data.message);
+
+    if (activating) {
+      return NextResponse.json({ ok: true, activate: true });
+    }
+    if (!res.ok || (!formspree && !success)) {
+      throw new Error('upstream');
+    }
   } catch {
     return NextResponse.json({ ok: false }, { status: 502 });
   }

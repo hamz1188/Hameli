@@ -1,10 +1,16 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { FormEvent, useRef, useState } from 'react';
 import { hameli } from '../data/hameli';
 
+function fitTextarea(el: HTMLTextAreaElement) {
+  el.style.height = 'auto';
+  el.style.height = `${el.scrollHeight}px`;
+}
+
 export function ContactSection() {
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'activate' | 'error'>('idle');
+  const messageRef = useRef<HTMLTextAreaElement>(null);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -13,7 +19,7 @@ export function ContactSection() {
     const name = String(data.get('name') || '').trim();
     const email = String(data.get('email') || '').trim();
     const message = String(data.get('message') || '').trim();
-    const website = String(data.get('website') || '').trim();
+    const company = String(data.get('company') || '').trim();
     if (!name || !email || !message) return;
 
     setStatus('sending');
@@ -21,11 +27,15 @@ export function ContactSection() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message, website }),
+        body: JSON.stringify({ name, email, message, company }),
       });
-      if (!res.ok) throw new Error('fail');
-      setStatus('sent');
+      const payload = (await res.json().catch(() => null)) as { ok?: boolean; activate?: boolean } | null;
+      if (!res.ok || !payload?.ok) throw new Error('fail');
+      setStatus(payload.activate ? 'activate' : 'sent');
       form.reset();
+      if (messageRef.current) {
+        messageRef.current.style.height = '';
+      }
     } catch {
       setStatus('error');
     }
@@ -56,7 +66,7 @@ export function ContactSection() {
               name="name"
               required
               autoComplete="name"
-              className="mt-2 w-full bg-transparent border-0 border-b border-[var(--color-rule-strong)] py-2 outline-none focus:border-[var(--color-ink)] font-sans"
+              className="script-input mt-2 w-full bg-transparent border-0 border-b border-[var(--color-rule-strong)] py-2 outline-none focus:border-[var(--color-ink)] font-sans"
             />
           </label>
           <label className="block mb-8">
@@ -66,20 +76,22 @@ export function ContactSection() {
               type="email"
               required
               autoComplete="email"
-              className="mt-2 w-full bg-transparent border-0 border-b border-[var(--color-rule-strong)] py-2 outline-none focus:border-[var(--color-ink)] font-sans"
+              className="script-input mt-2 w-full bg-transparent border-0 border-b border-[var(--color-rule-strong)] py-2 outline-none focus:border-[var(--color-ink)] font-sans"
             />
           </label>
-          <label className="sr-only" aria-hidden="true">
-            Website
-            <input name="website" tabIndex={-1} autoComplete="off" />
+          <label className="honey" aria-hidden="true">
+            Company
+            <input name="company" tabIndex={-1} autoComplete="off" />
           </label>
           <label className="block mb-10">
             <span className="form-cue">{hameli.copy.contactMessageLabel}</span>
             <textarea
+              ref={messageRef}
               name="message"
               required
-              rows={4}
-              className="mt-2 w-full bg-transparent border-0 border-b border-[var(--color-rule-strong)] py-2 outline-none focus:border-[var(--color-ink)] font-sans resize-y min-h-[7rem]"
+              rows={2}
+              onInput={(event) => fitTextarea(event.currentTarget)}
+              className="script-input script-message mt-2 w-full bg-transparent border-0 border-b border-[var(--color-rule-strong)] py-2 outline-none focus:border-[var(--color-ink)] font-sans"
             />
           </label>
           <div className="flex flex-wrap items-center justify-between gap-4">
@@ -89,8 +101,13 @@ export function ContactSection() {
             {status === 'sent' && (
               <span className="text-[var(--color-ink-soft)]">{hameli.copy.contactSent}</span>
             )}
+            {status === 'activate' && (
+              <span className="text-[var(--color-ink-soft)]">Confirm once in {hameli.email}, then it lands there.</span>
+            )}
             {status === 'error' && (
-              <span className="text-[var(--color-error)]">Try {hameli.email}</span>
+              <a href={`mailto:${hameli.email}`} className="text-[var(--color-error)]">
+                Mail {hameli.email} instead
+              </a>
             )}
           </div>
         </form>
