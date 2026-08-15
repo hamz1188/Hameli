@@ -1,6 +1,6 @@
 'use client';
 
-/** Full-bleed desk atmosphere — screen + desk + phone. The visual of Made in public. */
+/** Unused desk illustration — homepage is a shooting script, not a desk stage. */
 export function DeskStage({ className = '' }: { className?: string }) {
   return (
     <div className={`absolute inset-0 overflow-hidden ${className}`} aria-hidden="true">

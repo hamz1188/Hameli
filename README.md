@@ -8,11 +8,11 @@ Portfolio site + social channel for websites, apps, and video — show the work,
 
 ## Promise
 
-People who contact you can see finished work and *how* you work. The site is a place to **learn**; contact is calm and easy when someone wants you to build something.
+People who contact you can watch how the work is made. The site is a **working title** — still in progress on purpose. Write when you need something built.
 
 ## Format (channel)
 
-**Series: Made in public** — start with **shorts** (30–90s) + voiceover. Natural desk filming (phone propped while working) + screen record. Longer YouTube only after shorts are shipping. Details: [FILM.md](FILM.md).
+**Series: Working title** — start with **shorts** (30–90s) + voiceover. Natural desk filming (phone propped while working) + screen record. Longer YouTube only after shorts are shipping. Details: [FILM.md](FILM.md).
 
 ## Platforms
 
@@ -42,7 +42,7 @@ Shorts on IG + YT until **4 public posts** exist. Then consider LinkedIn/TikTok.
 - [ ] Banner + avatar: simple wordmark later — blank/solid OK for day one
 - [ ] **About** blurb (paste):
 
-> Hameli — Made in public. Shorts from real desk work: websites, apps, video. Natural filming + screen + voiceover. hameli.io · hello@hameli.io
+> Hameli — Working title. Short films from the desk: websites, apps, video. Watch how it’s made. hameli.io · hello@hameli.io
 
 - [ ] Add website link: https://hameli.io
 - [ ] Paste channel URL into README Links + `app/data/hameli.ts` → `socials.youtube`
@@ -52,9 +52,9 @@ Shorts on IG + YT until **4 public posts** exist. Then consider LinkedIn/TikTok.
 - [ ] Create professional/creator account named **Hameli** (same handle if free)
 - [ ] Bio (paste):
 
-> Made in public · websites, apps, video  
-> Natural desk shorts + VO  
-> 🔗 hameli.io · hello@hameli.io
+> Working title · websites, apps, video  
+> Desk shorts + voiceover  
+> hameli.io · hello@hameli.io
 
 - [ ] Paste profile URL into README Links + `app/data/hameli.ts` → `socials.instagram`
 

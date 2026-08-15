@@ -14,14 +14,14 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t border-[var(--color-rule)]">
-      <div className="shell py-10 flex flex-col md:flex-row md:items-end justify-between gap-8">
-        <div>
-          <Link href="/" className="font-serif text-3xl tracking-tight" style={{ fontVariationSettings: "'SOFT' 30" }}>
-            {hameli.brand}
+      <div className="script-page py-10 flex flex-col gap-6">
+        <div className="flex flex-wrap items-baseline justify-between gap-4">
+          <Link href="/" className="slugline">
+            {hameli.brand}.
           </Link>
-          <p className="mt-2 text-label text-[var(--color-ink-faint)]">{hameli.seriesName}</p>
+          <p className="text-label text-[var(--color-ink-faint)]">{hameli.seriesName}</p>
         </div>
-        <div className="flex flex-wrap gap-6 text-label text-[var(--color-ink-soft)]">
+        <div className="flex flex-wrap gap-x-6 gap-y-2 text-label text-[var(--color-ink-soft)]">
           {links.map((l) => (
             <a
               key={l.label}

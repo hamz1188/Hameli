@@ -5,6 +5,7 @@ export interface Episode {
   number: number;
   title: string;
   lesson: string;
+  slugline: string;
   status: EpisodeStatus;
   /** YouTube / IG URL when live — omit while upcoming */
   url?: string;
@@ -13,6 +14,7 @@ export interface Episode {
 export interface FilmStep {
   title: string;
   body: string;
+  slugline: string;
 }
 
 export type ShowPermission = 'yes' | 'ask' | 'anonymize';
@@ -30,9 +32,28 @@ export const hameli = {
   brand: 'Hameli',
   person: 'Ahmed Ali',
   location: 'Abu Dhabi, UAE',
-  seriesName: 'Made in public',
+  seriesName: 'Working title',
   tagline:
-    'Shorts with voiceover from real desk work — websites, apps, and video. Learn here; ask when you need something built.',
+    'Short films from the desk where the work happens — sites, apps, video. Watch how it’s made; write when you need one built.',
+  copy: {
+    watchHeading: 'Watch — the work, in scenes',
+    watchIntroLive:
+      'Each scene is a 30–90 second cut from a real session: desk cam, screen, voiceover. Play one and you get the decision, not a highlight reel.',
+    watchIntroEmpty:
+      'The first scenes are lined up but not shot yet. When a short goes live the slugline unlocks — nothing here is a staged embed.',
+    methodHeading: 'Method — three layers, one session',
+    methodIntro:
+      'One sitting. Three recordings. The light is whatever the room gives; the point is the decision on screen.',
+    contactHeading: 'The next scene is yours.',
+    contactBody:
+      'Sites, apps, and video are the work I take on. Tell me what you’re making and I’ll say plainly whether I’m the right person to build it.',
+    contactMessageLabel: 'What are you making?',
+    contactSubmit: 'Send it over',
+    ctaWatch: 'Cut to: Watch',
+    ctaWrite: 'Write to',
+    queuedLine: '(not shot yet)',
+    liveLine: 'Play the short.',
+  },
   email: 'hello@hameli.io',
   siteUrl: 'https://hameli.io',
   socials: {
@@ -64,7 +85,7 @@ export const hameli = {
       title: 'Hameli site',
       type: 'site',
       canShow: 'yes',
-      notes: 'This site — learn-first desk notes + contact.',
+      notes: 'This site — shooting-script look + contact.',
       demoUrl: 'https://hameli.io',
       codeUrl: 'https://github.com/hamz1188/Hameli',
     },
@@ -87,44 +108,51 @@ export const hameli = {
     {
       id: 'ep-01',
       number: 1,
-      title: 'One build, one decision I’d change',
-      lesson: '60s VO over a finished piece — natural desk + screen.',
+      title: 'The Decision I’d Take Back',
+      lesson: 'Sixty seconds over a finished build, talking through the one call I’d make differently now.',
+      slugline: 'INT. DESK — DAY',
       status: 'upcoming' as EpisodeStatus,
     },
     {
       id: 'ep-02',
       number: 2,
-      title: 'Ugly section → fixed',
-      lesson: 'Screen record the fix; voiceover the why.',
+      title: 'The Ugly Section',
+      lesson: 'A screen recording of one bad-looking part getting fixed, with the reasoning said out loud.',
+      slugline: 'INT. SCREEN — CONTINUOUS',
       status: 'upcoming' as EpisodeStatus,
     },
     {
       id: 'ep-03',
       number: 3,
-      title: 'What I ask before I start',
-      lesson: 'Client-path short: the questions that save a project.',
+      title: 'Questions Before Frame One',
+      lesson: 'The handful of things I ask before anything gets built — the ones that save the project.',
+      slugline: 'INT. BRIEFING — DAY',
       status: 'upcoming' as EpisodeStatus,
     },
     {
       id: 'ep-04',
       number: 4,
-      title: 'Brief → live, speed cut',
-      lesson: 'One landing-page arc in under 90 seconds.',
+      title: 'Brief to Live',
+      lesson: 'One landing page from an empty brief to a live URL, cut down to under ninety seconds.',
+      slugline: 'INT. BUILD — DAY',
       status: 'upcoming' as EpisodeStatus,
     },
   ] as Episode[],
   filmSteps: [
     {
-      title: 'Natural desk cam',
-      body: 'Phone propped while you work. Imperfect light and ambient sound are OK.',
+      title: 'Desk cam',
+      slugline: 'INT. DESK — DAY',
+      body: 'A phone propped against a mug while the real work happens. The light is whatever the room gives, and the sound is the room too. Nothing is set-dressed and nothing is performed.',
     },
     {
       title: 'Screen record',
-      body: 'Capture the real session — design, code, or edit timeline.',
+      slugline: 'INT. SCREEN — CONTINUOUS',
+      body: 'The actual session — a design file, a code editor, an edit timeline — recorded as it runs. Private windows are closed before the record button, not after.',
     },
     {
       title: 'Voiceover',
-      body: 'A few bullets same day. Shorts first (30–90s); longer cut only if it earns it.',
+      slugline: 'INT. VOICEOVER — LATER',
+      body: 'A few bullets, read the same day, before the reason for the decision fades. Shorts first, thirty to ninety seconds. A longer cut only when the arc earns it.',
     },
   ] as FilmStep[],
 };

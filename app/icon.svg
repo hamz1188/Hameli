@@ -1,13 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" fill="#efece4"/>
+  <rect width="32" height="32" fill="#f3efe4"/>
   <text
     x="16"
     y="22"
     text-anchor="middle"
-    font-family="Georgia, 'Times New Roman', serif"
+    font-family="Courier Prime, Courier New, Courier, monospace"
     font-size="18"
-    font-weight="600"
-    fill="#141311"
+    font-weight="700"
+    fill="#1a1916"
   >H</text>
-  <rect x="6" y="26" width="20" height="1" fill="#556345"/>
 </svg>

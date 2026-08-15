@@ -1,8 +1,8 @@
-# Film — Made in public
+# Film — Working title
 
 Shorts-first. Voiceover. Natural filming. Ship; don’t build a gear bible.
 
-**Series name:** Made in public  
+**Series name:** Working title  
 **Primary cut:** 30–90s (IG Reel / YouTube Short)  
 **Secondary:** longer cut only if the same session has a clear arc
 
@@ -33,10 +33,10 @@ Shorts-first. Voiceover. Natural filming. Ship; don’t build a gear bible.
 
 | # | Title | Hook | Pillar |
 |---|-------|------|--------|
-| 1 | One build, one decision I’d change | “Here’s the call I’d undo on this site.” | Portfolio |
-| 2 | Ugly section → fixed | “Watch this block go from broken to clear.” | Process |
-| 3 | What I ask before I start | “Three questions that save the project.” | Client-path |
-| 4 | Brief → live, speed cut | “Landing page arc in under 90 seconds.” | Process |
+| 1 | The Decision I’d Take Back | “Here’s the call I’d undo on this site.” | Portfolio |
+| 2 | The Ugly Section | “Watch this block go from broken to clear.” | Process |
+| 3 | Questions Before Frame One | “Three questions that save the project.” | Client-path |
+| 4 | Brief to Live | “Landing page arc in under 90 seconds.” | Process |
 | 5 | Before / after screen flow | “Same app, clearer path.” | Portfolio |
 | 6 | Mistake I fixed this week | “I shipped this wrong — here’s the repair.” | Process |
 | 7 | Tools on my desk today | “Only what I actually opened.” | Process |
@@ -44,7 +44,7 @@ Shorts-first. Voiceover. Natural filming. Ship; don’t build a gear bible.
 
 ## Short 01 shoot card (start here)
 
-**Title:** One build, one decision I’d change  
+**Title:** The Decision I’d Take Back  
 **Length target:** 45–75s  
 **Goal:** Trust + natural process — not a portfolio sales reel.
 

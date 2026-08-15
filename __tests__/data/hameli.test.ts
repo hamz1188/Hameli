@@ -4,6 +4,7 @@ import { portfolioData } from '../../app/data/portfolio';
 describe('hameli data completeness', () => {
   it('has core identity fields', () => {
     expect(hameli.brand).toBe('Hameli');
+    expect(hameli.seriesName).toBe('Working title');
     expect(hameli.email).toBe('hello@hameli.io');
     expect(hameli.siteUrl).toBe('https://hameli.io');
     expect(hameli.socials.github).toContain('github.com');
@@ -25,8 +26,9 @@ describe('hameli data completeness', () => {
     expect(portfolioData.personalInfo.email).toBe(hameli.email);
   });
 
-  it('queues four Made in public shorts', () => {
+  it('queues four Working title shorts with sluglines', () => {
     expect(hameli.episodes).toHaveLength(4);
     expect(hameli.episodes.every((e) => e.status === 'upcoming')).toBe(true);
+    expect(hameli.episodes.every((e) => e.slugline.startsWith('INT.'))).toBe(true);
   });
 });

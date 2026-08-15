@@ -4,7 +4,7 @@ Pillars, cadence, backlog, inventory, posted log. Shorts-first. Don’t spawn ne
 
 ## Series
 
-**Made in public** — natural desk filming + screen + voiceover. See FILM.md.
+**Working title** — desk filming + screen + voiceover. See FILM.md.
 
 ## Pillars (3 only)
 
@@ -27,10 +27,10 @@ No fourth pillar until each has **at least 2 posts**.
 
 | # | Idea | Pillar | Notes |
 |---|------|--------|-------|
-| 1 | One build, one decision I’d change | Portfolio | **Short 01** — Desert Survivors or Fitness Tracker |
-| 2 | Ugly section → fixed | Process | Short 02 |
-| 3 | What I ask before I start | Client-path | Short 03 |
-| 4 | Brief → live, speed cut | Process | Short 04 |
+| 1 | The Decision I’d Take Back | Portfolio | **Short 01** — Desert Survivors or Fitness Tracker |
+| 2 | The Ugly Section | Process | Short 02 |
+| 3 | Questions Before Frame One | Client-path | Short 03 |
+| 4 | Brief to Live | Process | Short 04 |
 | 5 | Before / after screen flow | Portfolio | Short 05 |
 | 6 | Mistake I fixed this week | Process | Short 06 |
 | 7 | Tools on my desk today | Process | Short 07 — natural filming friendly |

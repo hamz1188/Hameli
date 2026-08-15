@@ -1,7 +1,7 @@
 {
   "name": "hameli",
   "version": "1.0.0",
-  "description": "Hameli — learn-in-public site and Made in public shorts studio",
+  "description": "Hameli — Working title. Short films from the desk: sites, apps, video.",
   "private": true,
   "scripts": {
     "dev": "next dev",

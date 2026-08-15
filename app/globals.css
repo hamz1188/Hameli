@@ -1,98 +1,98 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: 'Fraunces', Georgia, serif;
-  --font-sans: 'Newsreader', 'Times New Roman', serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-serif: var(--font-courier), 'Courier New', Courier, monospace;
+  --font-sans: var(--font-courier), 'Courier New', Courier, monospace;
+  --font-mono: var(--font-courier), 'Courier New', Courier, monospace;
 
-  --space-section: clamp(72px, 11vw, 140px);
-  --space-element: clamp(28px, 5vw, 64px);
+  --space-section: clamp(64px, 10vw, 120px);
+  --space-element: clamp(24px, 4vw, 48px);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
-  --container-padding: clamp(20px, 5vw, 72px);
-  --content-width: 72rem;
+  --container-padding: clamp(20px, 5vw, 48px);
+  --content-width: 42rem;
   --rule: 1px solid var(--color-rule);
 }
 
-/* Desk paper — field notes, not agency portfolio */
+/* Shooting script — paper, ink, Courier. No editorial serif. */
 :root {
-  --color-background: #efece4;
-  --color-background-light: #f7f5ef;
-  --color-desk: #e4dfd3;
-  --color-ink: #141311;
-  --color-ink-soft: #3d3b36;
-  --color-ink-faint: #7a776e;
-  --color-rule: rgba(20, 19, 17, 0.14);
-  --color-rule-strong: rgba(20, 19, 17, 0.28);
-  --color-olive: #556345;
-  --color-olive-deep: #3d4a30;
-  --color-screen: #1c1b19;
-  --color-screen-glow: rgba(180, 190, 160, 0.18);
+  --color-background: #f3efe4;
+  --color-background-light: #faf7ef;
+  --color-desk: #ebe6d8;
+  --color-ink: #1a1916;
+  --color-ink-soft: #3f3d38;
+  --color-ink-faint: #7a776f;
+  --color-rule: rgba(26, 25, 22, 0.16);
+  --color-rule-strong: rgba(26, 25, 22, 0.32);
+  --color-olive: #1a1916;
+  --color-olive-deep: #1a1916;
+  --color-screen: #1a1916;
+  --color-screen-glow: rgba(26, 25, 22, 0.08);
 
   --color-foreground: var(--color-ink);
   --color-foreground-muted: var(--color-ink-soft);
   --color-foreground-subtle: var(--color-ink-faint);
-  --color-accent: var(--color-olive);
-  --color-accent-dark: var(--color-olive-deep);
-  --color-accent-glow: rgba(85, 99, 69, 0.14);
+  --color-accent: var(--color-ink);
+  --color-accent-dark: var(--color-ink);
+  --color-accent-glow: rgba(26, 25, 22, 0.08);
   --color-border: var(--color-rule);
   --color-border-strong: var(--color-rule-strong);
   --color-error: #8b3a3a;
   --color-background-elevated: var(--color-desk);
-  --color-surface: #d9d3c4;
+  --color-surface: #e4dfd0;
 }
 
 .dark,
 html[data-theme="dark"] {
-  --color-background: #141311;
-  --color-background-light: #1c1a16;
-  --color-desk: #222019;
-  --color-ink: #f3f0e8;
-  --color-ink-soft: #b5b1a6;
-  --color-ink-faint: #7f7b72;
-  --color-rule: rgba(243, 240, 232, 0.12);
-  --color-rule-strong: rgba(243, 240, 232, 0.22);
-  --color-olive: #a3b484;
-  --color-olive-deep: #819266;
+  --color-background: #12110e;
+  --color-background-light: #1b1a16;
+  --color-desk: #1b1a16;
+  --color-ink: #efebe0;
+  --color-ink-soft: #c4bfb2;
+  --color-ink-faint: #8a857a;
+  --color-rule: rgba(239, 235, 224, 0.14);
+  --color-rule-strong: rgba(239, 235, 224, 0.28);
+  --color-olive: #efebe0;
+  --color-olive-deep: #efebe0;
   --color-screen: #0c0b0a;
-  --color-screen-glow: rgba(163, 180, 132, 0.12);
+  --color-screen-glow: rgba(239, 235, 224, 0.08);
   --color-foreground: var(--color-ink);
   --color-foreground-muted: var(--color-ink-soft);
   --color-foreground-subtle: var(--color-ink-faint);
-  --color-accent: var(--color-olive);
-  --color-accent-dark: var(--color-olive-deep);
-  --color-accent-glow: rgba(163, 180, 132, 0.14);
+  --color-accent: var(--color-ink);
+  --color-accent-dark: var(--color-ink);
+  --color-accent-glow: rgba(239, 235, 224, 0.08);
   --color-border: var(--color-rule);
   --color-border-strong: var(--color-rule-strong);
   --color-background-elevated: var(--color-desk);
-  --color-surface: #2e2b24;
+  --color-surface: #2a2822;
   --color-error: #d08888;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not(.light):not(.dark) {
-    --color-background: #141311;
-    --color-background-light: #1c1a16;
-    --color-desk: #222019;
-    --color-ink: #f3f0e8;
-    --color-ink-soft: #b5b1a6;
-    --color-ink-faint: #7f7b72;
-    --color-rule: rgba(243, 240, 232, 0.12);
-    --color-rule-strong: rgba(243, 240, 232, 0.22);
-    --color-olive: #a3b484;
-    --color-olive-deep: #819266;
+    --color-background: #12110e;
+    --color-background-light: #1b1a16;
+    --color-desk: #1b1a16;
+    --color-ink: #efebe0;
+    --color-ink-soft: #c4bfb2;
+    --color-ink-faint: #8a857a;
+    --color-rule: rgba(239, 235, 224, 0.14);
+    --color-rule-strong: rgba(239, 235, 224, 0.28);
+    --color-olive: #efebe0;
+    --color-olive-deep: #efebe0;
     --color-screen: #0c0b0a;
-    --color-screen-glow: rgba(163, 180, 132, 0.12);
+    --color-screen-glow: rgba(239, 235, 224, 0.08);
     --color-foreground: var(--color-ink);
     --color-foreground-muted: var(--color-ink-soft);
     --color-foreground-subtle: var(--color-ink-faint);
-    --color-accent: var(--color-olive);
-    --color-accent-dark: var(--color-olive-deep);
-    --color-accent-glow: rgba(163, 180, 132, 0.14);
+    --color-accent: var(--color-ink);
+    --color-accent-dark: var(--color-ink);
+    --color-accent-glow: rgba(239, 235, 224, 0.08);
     --color-border: var(--color-rule);
     --color-border-strong: var(--color-rule-strong);
     --color-background-elevated: var(--color-desk);
-    --color-surface: #2e2b24;
+    --color-surface: #2a2822;
     --color-error: #d08888;
   }
 }
@@ -106,13 +106,16 @@ body {
   color: var(--color-foreground);
   font-family: var(--font-sans);
   font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
 ::selection {
-  background: var(--color-olive);
-  color: var(--color-background-light);
+  background: var(--color-ink);
+  color: var(--color-background);
 }
 
 .font-serif { font-family: var(--font-serif); }
@@ -120,55 +123,53 @@ body {
 .font-mono { font-family: var(--font-mono); }
 
 .text-hero {
-  font-family: var(--font-serif);
-  font-size: clamp(4.5rem, 16vw, 11rem);
-  font-weight: 400;
-  line-height: 0.88;
-  letter-spacing: -0.045em;
-  font-variation-settings: 'SOFT' 35, 'WONK' 1, 'opsz' 144;
+  font-family: var(--font-sans);
+  font-size: clamp(2.4rem, 7vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .text-section {
-  font-family: var(--font-serif);
-  font-size: clamp(2.25rem, 5vw, 3.75rem);
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  font-variation-settings: 'SOFT' 25, 'WONK' 0.5, 'opsz' 72;
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .text-lede {
   font-family: var(--font-sans);
-  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 1.45;
-  letter-spacing: -0.01em;
+  line-height: 1.6;
 }
 
 .text-body {
-  font-size: 1.0625rem;
-  line-height: 1.65;
-}
-
-.text-marginalia {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .text-label {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .shell {
   width: min(100% - (var(--container-padding) * 2), var(--content-width));
   margin-inline: auto;
+}
+
+.script-page {
+  width: min(100% - (var(--container-padding) * 2), 42rem);
+  margin-inline: auto;
+  position: relative;
 }
 
 .section-pad {
@@ -181,40 +182,69 @@ body {
   margin: 0;
 }
 
+.slugline {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.character {
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-inline: auto;
+  max-width: 22rem;
+}
+
+.dialogue {
+  max-width: 22rem;
+  margin-inline: auto;
+  text-align: left;
+}
+
+.transition-line {
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
 .btn-ink {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.95rem 1.4rem;
-  background: var(--color-ink);
-  color: var(--color-background);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
+  padding: 0.65rem 0;
+  background: transparent;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   border-radius: 0;
-  transition: background 0.25s var(--ease-out-quart), transform 0.25s var(--ease-out-quart);
+  border-bottom: 1px solid var(--color-ink);
+  transition: opacity 0.2s var(--ease-out-quart);
 }
 
 .btn-ink:hover {
-  background: var(--color-olive);
+  opacity: 0.55;
 }
 
 .btn-ghost {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 500;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 400;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-ink-soft);
   border-bottom: 1px solid var(--color-rule-strong);
-  padding-bottom: 0.2rem;
-  transition: color 0.25s var(--ease-out-quart), border-color 0.25s var(--ease-out-quart);
+  padding-bottom: 0.15rem;
+  transition: color 0.2s var(--ease-out-quart), border-color 0.2s var(--ease-out-quart);
 }
 
 .btn-ghost:hover {
@@ -223,19 +253,8 @@ body {
 }
 
 .nav-scrolled {
-  background: color-mix(in srgb, var(--color-background) 94%, transparent);
-  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--color-background) 96%, transparent);
   border-bottom: 1px solid var(--color-rule);
-}
-
-/* Lined paper utility for notes / form */
-.paper-lines {
-  background-image: repeating-linear-gradient(
-    transparent,
-    transparent 1.65rem,
-    var(--color-rule) 1.65rem,
-    var(--color-rule) calc(1.65rem + 1px)
-  );
 }
 
 @keyframes draw-rule {

@@ -15,7 +15,7 @@ describe('HeroSection', () => {
 
   it('renders watch and contact CTAs', () => {
     render(<HeroSection />);
-    expect(screen.getByRole('link', { name: /Watch shorts/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /Ask me to build/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Cut to: Watch/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Write to:/i })).toBeInTheDocument();
   });
 });

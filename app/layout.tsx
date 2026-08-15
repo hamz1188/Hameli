@@ -1,44 +1,31 @@
 import type { Metadata } from 'next';
-import { Fraunces, Newsreader, IBM_Plex_Mono } from 'next/font/google';
+import { Courier_Prime } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from './components/ThemeProvider';
 import { Navigation } from './components/Navigation';
 import { SmoothScrollProvider } from './components/SmoothScrollProvider';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-const newsreader = Newsreader({
+const courier = Courier_Prime({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-sans',
+  weight: ['400', '700'],
   style: ['normal', 'italic'],
-});
-
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-serif',
-  axes: ['SOFT', 'WONK', 'opsz'],
-});
-
-const plexMono = IBM_Plex_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '500'],
-  variable: '--font-mono',
+  variable: '--font-courier',
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://hameli.io'),
   title: {
-    default: 'Hameli — Made in public',
+    default: 'Hameli — Working title',
     template: '%s · Hameli',
   },
   description:
-    'Shorts with voiceover from real desk work: websites, apps, and video. Learn how it’s made — ask when you need something built.',
+    'Short films from the desk where the work happens: websites, apps, and video. Watch how it’s made, and write when you need something built.',
   applicationName: 'Hameli',
   authors: [{ name: 'Ahmed Ali', url: 'https://hameli.io' }],
   creator: 'Ahmed Ali',
-  keywords: ['Hameli', 'Made in public', 'websites', 'apps', 'video', 'Abu Dhabi'],
+  keywords: ['Hameli', 'Working title', 'websites', 'apps', 'video', 'Abu Dhabi'],
   alternates: {
     canonical: '/',
     types: { 'application/rss+xml': '/feed.xml' },
@@ -48,15 +35,15 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://hameli.io',
     siteName: 'Hameli',
-    title: 'Hameli — Made in public',
+    title: 'Hameli — Working title',
     description:
-      'Shorts with voiceover from real desk work: websites, apps, and video. Learn how it’s made — ask when you need something built.',
+      'Short films from the desk where the work happens: websites, apps, and video. Watch how it’s made, and write when you need something built.',
   },
   twitter: {
     card: 'summary',
-    title: 'Hameli — Made in public',
+    title: 'Hameli — Working title',
     description:
-      'Shorts with voiceover from real desk work: websites, apps, and video.',
+      'Short films from the desk where the work happens: websites, apps, and video.',
   },
   icons: {
     icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
@@ -66,12 +53,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${newsreader.variable} ${fraunces.variable} ${plexMono.variable}`}
-    >
-      <body className="bg-[var(--color-background)] text-[var(--color-foreground)] antialiased overflow-x-hidden">
+    <html lang="en" suppressHydrationWarning className={courier.variable}>
+      <body className="bg-[var(--color-background)] text-[var(--color-foreground)] antialiased overflow-x-hidden font-sans">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <SmoothScrollProvider>
             <Navigation />

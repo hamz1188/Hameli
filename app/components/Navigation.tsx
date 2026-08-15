@@ -17,7 +17,7 @@ export function Navigation() {
   const items = [
     { label: 'Watch', href: '#watch' },
     { label: 'Method', href: '#learn' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Write', href: '#contact' },
   ];
 
   return (
@@ -27,12 +27,12 @@ export function Navigation() {
           scrolled ? 'nav-scrolled py-3' : 'py-5'
         }`}
       >
-        <div className="shell flex items-center justify-between">
-          <Link href="/" className="font-serif text-lg tracking-tight" style={{ fontVariationSettings: "'SOFT' 30" }}>
-            {hameli.brand}
+        <div className="script-page flex items-baseline justify-between gap-4">
+          <Link href="/" className="slugline text-sm">
+            {hameli.brand}.
           </Link>
 
-          <div className="hidden md:flex items-center gap-9">
+          <div className="hidden md:flex items-baseline gap-8">
             {items.map((item) => (
               <a
                 key={item.href}
@@ -42,7 +42,7 @@ export function Navigation() {
                 {item.label}
               </a>
             ))}
-            <a href={`mailto:${hameli.email}`} className="btn-ghost">
+            <a href={`mailto:${hameli.email}`} className="text-label text-[var(--color-ink-faint)] hover:text-[var(--color-ink)]">
               {hameli.email}
             </a>
           </div>
@@ -70,7 +70,7 @@ export function Navigation() {
             key={item.href}
             href={item.href}
             onClick={() => setOpen(false)}
-            className="text-section"
+            className="slugline text-xl"
           >
             {item.label}
           </a>

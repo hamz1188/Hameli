@@ -40,67 +40,68 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="section-pad">
-      <div className="shell grid lg:grid-cols-[minmax(0,14rem)_1fr] gap-8 lg:gap-12">
-        <p className="text-label text-[var(--color-olive)] pt-2">Contact</p>
+      <div className="script-page">
+        <p className="transition-line mb-10">Fade out.</p>
+        <h2 className="text-section mb-4">{hameli.copy.contactHeading}</h2>
+        <p className="character mt-10 font-normal tracking-wide text-[var(--color-ink-faint)]">
+          {hameli.copy.ctaWrite}:
+        </p>
+        <a href={`mailto:${hameli.email}`} className="character mt-1 block text-[var(--color-ink)]">
+          {hameli.email}
+        </a>
+        <p className="dialogue mt-8 text-[var(--color-ink-soft)]">
+          {hameli.copy.contactBody}
+        </p>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          <div>
-            <h2 className="text-section max-w-sm">Need something built?</h2>
-            <p className="mt-5 text-lede text-[var(--color-ink-soft)] max-w-md">
-              Websites, apps, video. Write like a note — short is better.
-            </p>
-            <a href={`mailto:${hameli.email}`} className="btn-ghost mt-8 inline-flex">
-              {hameli.email}
-            </a>
+        <form onSubmit={onSubmit} className="mt-14">
+          <label className="block mb-8">
+            <span className="character block text-sm font-normal tracking-wide text-[var(--color-ink-faint)]">
+              Name
+            </span>
+            <input
+              name="name"
+              required
+              autoComplete="name"
+              className="mt-2 w-full bg-transparent border-0 border-b border-[var(--color-rule-strong)] py-2 outline-none focus:border-[var(--color-ink)] font-sans"
+            />
+          </label>
+          <label className="block mb-8">
+            <span className="character block text-sm font-normal tracking-wide text-[var(--color-ink-faint)]">
+              Email
+            </span>
+            <input
+              name="email"
+              type="email"
+              required
+              autoComplete="email"
+              className="mt-2 w-full bg-transparent border-0 border-b border-[var(--color-rule-strong)] py-2 outline-none focus:border-[var(--color-ink)] font-sans"
+            />
+          </label>
+          <label className="block mb-10">
+            <span className="character block text-sm font-normal tracking-wide text-[var(--color-ink-faint)]">
+              {hameli.copy.contactMessageLabel}
+            </span>
+            <textarea
+              name="message"
+              required
+              rows={4}
+              className="mt-2 w-full bg-transparent border-0 border-b border-[var(--color-rule-strong)] py-2 outline-none focus:border-[var(--color-ink)] font-sans resize-y min-h-[7rem]"
+            />
+          </label>
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <button type="submit" disabled={status === 'sending'} className="btn-ink disabled:opacity-60">
+                {status === 'sending' ? 'Sending…' : hameli.copy.contactSubmit}
+            </button>
+            {status === 'sent' && (
+              <span className="text-sm text-[var(--color-ink-soft)]">
+                {formspreeId ? 'Sent.' : 'Opening mail…'}
+              </span>
+            )}
+            {status === 'error' && (
+              <span className="text-sm text-[var(--color-error)]">Try {hameli.email}</span>
+            )}
           </div>
-
-          <form
-            onSubmit={onSubmit}
-            className="border border-[var(--color-rule)] bg-[var(--color-background-light)] p-6 md:p-8"
-          >
-            <label className="block mb-6">
-              <span className="text-label text-[var(--color-ink-faint)]">Name</span>
-              <input
-                name="name"
-                required
-                autoComplete="name"
-                className="mt-2 w-full bg-transparent border-0 border-b border-[var(--color-rule-strong)] py-2 outline-none focus:border-[var(--color-olive)] font-sans text-lg"
-              />
-            </label>
-            <label className="block mb-6">
-              <span className="text-label text-[var(--color-ink-faint)]">Email</span>
-              <input
-                name="email"
-                type="email"
-                required
-                autoComplete="email"
-                className="mt-2 w-full bg-transparent border-0 border-b border-[var(--color-rule-strong)] py-2 outline-none focus:border-[var(--color-olive)] font-sans text-lg"
-              />
-            </label>
-            <label className="block mb-8">
-              <span className="text-label text-[var(--color-ink-faint)]">What do you need?</span>
-              <textarea
-                name="message"
-                required
-                rows={4}
-                className="mt-2 w-full bg-transparent border-0 border-b border-[var(--color-rule-strong)] py-2 outline-none focus:border-[var(--color-olive)] font-sans text-lg resize-y min-h-[7rem] leading-[1.65rem]"
-              />
-            </label>
-            <div className="flex flex-wrap items-center gap-4">
-              <button type="submit" disabled={status === 'sending'} className="btn-ink disabled:opacity-60">
-                {status === 'sending' ? 'Sending…' : 'Send note'}
-              </button>
-              {status === 'sent' && (
-                <span className="text-sm text-[var(--color-ink-soft)]">
-                  {formspreeId ? 'Sent.' : 'Opening mail…'}
-                </span>
-              )}
-              {status === 'error' && (
-                <span className="text-sm text-[var(--color-error)]">Try {hameli.email}</span>
-              )}
-            </div>
-          </form>
-        </div>
+        </form>
       </div>
     </section>
   );

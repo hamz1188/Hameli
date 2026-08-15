@@ -88,7 +88,7 @@ export const portfolioData = {
     {
       title: 'Hameli',
       description:
-        'Learn-first studio site — Made in public shorts, how it’s filmed, calm contact.',
+        'Studio site — Working title shorts, how they’re filmed, a quiet way to write.',
       tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'GSAP'],
       color: 'from-olive-500 to-stone-600',
       image: '/images/projects/portfolio/portfolio.png',
