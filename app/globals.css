@@ -232,6 +232,30 @@ body,
   position: relative;
 }
 
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  margin-left: calc(-1 * var(--sheet-pad-left));
+  margin-right: calc(-1 * var(--sheet-pad-right));
+  padding-left: var(--sheet-pad-left);
+  padding-right: var(--sheet-pad-right);
+}
+
+.nav-scrolled::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: color-mix(in srgb, var(--color-paper) 96%, var(--color-desk));
+  border-bottom: 1px solid var(--color-rule);
+  pointer-events: none;
+  z-index: -1;
+}
+
 .section-pad {
   padding-block: var(--space-section);
   scroll-margin-top: 4.5rem;
@@ -372,19 +396,16 @@ body,
   border-color: var(--color-ink);
 }
 
-.nav-scrolled {
-  background: color-mix(in srgb, var(--color-paper) 92%, transparent);
-  border-bottom: 1px solid var(--color-rule);
-}
-
 /* --- Physical page --- */
 
 .script-sheet {
+  --sheet-pad-left: clamp(2.6rem, 8vw, 3.6rem);
+  --sheet-pad-right: 1.5rem;
   position: relative;
   width: min(100% - 1.5rem, 54rem);
   min-height: 100svh;
   margin: 0 auto;
-  padding: 0 1.5rem 3rem clamp(2.6rem, 8vw, 3.6rem);
+  padding: 0 var(--sheet-pad-right) 3rem var(--sheet-pad-left);
   background-color: var(--color-paper);
   background-image:
     repeating-linear-gradient(
@@ -570,8 +591,10 @@ html[data-theme="dark"] .script-sheet::after {
 
 @media (max-width: 640px) {
   .script-sheet {
+    --sheet-pad-left: 2.85rem;
+    --sheet-pad-right: 1.5rem;
     width: 100%;
-    padding: 0 1.5rem 3.25rem 2.85rem;
+    padding: 0 var(--sheet-pad-right) 3.25rem var(--sheet-pad-left);
   }
 
   .section-pad {
