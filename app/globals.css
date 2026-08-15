@@ -6,9 +6,9 @@
   --font-sans: 'Sora', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Spacing Scale */
-  --space-section: clamp(100px, 18vw, 240px);
-  --space-element: clamp(48px, 10vw, 120px);
+  /* Spacing — tighter editorial (Direction A) */
+  --space-section: clamp(64px, 10vw, 120px);
+  --space-element: clamp(32px, 6vw, 72px);
 
   /* Animation Timing */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -17,120 +17,100 @@
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
   /* Layout */
-  --container-padding: clamp(24px, 6vw, 100px);
+  --container-padding: clamp(20px, 4vw, 64px);
 
-  /* Shadows - Light Mode */
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.12);
-  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.16);
-  --shadow-xl: 0 40px 80px -20px rgba(0, 0, 0, 0.2);
-  --shadow-glow: 0 0 60px rgba(8, 145, 178, 0.12);
+  /* Shadows — quiet, paper-like */
+  --shadow-sm: 0 1px 2px rgba(26, 25, 23, 0.04);
+  --shadow-md: 0 8px 24px rgba(26, 25, 23, 0.06);
+  --shadow-lg: 0 16px 40px rgba(26, 25, 23, 0.08);
+  --shadow-xl: 0 24px 48px rgba(26, 25, 23, 0.1);
+  --shadow-glow: none;
 }
 
 /* ========================================
-   ARCTIC PRECISION COLOR SYSTEM
-   Auto-switches based on system preference
+   DESK PAPER COLOR SYSTEM
+   Field notes / documentary — not tech cyan
    ======================================== */
 
-/* Light Mode (Default) */
 :root {
-  /* Backgrounds - Stone-based warm neutrals */
-  --color-background: #fafaf9;
-  --color-background-light: #ffffff;
-  --color-background-elevated: #f5f5f4;
-  --color-surface: #e7e5e4;
+  /* Paper */
+  --color-background: #f4f3ee;
+  --color-background-light: #fafaf7;
+  --color-background-elevated: #ebe8e0;
+  --color-surface: #e2dfd6;
 
-  /* Foreground - Warm charcoals */
-  --color-foreground: #1c1917;
-  --color-foreground-muted: #57534e;
-  --color-foreground-subtle: #78716c;
+  /* Ink */
+  --color-foreground: #1a1917;
+  --color-foreground-muted: #5c5a55;
+  --color-foreground-subtle: #8a8780;
 
-  /* Arctic Cyan Accent */
-  --color-accent: #0891b2;
-  --color-accent-light: #06b6d4;
-  --color-accent-dark: #0e7490;
-  --color-accent-glow: rgba(8, 145, 178, 0.15);
+  /* Muted olive accent */
+  --color-accent: #5f6b4a;
+  --color-accent-light: #7a8762;
+  --color-accent-dark: #454e36;
+  --color-accent-glow: rgba(95, 107, 74, 0.12);
 
   /* Borders */
-  --color-border: rgba(28, 25, 23, 0.08);
-  --color-border-strong: rgba(28, 25, 23, 0.15);
+  --color-border: rgba(26, 25, 23, 0.1);
+  --color-border-strong: rgba(26, 25, 23, 0.18);
 
-  /* Semantic Colors */
-  --color-success: #059669;
-  --color-warning: #d97706;
-  --color-error: #dc2626;
-  --color-info: #0891b2;
+  /* Semantic */
+  --color-success: #4d6b4a;
+  --color-warning: #9a7b3c;
+  --color-error: #8f3d3d;
+  --color-info: #5f6b4a;
 }
 
-/* Dark Mode - Class-based (next-themes) + system fallback */
 .dark,
 html[data-theme="dark"] {
-  /* Backgrounds - Deep warm blacks */
-  --color-background: #0c0a09;
-  --color-background-light: #1c1917;
-  --color-background-elevated: #292524;
-  --color-surface: #44403c;
+  /* Night desk — still paper, not neon */
+  --color-background: #161512;
+  --color-background-light: #1e1c18;
+  --color-background-elevated: #2a2722;
+  --color-surface: #3a3630;
 
-  /* Foreground - Pure whites with warm muted tones */
-  --color-foreground: #fafaf9;
-  --color-foreground-muted: #a8a29e;
-  --color-foreground-subtle: #78716c;
+  --color-foreground: #f2f0e9;
+  --color-foreground-muted: #a8a59c;
+  --color-foreground-subtle: #7a776f;
 
-  /* Arctic Cyan Accent - Brighter for dark mode */
-  --color-accent: #22d3ee;
-  --color-accent-light: #67e8f9;
-  --color-accent-dark: #06b6d4;
-  --color-accent-glow: rgba(34, 211, 238, 0.2);
+  --color-accent: #9aab7c;
+  --color-accent-light: #b5c49a;
+  --color-accent-dark: #7a8a5e;
+  --color-accent-glow: rgba(154, 171, 124, 0.15);
 
-  /* Borders */
-  --color-border: rgba(250, 250, 249, 0.08);
-  --color-border-strong: rgba(250, 250, 249, 0.15);
+  --color-border: rgba(242, 240, 233, 0.1);
+  --color-border-strong: rgba(242, 240, 233, 0.18);
 
-  /* Semantic Colors - Adjusted for dark */
-  --color-success: #34d399;
-  --color-warning: #fbbf24;
-  --color-error: #f87171;
-  --color-info: #22d3ee;
+  --color-success: #8fad7e;
+  --color-warning: #c4a35a;
+  --color-error: #c47a7a;
+  --color-info: #9aab7c;
 }
 
-/* System preference fallback (when no class is set) */
 @media (prefers-color-scheme: dark) {
   :root:not(.light):not(.dark) {
-    /* Backgrounds - Deep warm blacks */
-    --color-background: #0c0a09;
-    --color-background-light: #1c1917;
-    --color-background-elevated: #292524;
-    --color-surface: #44403c;
-
-    /* Foreground - Pure whites with warm muted tones */
-    --color-foreground: #fafaf9;
-    --color-foreground-muted: #a8a29e;
-    --color-foreground-subtle: #78716c;
-
-    /* Arctic Cyan Accent - Brighter for dark mode */
-    --color-accent: #22d3ee;
-    --color-accent-light: #67e8f9;
-    --color-accent-dark: #06b6d4;
-    --color-accent-glow: rgba(34, 211, 238, 0.2);
-
-    /* Borders */
-    --color-border: rgba(250, 250, 249, 0.08);
-    --color-border-strong: rgba(250, 250, 249, 0.15);
-
-    /* Semantic Colors - Adjusted for dark */
-    --color-success: #34d399;
-    --color-warning: #fbbf24;
-    --color-error: #f87171;
-    --color-info: #22d3ee;
+    --color-background: #161512;
+    --color-background-light: #1e1c18;
+    --color-background-elevated: #2a2722;
+    --color-surface: #3a3630;
+    --color-foreground: #f2f0e9;
+    --color-foreground-muted: #a8a59c;
+    --color-foreground-subtle: #7a776f;
+    --color-accent: #9aab7c;
+    --color-accent-light: #b5c49a;
+    --color-accent-dark: #7a8a5e;
+    --color-accent-glow: rgba(154, 171, 124, 0.15);
+    --color-border: rgba(242, 240, 233, 0.1);
+    --color-border-strong: rgba(242, 240, 233, 0.18);
+    --color-success: #8fad7e;
+    --color-warning: #c4a35a;
+    --color-error: #c47a7a;
+    --color-info: #9aab7c;
   }
 }
 
-/* ========================================
-   BASE STYLES
-   ======================================== */
-
 html {
-  scroll-behavior: auto; /* Let Lenis handle smooth scroll */
+  scroll-behavior: auto;
 }
 
 body {
@@ -144,13 +124,8 @@ body {
 
 ::selection {
   background-color: var(--color-accent);
-  color: var(--color-background);
+  color: var(--color-background-light);
 }
-
-
-/* ========================================
-   TYPOGRAPHY SYSTEM
-   ======================================== */
 
 .font-serif {
   font-family: var(--font-serif);
@@ -160,88 +135,77 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Hero headline - massive responsive sizing */
+/* Brand hero — strong but not circus-scale */
 .text-hero {
   font-family: var(--font-serif);
-  font-size: clamp(4rem, 14vw, 12rem);
-  font-weight: 300;
-  line-height: 0.85;
-  letter-spacing: -0.04em;
-  font-variation-settings: 'SOFT' 50, 'WONK' 1;
+  font-size: clamp(3.5rem, 11vw, 8rem);
+  font-weight: 350;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+  font-variation-settings: 'SOFT' 40, 'WONK' 0.8;
 }
 
-/* Display text - for giant decorative numbers/text */
 .text-display {
   font-family: var(--font-serif);
-  font-size: clamp(8rem, 25vw, 20rem);
-  font-weight: 200;
-  line-height: 0.8;
-  letter-spacing: -0.05em;
-  font-variation-settings: 'SOFT' 100, 'WONK' 0;
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: 250;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  font-variation-settings: 'SOFT' 80, 'WONK' 0;
 }
 
-/* Section headlines */
+/* Section heads — don’t compete with Hameli */
 .text-section {
   font-family: var(--font-serif);
-  font-size: clamp(3rem, 10vw, 7rem);
-  font-weight: 300;
-  line-height: 0.95;
-  letter-spacing: -0.03em;
-  font-variation-settings: 'SOFT' 50, 'WONK' 1;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  font-variation-settings: 'SOFT' 30, 'WONK' 0.4;
 }
 
-/* Subsection titles */
 .text-title {
   font-family: var(--font-sans);
-  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
   font-weight: 500;
-  line-height: 1.15;
+  line-height: 1.2;
   letter-spacing: -0.02em;
 }
 
-/* Subtitle */
 .text-subtitle {
   font-family: var(--font-sans);
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.55;
   letter-spacing: -0.01em;
 }
 
-/* Body large */
 .text-body-lg {
-  font-size: clamp(1.125rem, 2vw, 1.375rem);
-  line-height: 1.7;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.65;
   font-weight: 400;
 }
 
-/* Body regular */
 .text-body {
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.65;
   font-weight: 400;
 }
 
-/* Label/caption text */
 .text-label {
   font-family: var(--font-sans);
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-/* Small label */
 .text-caption {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.06em;
 }
-
-/* ========================================
-   LAYOUT UTILITIES
-   ======================================== */
 
 .container-padding {
   padding-left: var(--container-padding);
@@ -253,19 +217,49 @@ body {
   padding-bottom: var(--space-section);
 }
 
-/* Full-width with max constraint */
 .container-wide {
-  max-width: 1800px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
 }
 
-/* ========================================
-   ANIMATION UTILITIES
-   ======================================== */
+/* Desk paper buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.5rem;
+  background: var(--color-foreground);
+  color: var(--color-background);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 2px;
+  transition: background 0.25s var(--ease-out-quart), color 0.25s var(--ease-out-quart);
+}
 
-/* Split text animation setup */
+.btn-primary:hover {
+  background: var(--color-accent);
+  color: var(--color-background-light);
+}
+
+.btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-foreground-muted);
+  border-bottom: 1px solid var(--color-border-strong);
+  padding-bottom: 2px;
+  transition: color 0.25s var(--ease-out-quart), border-color 0.25s var(--ease-out-quart);
+}
+
+.btn-text:hover {
+  color: var(--color-foreground);
+  border-color: var(--color-foreground);
+}
+
 .split-word,
 .split-char {
   display: inline-block;
@@ -285,10 +279,9 @@ body {
   opacity: 1;
 }
 
-/* Reveal animations */
 .reveal-up {
   opacity: 0;
-  transform: translateY(60px);
+  transform: translateY(40px);
 }
 
 .reveal-up.revealed {
@@ -303,20 +296,6 @@ body {
 .reveal-fade.revealed {
   opacity: 1;
 }
-
-.reveal-scale {
-  opacity: 0;
-  transform: scale(0.95);
-}
-
-.reveal-scale.revealed {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* ========================================
-   LINK ANIMATIONS
-   ======================================== */
 
 .link-underline {
   position: relative;
@@ -333,7 +312,7 @@ body {
   background: currentColor;
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform 0.5s var(--ease-out-expo);
+  transition: transform 0.45s var(--ease-out-expo);
 }
 
 .link-underline:hover::after {
@@ -341,119 +320,22 @@ body {
   transform-origin: left;
 }
 
-/* Magnetic button effect placeholder */
-.magnetic {
-  transition: transform 0.3s var(--ease-out-expo);
-}
-
-/* ========================================
-   MARQUEE
-   ======================================== */
-
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-@keyframes marquee-reverse {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
-}
-
-@keyframes float {
-  0% { transform: translateY(0) translateX(0); }
-  100% { transform: translateY(-20px) translateX(10px); }
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 30s linear infinite;
-}
-
-.marquee-track.reverse {
-  animation: marquee-reverse 30s linear infinite;
-}
-
-.marquee-track:hover {
-  animation-play-state: paused;
-}
-
-/* ========================================
-   HORIZONTAL SCROLL SECTION
-   ======================================== */
-
-.horizontal-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.horizontal-track {
-  display: flex;
-  gap: 40px;
-  height: 100%;
-  will-change: transform;
-}
-
-.horizontal-item {
-  flex-shrink: 0;
-  width: 70vw;
-  max-width: 900px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-/* ========================================
-   NAVIGATION
-   ======================================== */
-
 .nav-scrolled {
-  background: color-mix(in srgb, var(--color-background) 90%, transparent);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: color-mix(in srgb, var(--color-background) 92%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
 }
-
-/* ========================================
-   GLASSMORPHISM
-   ======================================== */
 
 .glass {
-  background: color-mix(in srgb, var(--color-background-light) 70%, transparent);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: color-mix(in srgb, var(--color-background-light) 85%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--color-border);
 }
 
-/* ========================================
-   VIDEO PLAYER
-   ======================================== */
-
-.video-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.95);
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s var(--ease-out-expo);
-}
-
-.video-overlay.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* ========================================
-   SCROLLBAR
-   ======================================== */
-
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -461,15 +343,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-accent-dark);
-  border-radius: 4px;
+  background: var(--color-surface);
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent);
 }
-
-/* ========================================
-   RESPONSIVE HELPERS
-   ======================================== */
-
