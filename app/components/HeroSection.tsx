@@ -44,9 +44,9 @@ export function HeroSection() {
   const letters = hameli.brand.split('');
 
   return (
-    <section id="hero" ref={ref} className="relative min-h-[100svh] flex flex-col justify-center">
-      <div className="script-page title-page relative py-28 md:py-32">
-        <p className="hero-rest transition-line mb-16">Fade in:</p>
+    <section id="hero" ref={ref} className="relative md:min-h-[100svh] md:flex md:flex-col md:justify-center">
+      <div className="script-page title-page relative py-10 md:py-32">
+        <p className="hero-rest transition-line mb-8 md:mb-16">Fade in:</p>
 
         <h1 className="text-hero text-[var(--color-ink)]" aria-label={hameli.brand}>
           <span className="hero-title">
@@ -59,18 +59,18 @@ export function HeroSection() {
           </span>
         </h1>
 
-        <p className="hero-rest character mt-8 text-[var(--color-ink-soft)] normal-case tracking-normal font-normal italic">
+        <p className="hero-rest character mt-6 md:mt-8 text-[var(--color-ink-soft)] normal-case tracking-normal font-normal italic">
           “<span className="hl hl-yellow">{hameli.seriesName}</span>”
         </p>
         <p className="hero-rest note-hand note-hero-check" aria-hidden="true">
           ✓+
         </p>
 
-        <p className="hero-rest mt-16 text-center text-[var(--color-ink-faint)]">written by</p>
+        <p className="hero-rest mt-10 md:mt-16 text-center text-[var(--color-ink-faint)]">written by</p>
         <p className="hero-rest character mt-2">{hameli.person}</p>
-        <p className="hero-rest mt-6 text-center text-[var(--color-ink-faint)]">{hameli.location}</p>
+        <p className="hero-rest mt-3 md:mt-6 text-center text-[var(--color-ink-faint)]">{hameli.location}</p>
 
-        <p className="hero-rest dialogue mt-16 text-[var(--color-ink-soft)]">
+        <p className="hero-rest dialogue mt-10 md:mt-16 text-[var(--color-ink-soft)]">
           {hameli.tagline}
         </p>
 
@@ -78,7 +78,7 @@ export function HeroSection() {
           <span className="stamp">Working</span>
         </p>
 
-        <div className="mt-16 flex flex-col sm:flex-row sm:justify-between gap-6">
+        <div className="mt-10 md:mt-16 flex flex-col sm:flex-row sm:justify-between gap-6">
           <a href="#watch" className="hero-cta btn-ink">
             {hameli.copy.ctaWatch}
           </a>

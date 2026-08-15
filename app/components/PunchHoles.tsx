@@ -12,7 +12,8 @@ export function PunchHoles() {
     if (!sheet) return;
 
     const measure = () => {
-      const pageLen = Math.min(window.innerHeight, Math.max(480, sheet.clientWidth * (11 / 8.5)));
+      const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+      const pageLen = Math.min(window.innerHeight, 52 * rem);
       setPages(Math.max(1, Math.ceil(sheet.scrollHeight / pageLen)));
     };
 

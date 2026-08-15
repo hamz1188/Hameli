@@ -34,7 +34,7 @@ export function Navigation() {
           scrolled ? 'nav-scrolled py-3' : 'py-5'
         }`}
       >
-        <div className="script-nav flex items-baseline justify-between gap-4">
+        <div className="script-nav flex items-center justify-between gap-4">
           <Link href="/" className="slugline">
             {hameli.brand}.
           </Link>
