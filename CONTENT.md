@@ -30,23 +30,98 @@ No fourth pillar until each has **at least 2 posts**.
 - **Miss week:** 30s VO + existing desk coverage over demo progress.
 - **CTA:** demo URL on hameli.io · hello@hameli.io
 
-## Global trend → demo shortlist
+## World trend research (15 Aug 2026)
 
-| # | Trend (global) | Demo to build | Why it proves skill |
-|---|----------------|---------------|---------------------|
-| A | **AI workflow micro-tools** | One tight tool: paste → structured brief / notes / proposal | Product + AI, not a speech |
-| B | **Interactive product demo on a marketing site** | Landing with ungated click-through / sandbox | “Try it,” not screenshots |
-| C | **Vertical micro-SaaS UI** | Client portal, booking+intake, or status board | Recognizable B2B workflow UI |
-| D | **Content → multi-format repurposer** | Script/URL → captions / hooks / cut list | Apps + video offer |
-| E | **Motion-led product site** | One site: motion hero, one CTA, real craft | Site craft shorts can linger on |
+What is actually shipping / being talked about. Not a letter menu. Sources named.
 
-**Build rule:** each demo public, named, linked from hameli.io.
+### 1. What people are launching (Product Hunt)
 
-### Pick next (fill when locked)
+**August 2026 category rank** ([Hunted.space](https://hunted.space/top-products/2026/August)):
 
-| Slot | Choice (A–E or custom) | Working title of demo | Status |
-|------|------------------------|----------------------|--------|
-| Demo 1 | | | not started |
+1. Artificial Intelligence  
+2. Productivity  
+3. Developer Tools  
+then GitHub, Open Source, SaaS, Mac, Tech, Menu Bar, API
+
+**August AI leader:** [Wispr Flow Notetaker](https://wisprflow.ai/post/wispr-flow-notetaker) (launched 5 Aug 2026) — meeting capture without a bot invite; transcript → decisions / owners; hooks into Claude/ChatGPT via MCP.
+
+**15 Aug 2026 daily board** ([OrangeBot snapshot of Product Hunt](https://orangebot.ai/product-hunt-today); PH homepage itself is Cloudflare-gated from this environment):
+
+| # | Product | What it is |
+|---|---------|------------|
+| 1 | Joy | Menu-bar confetti for wins |
+| 2 | nenspace | “lo-fi of LLMs” |
+| 3 | Clamshell | Close laptop, keep work running |
+| 5 | Inferock Bench | Receipt for every LLM API call |
+| 6 | Attyn | Intelligence on the cursor |
+| 10 | Zetik | Pocket chief of staff |
+| 12 | Freebuff | Free coding agents |
+| 14 | Outcome | Content → personal outcome per lead |
+| 15 | **Openmotion** | **Product screenshots + prompts → motion videos** |
+| 17 | Munder Difflin | Clones via Claude Code / Codex |
+| 20 | Gemini 3.7 Flash | Coding & agents |
+| 21 | BrowserAct Cloud | Scrape any site from one prompt |
+| 22 | **isolate.video** | **Screen recordings → product videos** |
+| 26 | Suno Studio 2.0 | Browser generative DAW |
+| 27 | DeepSeek Harness | Agent harness, everything a plugin |
+| 30 | Port22 | Coding agents on your phone |
+
+Also on PH homepage listings the same day: Manus desktop automation, Lightning Rod (data → training sets), Codex subagents.
+
+**Pattern in the launches:** agents that *do* a job (code, scrape, follow up, chief of staff) + tools that turn **screens / screenshots into motion video**.
+
+### 2. What the web platform is betting on (Vercel Ship, June 2026)
+
+Source: [Vercel Ship 2026 recap](https://vercel.com/blog/vercel-ship-2026-recap) (London / Berlin / New York).
+
+- Vercel’s line: **agentic infrastructure** — deploy agents, build agents, let agents run production.
+- Stack named on stage: AI SDK, AI Gateway, Workflow SDK, Sandbox, Chat SDK, **Vercel Connect**, open-source agent framework **eve**.
+- **Nicolas Le Pallec (AKQA):** AI-native CX **replaces navigation with intent**. Three layers: capture intent → brand brain → **generative UI that composes pages** instead of static ones.
+- **Carsten Høyer (AKQA):** Starbucks ChatGPT app as a “generative store” — brand pulled into the conversation, not only visited as a site.
+- **Tomas Jansson (Currys/Elkjøp):** storefront → shopping agents; **customer intent replaces navigation**.
+- Ivan Zhao (Notion), quoted in the same recap: next customer is human *and* agent; design **API/meaning first, UI last**.
+
+Same idea in Vercel’s own docs: models as routers that **stream UI**, not only text ([AI SDK — generative UI](https://github.com/vercel/ai)).
+
+Products already shipping runtime-composed UI (named in [Mantlr, 2026](https://mantlr.com/blog/generative-ui-patterns-2026)): Claude Design (17 Apr 2026), Notion 3.2 agent views (Jan 2026), Linear Agent (1 Apr 2026), Perplexity dynamic answers, Intercom Fin, ChatGPT Canvas.
+
+### 3. What product *sites* look like if they want to feel current
+
+Source: [Brainy — Web Design Trends 2026: What Actually Ships](https://brainy.ink/paper/web-design-trends-2026) (names Vercel, Linear, Stripe, Arc, Perplexity, Figma).
+
+- **AI-native layouts:** same page surface, cells/copy/CTA composed per visitor (intent / referrer). Not “a new aesthetic.”
+- **Bento as a system** (nested, live widgets) — Linear / Vercel cited. Three-column equal feature rows read as dated.
+- **Motion that directs** (hover preview, scroll-linked reveal). Scrolljack + full-bleed autoplay hero = dated.
+- **Variable type as identity.** **Speed as the premium look** (Linear cited under 400ms). Glassmorphism blobs = “AI template.”
+
+### 4. How product videos are being made (matches Hameli: sites + apps + video)
+
+What’s launching / selling *now*:
+
+- **Openmotion** (PH 15 Aug): screenshots + prompts → motion videos  
+- **isolate.video** (PH 15 Aug): screen recordings → product videos  
+- **[ScreenCI](https://screenci.com/):** agent writes a walkthrough from a real run of the app; video is code; re-renders when the product changes  
+- **[Ultrademo](https://github.com/new-xp/ultrademo):** point an agent at a site → narrated MP4 (Playwright + Remotion)
+
+Short-form pattern (how those get cut for Reels/Shorts): **result on screen in the first seconds**, then how, VO over the UI, 15–60s, vertical. Sources: [Grow Creator — first 3 seconds](https://growcreator.pro/blog/tech-shorts-first-3-seconds), [Versely 60s AI demo](https://www.versely.studio/blog/how-to-make-60-second-ai-product-demo-2026).
+
+### 5. What this means for what we present (not a pick-list)
+
+Three things keep showing up across **launches + platform + site craft + video tools**. A Hameli demo that can sit on screen under VO would be one of these, built new (no archive):
+
+| Cluster | What the world is doing | What a demo would *show* |
+|---------|-------------------------|---------------------------|
+| **Intent → page** | Generative UI / nav replaced by intent (Vercel Ship, AKQA, Linear, Claude Design) | Type what you want → a real page/UI assembles |
+| **Agent that finishes a job** | PH: coding agents, notetakers, scrape-from-prompt, chief of staff | One input → a finished artifact (not a chat dump) |
+| **Screen → motion** | Openmotion, isolate.video, ScreenCI, Ultrademo | Stills or a recording become a product film |
+
+Hameli’s stated work is **sites, apps, and video**. Cluster 1 is sites+apps. Cluster 3 is video. Cluster 2 is apps. Those are the trends the demos should prove — then filming is VO + a couple of desk shots of *that* screen.
+
+### Demo slots
+
+| Slot | Cluster | Working title | Status |
+|------|---------|---------------|--------|
+| Demo 1 | | | research done — not built |
 | Demo 2 | | | |
 | Demo 3 | | | |
 
