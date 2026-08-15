@@ -1,8 +1,9 @@
-import { getPostData, getSortedPostsData } from '../../lib/posts';
-import ReactMarkdown from 'react-markdown';
+import type { Metadata } from 'next';
 import Link from 'next/link';
+import ReactMarkdown from 'react-markdown';
+import { getPostData, getSortedPostsData } from '../../lib/posts';
+import { hameli } from '../../data/hameli';
 
-// Generate static params for all blog posts
 export async function generateStaticParams() {
   const posts = getSortedPostsData();
   return posts.map((post) => ({
@@ -10,44 +11,61 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Post({ params }: { params: { slug: string } }) {
-  // Await params to fix the error
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostData(slug);
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: 'article',
+      publishedTime: post.date,
+      authors: [hameli.person],
+    },
+  };
+}
+
+export default async function Post({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const postData = getPostData(slug);
 
   return (
-    <article className="py-24 bg-[var(--color-background)] min-h-screen">
-      <div className="max-w-3xl mx-auto px-6">
-        {/* Back to Blog Link */}
-        <div className="mb-8 animate-fade-in-up">
-          <Link 
-            href="/blog" 
-            className="inline-flex items-center text-sm font-medium text-[var(--color-muted-foreground)] hover:text-[var(--color-primary)] transition-colors"
-          >
-            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Back to Blog
-          </Link>
-        </div>
+    <article className="section-pad min-h-screen">
+      <div className="shell max-w-3xl">
+        <Link
+          href="/blog"
+          className="text-label text-[var(--color-ink-faint)] hover:text-[var(--color-olive)] transition-colors"
+        >
+          ← Notes
+        </Link>
 
-        <header className="mb-12 text-center animate-fade-in-up">
-          <div className="flex gap-2 justify-center mb-6">
-            {postData.tags.map(tag => (
-              <span key={tag} className="px-3 py-1 text-xs font-medium rounded-full bg-[var(--color-secondary)] text-[var(--color-foreground)]">
+        <header className="mt-10 mb-12">
+          <div className="flex flex-wrap gap-3 mb-5">
+            {postData.tags.map((tag) => (
+              <span key={tag} className="text-label text-[var(--color-olive)]">
                 {tag}
               </span>
             ))}
           </div>
-          <h1 className="text-3xl md:text-5xl font-bold mb-6 text-[var(--color-foreground)] leading-tight">
-            {postData.title}
-          </h1>
-          <time className="text-[var(--color-muted-foreground)]">
-            {new Date(postData.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+          <h1 className="text-section max-w-2xl">{postData.title}</h1>
+          <time className="mt-5 block text-label text-[var(--color-ink-faint)]">
+            {new Date(postData.date).toLocaleDateString('en-US', {
+              month: 'long',
+              day: 'numeric',
+              year: 'numeric',
+            })}
           </time>
         </header>
 
-        <div className="prose prose-lg dark:prose-invert max-w-none mx-auto animate-fade-in-up delay-200">
+        <hr className="rule mb-10" />
+
+        <div className="note-prose text-body text-[var(--color-ink-soft)] max-w-2xl space-y-5 [&_h1]:font-serif [&_h1]:text-[var(--color-ink)] [&_h1]:text-3xl [&_h1]:mt-10 [&_h1]:mb-4 [&_h2]:font-serif [&_h2]:text-[var(--color-ink)] [&_h2]:text-2xl [&_h2]:mt-10 [&_h2]:mb-3 [&_h3]:font-serif [&_h3]:text-[var(--color-ink)] [&_h3]:text-xl [&_h3]:mt-8 [&_h3]:mb-2 [&_strong]:text-[var(--color-ink)] [&_a]:text-[var(--color-olive)] [&_a]:underline [&_a]:underline-offset-4 [&_ol]:list-decimal [&_ol]:pl-5 [&_ul]:list-disc [&_ul]:pl-5 [&_li]:my-1 [&_code]:font-mono [&_code]:text-sm [&_code]:bg-[var(--color-desk)] [&_code]:px-1.5 [&_code]:py-0.5">
           <ReactMarkdown
             components={{
               a: (props) => {
@@ -59,7 +77,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
                     rel={isExternal ? 'noopener noreferrer' : undefined}
                   />
                 );
-              }
+              },
             }}
           >
             {postData.content}

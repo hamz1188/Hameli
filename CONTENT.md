@@ -27,7 +27,7 @@ No fourth pillar until each has **at least 2 posts**.
 
 | # | Idea | Pillar | Notes |
 |---|------|--------|-------|
-| 1 | One build, one decision I’d change | Portfolio | **Short 01** |
+| 1 | One build, one decision I’d change | Portfolio | **Short 01** — Desert Survivors or Fitness Tracker |
 | 2 | Ugly section → fixed | Process | Short 02 |
 | 3 | What I ask before I start | Client-path | Short 03 |
 | 4 | Brief → live, speed cut | Process | Short 04 |
@@ -44,13 +44,15 @@ No fourth pillar until each has **at least 2 posts**.
 
 ## Portfolio inventory
 
-| # | Project | Type (site / app / video) | Can show? | Notes |
-|---|---------|---------------------------|-----------|-------|
-| 1 | | | Yes / Ask / Anonymize | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
+Source of truth in code: `app/data/hameli.ts` → `portfolio`.
+
+| # | Project | Type | Can show? | Notes |
+|---|---------|------|-----------|-------|
+| 1 | Desert Survivors | game | Yes | iOS roguelike — [demo](https://desert-survivors.vercel.app/) · [repo](https://github.com/hamz1188/DesertSurvivors). Strong Short 01 candidate. |
+| 2 | Fitness Tracker | app | Yes | Expo fitness app — [demo](https://hamz-fitness-tracker-app.vercel.app/) · [repo](https://github.com/hamz1188/hamz-fitness-tracker-app). |
+| 3 | Hameli site | site | Yes | This site — [hameli.io](https://hameli.io) · [repo](https://github.com/hamz1188/Hameli). |
+| 4 | TalkingPhoto AI | app | Yes | Photos → talking avatars — [repo](https://github.com/hamz1188/talkingphoto-ai). |
+| 5 | Ejazty legal pages | site | Ask | Privacy/legal for Ejazty — [repo](https://github.com/hamz1188/ejazty-legal). Confirm before filming. |
 
 ## Posted log
 
