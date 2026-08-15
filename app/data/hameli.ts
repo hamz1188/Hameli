@@ -116,9 +116,9 @@ export const hameli = {
     {
       id: 'ep-02',
       number: 2,
-      title: 'The Ugly Section',
-      lesson: 'A screen recording of one bad-looking part getting fixed, with the reasoning said out loud.',
-      slugline: 'INT. SCREEN — CONTINUOUS',
+      title: '3 builds in 60s',
+      lesson: 'Three shipped pieces from the same desk — game, app, site — cut to under a minute.',
+      slugline: 'INT. DESK — MONTAGE',
       status: 'upcoming' as EpisodeStatus,
     },
     {
@@ -132,9 +132,9 @@ export const hameli = {
     {
       id: 'ep-04',
       number: 4,
-      title: 'Brief to Live',
-      lesson: 'One landing page from an empty brief to a live URL, cut down to under ninety seconds.',
-      slugline: 'INT. BUILD — DAY',
+      title: 'How to send me a project',
+      lesson: 'What to put in the first email — outcome, constraint, deadline — and what not to send.',
+      slugline: 'INT. INBOX — DAY',
       status: 'upcoming' as EpisodeStatus,
     },
   ] as Episode[],

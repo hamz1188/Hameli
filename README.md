@@ -71,18 +71,19 @@ Shorts on IG + YT until **4 public posts** exist.
 - [ ] Finish channel checklist above
 - [x] Follow [EMAIL.md](EMAIL.md) for Zoho → `hello@hameli.io`
 - [x] List **5 portfolio pieces** in `CONTENT.md` (+ `app/data/hameli.ts` → `portfolio`)
-- [ ] Skim `FILM.md` Short 01 shoot card
+- [ ] Skim `FILM.md` → **Today shoot** (film now, screen later)
 
-### Days 3–5 — Short 01
+### Days 3–5 — Desk / VO batch
 
-- [ ] Shoot/cut Short 01 (FILM.md shoot card — 45–75s)
+- [ ] Shoot shared B-roll + VO for Shorts 01–04 (FILM.md Today shoot)
+- [ ] Screen-record later; cut Short 01 first (45–75s)
 - [ ] Post IG Reel + YouTube Short
 - [ ] Set `ep-01` to `live` + URL in `app/data/hameli.ts`
 - [ ] Log in `CONTENT.md`
 
 ### Days 6–14
 
-- [ ] Two more shorts (Short 02, Short 03)
+- [ ] Post Shorts 02–04 (3 builds → Questions → How to send)
 - [ ] Reply to inbound with hameli.io + hello@hameli.io
 
 **Two-week success:** 4 posts + working hello@ + learn-first site — not subscriber count.
@@ -111,7 +112,7 @@ Contact form posts to `/api/contact` and lands in `hello@hameli.io`. First live 
 | File | Job |
 |------|-----|
 | [CONTENT.md](CONTENT.md) | Pillars, cadence, ideas, inventory, posted log |
-| [FILM.md](FILM.md) | Capture recipe + Short 01 shoot card |
+| [FILM.md](FILM.md) | Capture recipe + Today shoot cards |
 | [EMAIL.md](EMAIL.md) | Zoho Mail Lite setup for hello@hameli.io |
 
 ## Out of scope (for now)
