@@ -75,15 +75,15 @@ Shorts on IG + YT until **4 public posts** exist.
 
 ### Days 3–5 — Desk / VO batch
 
-- [ ] Shoot shared B-roll + VO for Shorts 01–04 (FILM.md Today shoot)
-- [ ] Screen-record later; cut Short 01 first (45–75s)
+- [ ] Shoot shared B-roll + VO for Shorts 01–04 (FILM.md Today shoot — **no old projects**)
+- [ ] Screen-record later (current Hameli / tools only); cut Short 01 first (45–75s)
 - [ ] Post IG Reel + YouTube Short
 - [ ] Set `ep-01` to `live` + URL in `app/data/hameli.ts`
 - [ ] Log in `CONTENT.md`
 
 ### Days 6–14
 
-- [ ] Post Shorts 02–04 (3 builds → Questions → How to send)
+- [ ] Post Shorts 02–04 (Tools → Decision → How to send) — no old projects on camera
 - [ ] Reply to inbound with hameli.io + hello@hameli.io
 
 **Two-week success:** 4 posts + working hello@ + learn-first site — not subscriber count.

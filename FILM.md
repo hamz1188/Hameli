@@ -29,22 +29,28 @@ Shorts-first. Voiceover. Natural filming. Ship; don’t build a gear bible.
 4. One takeaway  
 5. CTA → hameli.io / hello@hameli.io  
 
+## Rule — no old projects on camera
+
+Do **not** film, name, or montage old portfolio builds (Desert Survivors, Fitness Tracker, TalkingPhoto, Ejazty, or anything else from the archive).
+
+**Allowed on camera:** this week’s desk, Hameli / Working title as it’s being made, tools, briefs, process, how to hire you.
+
+Competence comes from judgment and process — not a highlight reel of past apps.
+
 ## Today shoot — film now, screen later
 
 One sitting. One angle. One light. Prop the phone and don’t reset between shorts.
 
-**Project lock (Short 01):** Desert Survivors. Swap to Fitness Tracker only if that decision story is clearer today.
+**Post order (first 4):** Questions → Tools → Decision (this week) → How to send.
 
-**Post order (first 4):** Decision → 3 builds → Questions → How to send.
-
-**Skip today (screen-first):** The Ugly Section, Brief to Live, Before/after flow, Mistake I fixed.
+**Skip today (needs a live build session on screen):** The Ugly Section, Brief to Live, Mistake I fixed — only when the work on screen is **current**, not an old demo.
 
 ### 0 — Shared B-roll bank (do first)
 
-5–8 clips, 5–10s each. Reuse across cuts.
+5–8 clips, 5–10s each. Reuse across cuts. Keep screens unreadable or on Hameli / blank / tools only.
 
 - [ ] Hands on keyboard
-- [ ] Side of screen (no readable private text)
+- [ ] Side of screen (no old demos, no private text)
 - [ ] Thinking pause / lean back
 - [ ] Mug or phone prop in frame
 - [ ] Notebook or second device flip
@@ -52,41 +58,7 @@ One sitting. One angle. One light. Prop the phone and don’t reset between shor
 - [ ] Desk wide (messy OK)
 - [ ] Hands reaching for mouse / trackpad
 
-### 1 — The Decision I’d Take Back
-
-**Length:** 45–75s · **Pillar:** Portfolio · **Goal:** Judgment over a finished build.
-
-**Film today**
-- [ ] On-camera or VO: what it is → one strong call → what you’d undo → CTA
-- [ ] 3–5 desk clips while “reviewing” (from bank OK)
-
-**VO bullets**
-1. “This is Desert Survivors — a finished iOS roguelike.”
-2. Name **one** decision you’d undo (scope, UX, art, monetization — pick the real one).
-3. Why it mattered.
-4. What you’d do now.
-5. Open loop: “Next short is three builds from this same desk.” → hameli.io
-
-**Screen later:** 5–10 min focused walkthrough of Desert Survivors (demo or device).
-
-### 2 — 3 builds in 60s
-
-**Length:** 45–60s · **Pillar:** Portfolio · **Goal:** Volume of shipped work.
-
-**Film today**
-- [ ] VO naming three projects
-- [ ] Desk B-roll flipping between notebooks/phone (from bank)
-
-**VO bullets**
-1. “Three things I actually shipped.”
-2. One line: Desert Survivors (game).
-3. One line: Fitness Tracker (app).
-4. One line: Hameli (this site) — or TalkingPhoto if stronger today.
-5. “Same desk. Different problems.” → hameli.io / hello@hameli.io
-
-**Screen later:** Quick cuts of each demo (Desert Survivors → Fitness Tracker → Hameli or TalkingPhoto).
-
-### 3 — Questions Before Frame One
+### 1 — Questions Before Frame One
 
 **Length:** 45–75s · **Pillar:** Client-path · **Goal:** Authority + intrigue.
 
@@ -98,9 +70,40 @@ One sitting. One angle. One light. Prop the phone and don’t reset between shor
 2. Q1: “What does done look like in one sentence — not a feature list?”
 3. Q2: “What must not break — brand, deadline, or budget?”
 4. Q3: “Who decides in the room when two options are both fine?”
-5. “If they can’t answer these, we don’t start.” Open loop: “I’ll show what a good brief looks like.” → hameli.io
+5. “If they can’t answer these, we don’t start.” Open loop: “Next: what I actually open at this desk.” → hameli.io
 
-**Screen later (optional):** Flash a brief/notes doc under VO.
+**Screen later (optional):** Flash a blank brief / notes template — not an old project.
+
+### 2 — Tools on my desk today
+
+**Length:** 30–45s · **Pillar:** Process · **Goal:** Volume of work without a portfolio parade.
+
+**Film today**
+- [ ] Hands + desk — name only what you actually open **today**
+
+**VO bullets**
+1. “Only what I actually opened.”
+2. Name 3–5 tools, one beat each (editor, browser, notes, mail, design — whatever is real).
+3. “Same desk every day. The work is the proof.” → hameli.io
+
+**Screen later:** Brief cursor pans over those tools (no old product demos).
+
+### 3 — The Decision I’d Take Back (this week)
+
+**Length:** 45–75s · **Pillar:** Process · **Goal:** Taste + judgment on **current** work.
+
+**Film today**
+- [ ] On-camera or VO about **one call on Hameli / this week’s build** — not an old project
+- [ ] Desk clips from the bank
+
+**VO bullets**
+1. “Working title — this site / this week’s build.”
+2. Name **one** decision you’d undo (layout, copy, scope, timing — pick the real one).
+3. Why it mattered.
+4. What you’d do now.
+5. Open loop: “I’ll show how to email me a project.” → hameli.io
+
+**Screen later:** Short pass over the **current** Hameli screen / file you mean — not archive demos.
 
 ### 4 — How to send me a project
 
@@ -116,48 +119,31 @@ One sitting. One angle. One light. Prop the phone and don’t reset between shor
 
 **Screen later (optional):** Compose a sample email on screen.
 
-### 5 — Tools on my desk today (optional same sitting)
-
-**Length:** 30–45s · **Pillar:** Process · **Goal:** Easy process presence.
-
-**Film today**
-- [ ] Hands + desk only — name only what you actually open
-
-**VO bullets**
-1. “Only what I actually opened.”
-2. Name 3–5 tools, one beat each.
-3. CTA → hameli.io
-
-**Screen later:** Brief cursor pans over those apps.
-
 ## Screen later (edit session)
 
 When you’re at the machine ready to record:
 
-1. [ ] Desert Survivors walkthrough (Short 01)
-2. [ ] Three demos for the montage (Short 02)
-3. [ ] Optional: brief/notes flash (Short 03)
+1. [ ] Optional: brief/notes flash (Short 01)
+2. [ ] Tool cursor pans — current apps only (Short 02)
+3. [ ] Current Hameli / this-week screen for the decision short (Short 03)
 4. [ ] Optional: sample email compose (Short 04)
-5. [ ] Optional: tool cursor pans (Short 05)
-6. [ ] Cut each short 30–90s (primary 45–75s where noted)
-7. [ ] Post: Decision → 3 builds → Questions → How to send
-8. [ ] Flip matching episodes in `app/data/hameli.ts` to `live` + `url`
-9. [ ] Log in CONTENT.md · pin hameli.io on IG/YouTube
+5. [ ] Cut each short 30–90s (primary 45–75s where noted)
+6. [ ] Post: Questions → Tools → Decision → How to send
+7. [ ] Flip matching episodes in `app/data/hameli.ts` to `live` + `url`
+8. [ ] Log in CONTENT.md · pin hameli.io on IG/YouTube
 
 ## First 8 shorts (backlog)
 
 | # | Title | Hook | Pillar |
 |---|-------|------|--------|
-| 1 | The Decision I’d Take Back | “Here’s the call I’d undo on this build.” | Portfolio |
-| 2 | 3 builds in 60s | “Three things I actually shipped.” | Portfolio |
-| 3 | Questions Before Frame One | “Three questions that save the project.” | Client-path |
+| 1 | Questions Before Frame One | “Three questions that save the project.” | Client-path |
+| 2 | Tools on my desk today | “Only what I actually opened.” | Process |
+| 3 | The Decision I’d Take Back | “Here’s the call I’d undo on this week’s build.” | Process |
 | 4 | How to send me a project | “Email me like this.” | Client-path |
-| 5 | The Ugly Section | “Watch this block go from broken to clear.” | Process |
-| 6 | Brief to Live | “Landing page arc in under 90 seconds.” | Process |
-| 7 | Before / after screen flow | “Same app, clearer path.” | Portfolio |
-| 8 | Mistake I fixed this week | “I shipped this wrong — here’s the repair.” | Process |
-
-Tools on my desk today = optional same-sitting fifth; not required for the Day-14 gate of 4 posts.
+| 5 | The Ugly Section | “Watch this block go from broken to clear.” | Process — **current** work only |
+| 6 | Brief to Live | “Landing page arc in under 90 seconds.” | Process — **current** work only |
+| 7 | Mistake I fixed this week | “I shipped this wrong — here’s the repair.” | Process |
+| 8 | What’s on the build list | “Three open threads on this desk — no archive tour.” | Process |
 
 ### Cuts (every short)
 
@@ -171,4 +157,5 @@ Tools on my desk today = optional same-sitting fifth; not required for the Day-1
 
 - Stall for lighting, music, or a “real” episode format
 - Start with long-form before you have 4 shorts shipped
+- Show or name old portfolio projects on shorts
 - Expand this file into a production manual
