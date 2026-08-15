@@ -35,7 +35,7 @@ describe('POST /api/contact', () => {
     requestNumber = 0;
     delete process.env.FORMSPREE_ID;
     delete process.env.NEXT_PUBLIC_FORMSPREE_ID;
-    jest.spyOn(global, 'fetch').mockResolvedValue(
+    jest.spyOn(global, 'fetch').mockImplementation(async () =>
       new Response(JSON.stringify({ success: true }), {
         status: 200,
         headers: { 'Content-Type': 'application/json' },
