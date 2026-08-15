@@ -8,11 +8,11 @@ Portfolio site + social channel for websites, apps, and video — show the work,
 
 ## Promise
 
-People who contact you can **try demos** and see how the work is made. Site stays a working title on purpose. **Demos first; VO-led shorts with a few filmed coverage shots.** Write when you need something built.
+People who contact you can watch how the work is made. The site is a **working title** — still in progress on purpose. Write when you need something built.
 
 ## Format (channel)
 
-**Series: Working title** — mostly **voiceover** + screen record + a short dual-cam **coverage bank** (FX3 / FX30). Not talk-heavy. Order: [CONTENT.md](CONTENT.md) · kit/coverage: [FILM.md](FILM.md).
+**Series: Working title** — start with **shorts** (30–90s) + voiceover. Natural desk filming (phone propped while working) + screen record. Longer YouTube only after shorts are shipping. Details: [FILM.md](FILM.md).
 
 ## Platforms
 
@@ -62,7 +62,7 @@ Shorts on IG + YT until **4 public posts** exist.
 1. **Ship before polish** — one public piece beats a perfect plan.
 2. **Living ops docs:** `CONTENT.md`, `FILM.md`, this README (+ `EMAIL.md` for one-time mail setup).
 3. **Weekly minimum:** 1 short (30–90s). Miss a week → 30s desk/progress VO, not zero.
-4. **Work first:** Dual-cam desk sessions while building. Cut shorts with Lark VO the same day when you can.
+4. **Work first:** Natural filming while building. Cut shorts with VO the same day when you can.
 
 ## Day 1–14 checklist
 
@@ -71,19 +71,18 @@ Shorts on IG + YT until **4 public posts** exist.
 - [ ] Finish channel checklist above
 - [x] Follow [EMAIL.md](EMAIL.md) for Zoho → `hello@hameli.io`
 - [x] List **5 portfolio pieces** in `CONTENT.md` (+ `app/data/hameli.ts` → `portfolio`)
-- [ ] Skim `FILM.md` → **Today shoot** (film now, screen later)
+- [ ] Skim `FILM.md` Short 01 shoot card
 
-### Days 3–5 — Desk / VO batch
+### Days 3–5 — Short 01
 
-- [ ] Shoot shared B-roll + VO for Shorts 01–04 (FILM.md Today shoot — **no old projects**)
-- [ ] Screen-record later (current Hameli / tools only); cut Short 01 first (45–75s)
+- [ ] Shoot/cut Short 01 (FILM.md shoot card — 45–75s)
 - [ ] Post IG Reel + YouTube Short
 - [ ] Set `ep-01` to `live` + URL in `app/data/hameli.ts`
 - [ ] Log in `CONTENT.md`
 
 ### Days 6–14
 
-- [ ] Post Shorts 02–04 (Tools → Decision → How to send) — no old projects on camera
+- [ ] Two more shorts (Short 02, Short 03)
 - [ ] Reply to inbound with hameli.io + hello@hameli.io
 
 **Two-week success:** 4 posts + working hello@ + learn-first site — not subscriber count.
@@ -112,7 +111,7 @@ Contact form posts to `/api/contact` and lands in `hello@hameli.io`. First live 
 | File | Job |
 |------|-----|
 | [CONTENT.md](CONTENT.md) | Pillars, cadence, ideas, inventory, posted log |
-| [FILM.md](FILM.md) | Screenplays + shot lists for Shorts 01–04 |
+| [FILM.md](FILM.md) | Capture recipe + Short 01 shoot card |
 | [EMAIL.md](EMAIL.md) | Zoho Mail Lite setup for hello@hameli.io |
 
 ## Out of scope (for now)
