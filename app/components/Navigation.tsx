@@ -16,12 +16,19 @@ export function Navigation() {
   }, []);
 
   const items = [
-    { label: 'Watch', href: '#watch' },
-    { label: 'Method', href: '#learn' },
-    { label: 'Write', href: '#contact' },
+    { label: 'Watch', href: '/#watch' },
+    { label: 'Week', href: '/week' },
+    { label: 'Method', href: '/#learn' },
+    { label: 'Write', href: '/#contact' },
   ];
 
-  function onSectionClick(event: MouseEvent<HTMLAnchorElement>, hash: string) {
+  function onSectionClick(event: MouseEvent<HTMLAnchorElement>, href: string) {
+    if (!href.includes('#')) {
+      setOpen(false);
+      return;
+    }
+    const hash = `#${href.split('#')[1]}`;
+    if (window.location.pathname !== '/') return;
     event.preventDefault();
     setOpen(false);
     scrollToHash(hash);

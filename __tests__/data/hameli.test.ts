@@ -25,4 +25,9 @@ describe('hameli data completeness', () => {
     expect(hameli.episodes.every((e) => e.status === 'upcoming')).toBe(true);
     expect(hameli.episodes.every((e) => e.slugline.startsWith('INT.'))).toBe(true);
   });
+
+  it('has a dated AI week brief with sources', () => {
+    expect(hameli.weekBrief.items.length).toBeGreaterThanOrEqual(4);
+    expect(hameli.weekBrief.items.every((item) => item.sourceUrl.startsWith('http'))).toBe(true);
+  });
 });

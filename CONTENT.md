@@ -121,9 +121,9 @@ Hameli’s stated work is **sites, apps, and video**. Cluster 1 is sites+apps. C
 
 | Slot | Cluster | Working title | Status |
 |------|---------|---------------|--------|
-| Demo 1 | | | research done — not built |
+| Test | Brief | What’s new in AI this week | Live on `/week` — VO in FILM.md |
+| Demo 1 | | | not built |
 | Demo 2 | | | |
-| Demo 3 | | | |
 
 ## Film coverage (always available)
 

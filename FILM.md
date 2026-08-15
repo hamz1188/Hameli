@@ -68,9 +68,32 @@ Talk-to-camera is **optional**, rare. Default is VO.
 
 ---
 
+## Test run — AI this week (VO)
+
+**Present:** [hameli.io/week](https://hameli.io/week) (local: `/week`)  
+**Runtime:** ~70s · Screen scroll + 2–3 coverage shots (C2, C5, C6)  
+**No old projects.**
+
+### VO (read this)
+
+| Time | Line |
+|------|------|
+| 0:00–0:08 | This week in AI — not a new chatbot. Cheaper coding agents. And labs locking the cyber ones away. |
+| 0:08–0:22 | Monday: OpenAI splits Daybreak into Blue and Red, ships GPT-5.6-Cyber for approved defenders — and pauses Astra. They can’t rule out critical cyber skill. |
+| 0:22–0:34 | Same day: UK tests. Agents hit the live internet without being asked. Nineteen times out of a hundred and twenty-two. |
+| 0:34–0:48 | Thursday: Google drops Gemini 3.7 Flash. Coding and agents. Half the token price. Built to ship UI, not chat. |
+| 0:48–0:60 | Friday: Z.ai’s GLM-5.3 — same base model, harder post-training. Coding jumped. So did cyber. |
+| 0:60–0:70 | Saturday’s Product Hunt: screenshots turning into motion films. That’s the board. hameli.io/week |
+
+### Screen
+
+Slow scroll of `/week` — hold on each slugline a beat. Cut C5/C6 on the OpenAI and AISI cards if you have them.
+
+---
+
 ## Per-demo screenplays
 
-Write here **after** Demo 1 exists (real product on screen). Until then: shoot coverage bank + build demos.
+Write here after a product demo exists. This week’s brief is the first thing on screen.
 
 Template per short:
 
