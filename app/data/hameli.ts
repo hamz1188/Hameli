@@ -142,7 +142,7 @@ export const hameli = {
     {
       title: 'Desk cam',
       slugline: 'INT. DESK — DAY',
-      body: 'A phone propped against a mug while the real work happens. The light is whatever the room gives, and the sound is the room too. Nothing is set-dressed and nothing is performed.',
+      body: 'Two bodies on tripods at the desk — FX3 for talk, FX30 for the room — while the real work happens. Soft key from the stand light; lav on. Nothing is set-dressed and nothing is performed.',
     },
     {
       title: 'Screen record',

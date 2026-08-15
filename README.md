@@ -12,7 +12,7 @@ People who contact you can watch how the work is made. The site is a **working t
 
 ## Format (channel)
 
-**Series: Working title** — start with **shorts** (30–90s) + voiceover. Natural desk filming (phone propped while working) + screen record. Longer YouTube only after shorts are shipping. Details: [FILM.md](FILM.md).
+**Series: Working title** — start with **shorts** (30–90s) + voiceover. Dual-cam desk sessions (FX3 + FX30) + screen record. Longer YouTube only after shorts are shipping. Details: [FILM.md](FILM.md).
 
 ## Platforms
 
@@ -62,7 +62,7 @@ Shorts on IG + YT until **4 public posts** exist.
 1. **Ship before polish** — one public piece beats a perfect plan.
 2. **Living ops docs:** `CONTENT.md`, `FILM.md`, this README (+ `EMAIL.md` for one-time mail setup).
 3. **Weekly minimum:** 1 short (30–90s). Miss a week → 30s desk/progress VO, not zero.
-4. **Work first:** Natural filming while building. Cut shorts with VO the same day when you can.
+4. **Work first:** Dual-cam desk sessions while building. Cut shorts with Lark VO the same day when you can.
 
 ## Day 1–14 checklist
 

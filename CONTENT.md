@@ -23,7 +23,7 @@ No fourth pillar until each has **at least 2 posts**.
 - **Longer YouTube:** only after shorts are shipping, from the same session.
 - **Every piece ends with:** CTA → hameli.io / hello@hameli.io.
 
-**Today’s runbook = FILM.md** — full **screenplays + shot lists** (not one-liners). Current desk only — no old projects.
+**Today’s runbook = FILM.md** — kit (FX3 / FX30 / 20–70 / 50GM / 100GM / Lark Max 2 / LA300Bi) + full screenplays + shot lists. Current desk only — no old projects.
 
 ## Today shoot — film now, screen later
 
