@@ -97,6 +97,14 @@ npm install
 npm run dev
 ```
 
+```bash
+npm test
+npm run lint
+npm run outdated
+```
+
+GitHub Actions runs test, lint, and build on every push. Dependabot opens a weekly PR for npm patches/minors — merge those when CI is green.
+
 Optional contact form backend: set `NEXT_PUBLIC_FORMSPREE_ID` (Formspree). Without it, the form opens a mailto to `hello@hameli.io`.
 
 ## Docs

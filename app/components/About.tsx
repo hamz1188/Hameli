@@ -1,11 +1,8 @@
 'use client';
 
-import { portfolioData } from '../data/portfolio';
 import { AnimatedSection } from './AnimatedSection';
 
 export function About() {
-  const { personalInfo } = portfolioData;
-
   return (
     <section id="about" className="py-32 px-6 md:px-24 border-t border-[var(--color-accent)]/10">
       <div className="flex flex-col md:flex-row gap-12 md:gap-24">

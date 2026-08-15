@@ -10,18 +10,29 @@ gsap.registerPlugin(ScrollTrigger);
 function SceneBlock({ episode }: { episode: Episode }) {
   const live = episode.status === 'live' && Boolean(episode.url);
   const inner = (
-    <article className="group py-10 border-b border-[var(--color-rule)]">
+    <article className="group relative py-10 border-b border-[var(--color-rule)]">
       <p className="slugline text-[var(--color-ink)]">
         SC. {String(episode.number).padStart(2, '0')}  {episode.slugline}
       </p>
-      <h3 className="mt-4 text-lg text-[var(--color-ink)]">{episode.title}</h3>
+      <h3 className="mt-4 text-lg text-[var(--color-ink)]">
+        {episode.number === 1 ? <span className="hl hl-yellow">{episode.title}</span> : episode.title}
+      </h3>
       <p className="mt-3 text-[var(--color-ink-soft)] text-body max-w-xl">{episode.lesson}</p>
-      <p className="character mt-6 text-sm font-normal tracking-wide text-[var(--color-ink-faint)]">
+      <p className="character mt-6 text-sm font-normal text-[var(--color-ink-faint)]">
         Ahmed (V.O.)
       </p>
       <p className="dialogue mt-1 text-sm text-[var(--color-ink-faint)]">
-        {live ? hameli.copy.liveLine : hameli.copy.queuedLine}
+        {live ? (
+          <span className="hl hl-blue">{hameli.copy.liveLine}</span>
+        ) : (
+          hameli.copy.queuedLine
+        )}
       </p>
+      {episode.number === 1 && !live && (
+        <p className="note-hand note-margin" aria-hidden="true">
+          not shot yet
+        </p>
+      )}
     </article>
   );
 

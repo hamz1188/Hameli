@@ -42,20 +42,23 @@ export function ContactSection() {
     <section id="contact" className="section-pad">
       <div className="script-page">
         <p className="transition-line mb-10">Fade out.</p>
-        <h2 className="text-section mb-4">{hameli.copy.contactHeading}</h2>
-        <p className="character mt-10 font-normal tracking-wide text-[var(--color-ink-faint)]">
+        <h2 className="text-section">
+          <span className="hl hl-yellow">{hameli.copy.contactHeading}</span>
+        </h2>
+        <p className="character mt-10 font-normal text-[var(--color-ink-faint)]">
           {hameli.copy.ctaWrite}:
         </p>
         <a href={`mailto:${hameli.email}`} className="character mt-1 block text-[var(--color-ink)]">
-          {hameli.email}
+          <span className="hl hl-blue">{hameli.email}</span>
         </a>
-        <p className="dialogue mt-8 text-[var(--color-ink-soft)]">
+        <p className="dialogue mt-8 text-[var(--color-ink-soft)] relative">
+          <span className="mark-arrow" aria-hidden="true" />
           {hameli.copy.contactBody}
         </p>
 
         <form onSubmit={onSubmit} className="mt-14">
           <label className="block mb-8">
-            <span className="character block text-sm font-normal tracking-wide text-[var(--color-ink-faint)]">
+            <span className="character block text-sm font-normal text-[var(--color-ink-faint)]">
               Name
             </span>
             <input
@@ -66,7 +69,7 @@ export function ContactSection() {
             />
           </label>
           <label className="block mb-8">
-            <span className="character block text-sm font-normal tracking-wide text-[var(--color-ink-faint)]">
+            <span className="character block text-sm font-normal text-[var(--color-ink-faint)]">
               Email
             </span>
             <input
@@ -78,7 +81,7 @@ export function ContactSection() {
             />
           </label>
           <label className="block mb-10">
-            <span className="character block text-sm font-normal tracking-wide text-[var(--color-ink-faint)]">
+            <span className="character block text-sm font-normal text-[var(--color-ink-faint)]">
               {hameli.copy.contactMessageLabel}
             </span>
             <textarea

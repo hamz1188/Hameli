@@ -38,7 +38,7 @@ export function Projects() {
                           {project.title}
                         </h3>
                         <div className="flex flex-wrap gap-2 group-hover/item:translate-x-2 transition-transform duration-500 delay-75">
-                          {project.tags.map((tag, i) => (
+                          {project.tags.map((tag) => (
                             <span
                               key={tag}
                               className="text-xs font-mono text-[var(--color-accent)]/70 bg-[var(--color-accent)]/10 px-3 py-1 rounded-full"

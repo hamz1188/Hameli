@@ -13,7 +13,7 @@ export function SiteFooter() {
   ].filter(Boolean) as { label: string; href: string }[];
 
   return (
-    <footer className="border-t border-[var(--color-rule)]">
+    <footer className="border-t border-[var(--color-rule)] mt-8">
       <div className="script-page py-10 flex flex-col gap-6">
         <div className="flex flex-wrap items-baseline justify-between gap-4">
           <Link href="/" className="slugline">

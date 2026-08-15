@@ -23,7 +23,7 @@ export function Navigation() {
   return (
     <>
       <nav
-        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+        className={`sticky top-0 z-50 -mx-1 px-1 transition-all duration-300 ${
           scrolled ? 'nav-scrolled py-3' : 'py-5'
         }`}
       >

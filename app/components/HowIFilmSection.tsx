@@ -30,13 +30,14 @@ export function HowIFilmSection() {
   }, []);
 
   return (
-    <section id="learn" ref={ref} className="section-pad border-y border-[var(--color-rule)]">
+    <section id="learn" ref={ref} className="section-pad">
       <div className="script-page">
         <div className="method-intro mb-12">
           <p className="transition-line mb-8">Smash cut to:</p>
           <h2 className="text-section">{hameli.copy.methodHeading}</h2>
           <p className="mt-5 text-lede text-[var(--color-ink-soft)]">
-            {hameli.copy.methodIntro}
+            One sitting. Three recordings. The light is whatever the room gives; the point is{' '}
+            <span className="ink-underline">the decision on screen</span>.
           </p>
         </div>
 
