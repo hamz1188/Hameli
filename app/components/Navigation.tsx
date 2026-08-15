@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type MouseEvent } from 'react';
 import Link from 'next/link';
 import { hameli } from '../data/hameli';
+import { scrollToHash } from './SmoothScrollProvider';
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -20,6 +21,12 @@ export function Navigation() {
     { label: 'Write', href: '#contact' },
   ];
 
+  function onSectionClick(event: MouseEvent<HTMLAnchorElement>, hash: string) {
+    event.preventDefault();
+    setOpen(false);
+    scrollToHash(hash);
+  }
+
   return (
     <>
       <nav
@@ -27,7 +34,7 @@ export function Navigation() {
           scrolled ? 'nav-scrolled py-3' : 'py-5'
         }`}
       >
-        <div className="script-page flex items-baseline justify-between gap-4">
+        <div className="script-nav flex items-baseline justify-between gap-4">
           <Link href="/" className="slugline">
             {hameli.brand}.
           </Link>
@@ -37,6 +44,7 @@ export function Navigation() {
               <a
                 key={item.href}
                 href={item.href}
+                onClick={(event) => onSectionClick(event, item.href)}
                 className="text-label text-[var(--color-ink-soft)] hover:text-[var(--color-ink)] transition-colors"
               >
                 {item.label}
@@ -69,7 +77,7 @@ export function Navigation() {
           <a
             key={item.href}
             href={item.href}
-            onClick={() => setOpen(false)}
+            onClick={(event) => onSectionClick(event, item.href)}
             className="slugline text-xl"
           >
             {item.label}

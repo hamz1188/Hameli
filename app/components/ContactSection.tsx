@@ -3,8 +3,6 @@
 import { FormEvent, useState } from 'react';
 import { hameli } from '../data/hameli';
 
-const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
-
 export function ContactSection() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
@@ -15,27 +13,22 @@ export function ContactSection() {
     const name = String(data.get('name') || '').trim();
     const email = String(data.get('email') || '').trim();
     const message = String(data.get('message') || '').trim();
+    const website = String(data.get('website') || '').trim();
     if (!name || !email || !message) return;
 
-    if (formspreeId) {
-      setStatus('sending');
-      try {
-        const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
-          method: 'POST',
-          headers: { Accept: 'application/json' },
-          body: data,
-        });
-        if (!res.ok) throw new Error('fail');
-        setStatus('sent');
-        form.reset();
-      } catch {
-        setStatus('error');
-      }
-      return;
+    setStatus('sending');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message, website }),
+      });
+      if (!res.ok) throw new Error('fail');
+      setStatus('sent');
+      form.reset();
+    } catch {
+      setStatus('error');
     }
-
-    window.location.href = `mailto:${hameli.email}?subject=${encodeURIComponent(`Hameli — ${name}`)}&body=${encodeURIComponent(`${message}\n\n— ${name}\n${email}`)}`;
-    setStatus('sent');
   }
 
   return (
@@ -48,9 +41,9 @@ export function ContactSection() {
         <p className="character mt-10 font-normal text-[var(--color-ink-faint)]">
           {hameli.copy.ctaWrite}:
         </p>
-        <a href={`mailto:${hameli.email}`} className="character mt-1 block text-[var(--color-ink)]">
+        <p className="character mt-1 text-[var(--color-ink)]">
           <span className="hl hl-blue">{hameli.email}</span>
-        </a>
+        </p>
         <p className="dialogue mt-8 text-[var(--color-ink-soft)] relative">
           <span className="mark-arrow" aria-hidden="true" />
           {hameli.copy.contactBody}
@@ -58,9 +51,7 @@ export function ContactSection() {
 
         <form onSubmit={onSubmit} className="script-form mt-14">
           <label className="block mb-8">
-            <span className="character block font-normal text-[var(--color-ink-faint)]">
-              Name
-            </span>
+            <span className="form-cue">Name</span>
             <input
               name="name"
               required
@@ -69,9 +60,7 @@ export function ContactSection() {
             />
           </label>
           <label className="block mb-8">
-            <span className="character block font-normal text-[var(--color-ink-faint)]">
-              Email
-            </span>
+            <span className="form-cue">Email</span>
             <input
               name="email"
               type="email"
@@ -80,10 +69,12 @@ export function ContactSection() {
               className="mt-2 w-full bg-transparent border-0 border-b border-[var(--color-rule-strong)] py-2 outline-none focus:border-[var(--color-ink)] font-sans"
             />
           </label>
+          <label className="sr-only" aria-hidden="true">
+            Website
+            <input name="website" tabIndex={-1} autoComplete="off" />
+          </label>
           <label className="block mb-10">
-            <span className="character block font-normal text-[var(--color-ink-faint)]">
-              {hameli.copy.contactMessageLabel}
-            </span>
+            <span className="form-cue">{hameli.copy.contactMessageLabel}</span>
             <textarea
               name="message"
               required
@@ -93,15 +84,13 @@ export function ContactSection() {
           </label>
           <div className="flex flex-wrap items-center justify-between gap-4">
             <button type="submit" disabled={status === 'sending'} className="btn-ink disabled:opacity-60">
-                {status === 'sending' ? 'Sending…' : hameli.copy.contactSubmit}
+              {status === 'sending' ? 'Sending…' : hameli.copy.contactSubmit}
             </button>
             {status === 'sent' && (
-              <span className="text-sm text-[var(--color-ink-soft)]">
-                {formspreeId ? 'Sent.' : 'Opening mail…'}
-              </span>
+              <span className="text-[var(--color-ink-soft)]">{hameli.copy.contactSent}</span>
             )}
             {status === 'error' && (
-              <span className="text-sm text-[var(--color-error)]">Try {hameli.email}</span>
+              <span className="text-[var(--color-error)]">Try {hameli.email}</span>
             )}
           </div>
         </form>

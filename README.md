@@ -22,30 +22,29 @@ People who contact you can watch how the work is made. The site is a **working t
 | Discovery | Instagram Reels + YouTube Shorts | Primary — 30–90s |
 | Home / depth | YouTube long-form | Later, from the same sessions |
 
-Shorts on IG + YT until **4 public posts** exist. Then consider LinkedIn/TikTok.
+Shorts on IG + YT until **4 public posts** exist.
 
 ## Links
 
 - Site: https://hameli.io
 - Email: hello@hameli.io (live — [EMAIL.md](EMAIL.md))
 - GitHub: https://github.com/hamz1188
-- LinkedIn: https://www.linkedin.com/in/ahmed-ali-406489394
-- YouTube: _TBD — create your channel first; do not paste a public `@hameli` that isn’t yours_
+- YouTube: https://www.youtube.com/@Hameli-yt
 - Instagram: _TBD — create your account first_
 
 ## Channel setup checklist (you click)
 
 ### YouTube
 
-- [ ] Create channel named **Hameli** (Google account you control)
-- [ ] Custom URL / handle: prefer `@hameli` if free; otherwise closest available
+- [x] Create channel named **Hameli** (Google account you control)
+- [x] Custom URL / handle: **@Hameli-yt**
 - [ ] Banner + avatar: simple wordmark later — blank/solid OK for day one
 - [ ] **About** blurb (paste):
 
 > Hameli — Working title. Short films from the desk: websites, apps, video. Watch how it’s made. hameli.io · hello@hameli.io
 
 - [ ] Add website link: https://hameli.io
-- [ ] Paste channel URL into README Links + `app/data/hameli.ts` → `socials.youtube`
+- [x] Paste channel URL into README Links + `app/data/hameli.ts` → `socials.youtube`
 
 ### Instagram
 
@@ -105,7 +104,7 @@ npm run outdated
 
 GitHub Actions runs test, lint, and build on every push. Dependabot opens a weekly PR for npm patches/minors — merge those when CI is green.
 
-Optional contact form backend: set `NEXT_PUBLIC_FORMSPREE_ID` (Formspree). Without it, the form opens a mailto to `hello@hameli.io`.
+Contact form posts to `/api/contact` and lands in `hello@hameli.io`. First live send: confirm the activation mail from FormSubmit in that inbox. Optional later: set `FORMSPREE_ID` on Vercel.
 
 ## Docs
 

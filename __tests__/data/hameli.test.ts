@@ -1,5 +1,4 @@
 import { hameli, getShowablePortfolio } from '../../app/data/hameli';
-import { portfolioData } from '../../app/data/portfolio';
 
 describe('hameli data completeness', () => {
   it('has core identity fields', () => {
@@ -8,22 +7,17 @@ describe('hameli data completeness', () => {
     expect(hameli.email).toBe('hello@hameli.io');
     expect(hameli.siteUrl).toBe('https://hameli.io');
     expect(hameli.socials.github).toContain('github.com');
-    expect(hameli.socials.linkedin).toContain('linkedin.com');
   });
 
-  it('keeps YouTube/Instagram empty until real channels exist', () => {
-    expect(hameli.socials.youtube).toBe('');
+  it('keeps Instagram empty until a real account exists', () => {
+    expect(hameli.socials.youtube).toBe('https://www.youtube.com/@Hameli-yt');
     expect(hameli.socials.instagram).toBe('');
+    expect(hameli.socials.linkedin).toBe('');
   });
 
   it('lists at least five portfolio pieces', () => {
     expect(hameli.portfolio.length).toBeGreaterThanOrEqual(5);
     expect(getShowablePortfolio().length).toBeGreaterThanOrEqual(4);
-  });
-
-  it('mirrors showable work into the portfolio shim', () => {
-    expect(portfolioData.projects.length).toBeGreaterThanOrEqual(4);
-    expect(portfolioData.personalInfo.email).toBe(hameli.email);
   });
 
   it('queues four Working title shorts with sluglines', () => {

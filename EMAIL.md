@@ -17,7 +17,7 @@ You need a professional inbox for Hameli, not Drive/Docs/Meet. Zoho Mail Lite is
 3. SPF on `@`: `v=spf1 include:zohomail.com ~all`
 4. DKIM on `zmail._domainkey`.
 5. Mailbox `hello@hameli.io` created and receiving.
-6. Site contact already targets `hello@hameli.io` in `app/data/hameli.ts`. Optional later: `NEXT_PUBLIC_FORMSPREE_ID` so the form posts via Formspree.
+6. Site form posts to `/api/contact` → `hello@hameli.io` (FormSubmit). Confirm the first activation email, then inbound stays in that mailbox.
 
 ## Optional leftover
 

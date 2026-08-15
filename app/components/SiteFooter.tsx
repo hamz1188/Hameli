@@ -8,7 +8,6 @@ export function SiteFooter() {
     hameli.socials.instagram ? { label: 'Instagram', href: hameli.socials.instagram } : null,
     hameli.socials.github ? { label: 'GitHub', href: hameli.socials.github } : null,
     hameli.socials.linkedin ? { label: 'LinkedIn', href: hameli.socials.linkedin } : null,
-    { label: 'Notes', href: '/blog' },
     { label: 'Email', href: `mailto:${hameli.email}` },
   ].filter(Boolean) as { label: string; href: string }[];
 

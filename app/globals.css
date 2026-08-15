@@ -121,7 +121,7 @@ body,
   color: var(--color-foreground);
   font-family: var(--font-sans);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.4;
   letter-spacing: -0.02em;
   -webkit-font-smoothing: auto;
@@ -193,7 +193,7 @@ body,
 
 .text-lede {
   font-family: var(--font-sans);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 400;
   line-height: 1.45;
   margin-left: 10ch;
@@ -201,7 +201,7 @@ body,
 }
 
 .text-body {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 1.45;
   margin-left: 10ch;
   max-width: 36ch;
@@ -222,6 +222,12 @@ body,
 
 .script-page {
   width: min(100%, var(--content-width));
+  margin-inline: auto;
+  position: relative;
+}
+
+.script-nav {
+  width: 100%;
   margin-inline: auto;
   position: relative;
 }
@@ -273,8 +279,12 @@ body,
   max-width: 42ch;
 }
 
-.script-form .character {
-  margin-left: 10ch;
+.form-cue {
+  display: block;
+  text-align: left;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
 }
 
 .title-page .character,
@@ -545,8 +555,7 @@ html[data-theme="dark"] .script-sheet::after {
     max-width: none;
   }
 
-  .character,
-  .script-form .character {
+  .character {
     margin-left: 5ch;
     max-width: none;
   }

@@ -49,6 +49,7 @@ export const hameli = {
       'Sites, apps, and video are the work I take on. Tell me what you’re making and I’ll say plainly whether I’m the right person to build it.',
     contactMessageLabel: 'What are you making?',
     contactSubmit: 'Send it over',
+    contactSent: 'It’s on the desk.',
     ctaWatch: 'Cut to: Watch',
     ctaWrite: 'Write to',
     queuedLine: '(not shot yet)',
@@ -57,11 +58,10 @@ export const hameli = {
   email: 'hello@hameli.io',
   siteUrl: 'https://hameli.io',
   socials: {
-    /** Leave empty until your own channel exists — do not use someone else’s @hameli handle. */
-    youtube: '' as string,
+    youtube: 'https://www.youtube.com/@Hameli-yt',
     instagram: '' as string,
     github: 'https://github.com/hamz1188',
-    linkedin: 'https://www.linkedin.com/in/ahmed-ali-406489394',
+    linkedin: '' as string,
   },
   /** Work you can film / cite. Keep in sync with CONTENT.md inventory. */
   portfolio: [

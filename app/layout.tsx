@@ -37,7 +37,6 @@ export const metadata: Metadata = {
   keywords: ['Hameli', 'Working title', 'websites', 'apps', 'video', 'Abu Dhabi'],
   alternates: {
     canonical: '/',
-    types: { 'application/rss+xml': '/feed.xml' },
   },
   openGraph: {
     type: 'website',
