@@ -45,21 +45,16 @@ export function ContactSection() {
       id="contact"
       className="relative section-padding container-padding border-t border-[var(--color-border)]"
     >
-      <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-14 lg:gap-20">
-        <div className="max-w-md">
+      <div className="max-w-[960px] mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="max-w-sm">
           <span className="text-label text-[var(--color-accent)] block mb-3">Contact</span>
-          <h2
-            className="text-section font-serif"
-            style={{ fontVariationSettings: "'SOFT' 50, 'WONK' 1" }}
-          >
-            Need something built?
-          </h2>
-          <p className="mt-5 text-[var(--color-foreground-muted)] leading-relaxed">
+          <h2 className="text-section">Need something built?</h2>
+          <p className="mt-4 text-[var(--color-foreground-muted)] text-body-lg">
             Websites, apps, video. A short note is enough.
           </p>
           <a
             href={`mailto:${hameli.email}`}
-            className="mt-6 inline-block text-[var(--color-foreground)] hover:text-[var(--color-accent)] transition-colors"
+            className="mt-6 inline-block btn-text"
           >
             {hameli.email}
           </a>
@@ -67,45 +62,37 @@ export function ContactSection() {
 
         <form onSubmit={onSubmit} className="flex flex-col gap-5">
           <label className="block">
-            <span className="text-caption text-[var(--color-foreground-subtle)] tracking-widest uppercase">
-              Name
-            </span>
+            <span className="text-caption text-[var(--color-foreground-subtle)] uppercase">Name</span>
             <input
               name="name"
               required
               autoComplete="name"
-              className="mt-2 w-full bg-transparent border-b border-[var(--color-border-strong)] py-3 outline-none focus:border-[var(--color-accent)] transition-colors"
+              className="mt-2 w-full bg-transparent border-b border-[var(--color-border-strong)] py-2.5 outline-none focus:border-[var(--color-accent)] transition-colors"
             />
           </label>
           <label className="block">
-            <span className="text-caption text-[var(--color-foreground-subtle)] tracking-widest uppercase">
-              Email
-            </span>
+            <span className="text-caption text-[var(--color-foreground-subtle)] uppercase">Email</span>
             <input
               name="email"
               type="email"
               required
               autoComplete="email"
-              className="mt-2 w-full bg-transparent border-b border-[var(--color-border-strong)] py-3 outline-none focus:border-[var(--color-accent)] transition-colors"
+              className="mt-2 w-full bg-transparent border-b border-[var(--color-border-strong)] py-2.5 outline-none focus:border-[var(--color-accent)] transition-colors"
             />
           </label>
           <label className="block">
-            <span className="text-caption text-[var(--color-foreground-subtle)] tracking-widest uppercase">
+            <span className="text-caption text-[var(--color-foreground-subtle)] uppercase">
               What do you need?
             </span>
             <textarea
               name="message"
               required
               rows={3}
-              className="mt-2 w-full bg-transparent border-b border-[var(--color-border-strong)] py-3 outline-none focus:border-[var(--color-accent)] transition-colors resize-y min-h-[100px]"
+              className="mt-2 w-full bg-transparent border-b border-[var(--color-border-strong)] py-2.5 outline-none focus:border-[var(--color-accent)] transition-colors resize-y min-h-[96px]"
             />
           </label>
           <div className="flex flex-wrap items-center gap-4 pt-1">
-            <button
-              type="submit"
-              disabled={status === 'sending'}
-              className="px-7 py-3.5 bg-[var(--color-accent)] text-[var(--color-background)] rounded-full text-sm font-medium hover:scale-105 transition-transform disabled:opacity-60"
-            >
+            <button type="submit" disabled={status === 'sending'} className="btn-primary disabled:opacity-60">
               {status === 'sending' ? 'Sending…' : 'Send'}
             </button>
             {status === 'sent' && (

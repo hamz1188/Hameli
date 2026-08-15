@@ -88,7 +88,7 @@ Shorts on IG + YT until **4 public posts** exist. Then consider LinkedIn/TikTok.
 
 ## Site (dev)
 
-Next.js 16 + TypeScript + Tailwind + GSAP. Content: `app/data/hameli.ts`.
+Next.js 16.3 + React 19 + TypeScript + Tailwind CSS 4 + GSAP. Content: `app/data/hameli.ts`.
 
 ```bash
 npm install
