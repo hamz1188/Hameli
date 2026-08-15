@@ -68,25 +68,25 @@ Talk-to-camera is **optional**, rare. Default is VO.
 
 ---
 
-## Test run — What you can do with AI (VO)
+## Test run — Use this for that (VO)
 
 **Present:** [hameli.io/week](https://hameli.io/week) (local: `/week`)  
-**Runtime:** ~70s · Scroll `/week` + 2–3 coverage shots (C2, C5, C6)
+**Runtime:** ~65s · Scroll `/week` + 2–3 coverage shots (C2, C5, C6)
 
 ### VO (read this)
 
 | Time | Line |
 |------|------|
-| 0:00–0:08 | Forget the headlines. Here’s what you can actually do with AI this week — and what I do with it. |
-| 0:08–0:22 | You can send a sketch or a screenshot and get a real webpage. I turn that into a site that looks like you, and I put it live. |
-| 0:22–0:36 | You can describe a small tool — bookings, a list, a portal — and get a first version you can click. I stay in the chair. I decide what ships. |
-| 0:36–0:50 | You can turn a few screens of the product into a short people will watch. I shoot, I cut, and I motion-ize the thing itself. |
-| 0:50–0:62 | Don’t hand it your passwords and walk away. These things wander. When I build for you, the model stays on a leash. |
-| 0:62–0:70 | Page, app, or short. hameli.io. hello@hameli.io |
+| 0:00–0:07 | Four tools this week. Use theirs. Or I can make you one. |
+| 0:07–0:20 | Gemini 3.7 Flash — drop a screenshot, get a first page. If you want it to be yours, I can make you that. |
+| 0:20–0:33 | A coding agent — describe a small app, let it draft. If you want it to match how you work, I can make you that. |
+| 0:33–0:46 | Openmotion or isolate.video — screens into a short. If you want it to look like your product, I can make you that. |
+| 0:46–0:56 | Don’t give any of them your passwords and walk away. They wander. |
+| 0:56–0:65 | Links on hameli.io/week. hello@hameli.io if none of them fit. |
 
 ### Screen
 
-Hold on each **You** / **What I do** pair. Don’t linger on source links.
+Hold on the tool name, then **Use this**. Don’t sell the last line.
 
 ---
 

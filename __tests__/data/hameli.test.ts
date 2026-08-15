@@ -26,9 +26,9 @@ describe('hameli data completeness', () => {
     expect(hameli.episodes.every((e) => e.slugline.startsWith('INT.'))).toBe(true);
   });
 
-  it('has a dated AI week brief with you/I copy and sources', () => {
+  it('has a dated AI week brief with tool-use copy and sources', () => {
     expect(hameli.weekBrief.items.length).toBeGreaterThanOrEqual(4);
-    expect(hameli.weekBrief.items.every((item) => item.youCan && item.iCan)).toBe(true);
+    expect(hameli.weekBrief.items.every((item) => item.useThis && item.orMine)).toBe(true);
     expect(hameli.weekBrief.items.every((item) => item.sourceUrl.startsWith('http'))).toBe(true);
   });
 });
