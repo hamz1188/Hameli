@@ -2,83 +2,52 @@
 
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { GradientMesh } from './GradientMesh';
+import { DeskStage } from './DeskStage';
 import { hameli } from '../data/hameli';
 
-gsap.registerPlugin(ScrollTrigger);
-
 export function HeroSection() {
-  const heroRef = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (!heroRef.current) return;
-
+    if (!ref.current) return;
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.15 });
-      tl.fromTo('.hero-label', { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' });
-      tl.fromTo(
-        '.hero-name-line',
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out' },
-        '-=0.3'
-      );
-      tl.fromTo(
-        '.hero-description',
-        { opacity: 0, y: 18 },
-        { opacity: 1, y: 0, duration: 0.65, ease: 'power3.out' },
-        '-=0.4'
-      );
-      tl.fromTo(
-        '.hero-cta',
-        { opacity: 0, y: 12 },
-        { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: 'power3.out' },
-        '-=0.35'
-      );
-
-      gsap.to('.hero-name-line', {
-        yPercent: 12,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: heroRef.current,
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 1,
-        },
-      });
-    }, heroRef);
-
+      tl.fromTo('.hero-stage', { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 1.1, ease: 'power3.out' });
+      tl.fromTo('.hero-brand', { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, '-=0.55');
+      tl.fromTo('.hero-copy', { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.45');
+      tl.fromTo('.hero-cta', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: 'power3.out' }, '-=0.35');
+      tl.fromTo('.hero-rule', { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: 'power3.out' }, '-=0.7');
+    }, ref);
     return () => ctx.revert();
   }, []);
 
   return (
-    <section id="hero" ref={heroRef} className="relative min-h-[100svh] flex items-center overflow-hidden">
-      <GradientMesh />
+    <section id="hero" ref={ref} className="relative min-h-[100svh] flex flex-col justify-end overflow-hidden">
+      <div className="hero-stage absolute inset-0">
+        <DeskStage />
+      </div>
 
-      <div className="relative z-10 container-padding w-full">
-        <div className="max-w-[1100px] mx-auto">
-          <p className="hero-label text-label text-[var(--color-accent)] mb-6">
-            {hameli.seriesName ?? 'Made in public'}
-          </p>
+      {/* Readability veil over lower third only */}
+      <div
+        className="absolute inset-x-0 bottom-0 h-[55%] pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--color-background) 55%, transparent) 35%, var(--color-background) 78%)',
+        }}
+      />
 
-          <h1 className="hero-name-line text-hero mb-6 md:mb-8 text-[var(--color-foreground)]">
-            {hameli.brand}
-          </h1>
-
-          <div className="hero-description max-w-lg mb-8">
-            <p className="text-subtitle text-[var(--color-foreground-muted)]">
-              {hameli.tagline}
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-6">
-            <a href="#watch" className="hero-cta btn-primary">
-              Watch shorts
-            </a>
-            <a href="#contact" className="hero-cta btn-text">
-              Need something built?
-            </a>
-          </div>
+      <div className="relative z-10 shell pb-14 md:pb-20 pt-40">
+        <p className="hero-copy text-label text-[var(--color-olive)] mb-5">{hameli.seriesName}</p>
+        <h1 className="hero-brand text-hero text-[var(--color-ink)] max-w-[12ch]">{hameli.brand}</h1>
+        <div className="hero-rule mt-7 mb-7 h-px w-full max-w-md bg-[var(--color-rule-strong)] origin-left" />
+        <p className="hero-copy text-lede text-[var(--color-ink-soft)] max-w-xl mb-9">{hameli.tagline}</p>
+        <div className="flex flex-wrap items-center gap-7">
+          <a href="#watch" className="hero-cta btn-ink">
+            Watch shorts
+          </a>
+          <a href="#contact" className="hero-cta btn-ghost">
+            Ask me to build
+          </a>
         </div>
       </div>
     </section>
