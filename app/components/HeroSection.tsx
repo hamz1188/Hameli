@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import { gsap } from 'gsap';
 import { hameli } from '../data/hameli';
 
 export function HeroSection() {
@@ -50,8 +50,8 @@ export function HeroSection() {
 
         <h1 className="text-hero text-[var(--color-ink)]" aria-label={hameli.brand}>
           <span className="hero-title">
-            {letters.map((letter, i) => (
-              <span key={`${letter}-${i}`} className="hero-char" aria-hidden="true">
+            {letters.map((letter) => (
+              <span key={letter} className="hero-char" aria-hidden="true">
                 {letter}
               </span>
             ))}
@@ -79,7 +79,7 @@ export function HeroSection() {
         </p>
 
         <div className="mt-10 md:mt-16 flex flex-col sm:flex-row sm:justify-between gap-6">
-          <a href="#watch" className="hero-cta btn-ink">
+          <a href="#work" className="hero-cta btn-ink">
             {hameli.copy.ctaWatch}
           </a>
           <a href={`mailto:${hameli.email}`} className="hero-cta btn-ghost">

@@ -38,11 +38,12 @@ export function PunchHoles() {
       );
     };
 
-    measure();
+    const initialFrame = requestAnimationFrame(measure);
     const ro = new ResizeObserver(() => requestAnimationFrame(measure));
     ro.observe(sheet);
     window.addEventListener('resize', measure);
     return () => {
+      cancelAnimationFrame(initialFrame);
       ro.disconnect();
       window.removeEventListener('resize', measure);
     };
@@ -50,8 +51,8 @@ export function PunchHoles() {
 
   return (
     <div ref={ref} className="script-holes" aria-hidden="true">
-      {holes.map((top, i) => (
-        <span key={i} className="script-hole" style={{ top }} />
+      {holes.map((top) => (
+        <span key={top} className="script-hole" style={{ top }} />
       ))}
     </div>
   );

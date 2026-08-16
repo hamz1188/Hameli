@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: Courier, 'Courier New', var(--font-courier), monospace;
-  --font-sans: Courier, 'Courier New', var(--font-courier), monospace;
-  --font-mono: Courier, 'Courier New', var(--font-courier), monospace;
+  --font-serif: 'Courier Prime', Courier, 'Courier New', monospace;
+  --font-sans: 'Courier Prime', Courier, 'Courier New', monospace;
+  --font-mono: 'Courier Prime', Courier, 'Courier New', monospace;
 
   --space-section: clamp(64px, 10vw, 120px);
   --space-element: clamp(24px, 4vw, 48px);
@@ -253,7 +253,7 @@ body,
   padding-right: var(--sheet-pad-right);
 }
 
-.nav-scrolled::before {
+.site-nav::before {
   content: '';
   position: absolute;
   top: 0;
@@ -261,17 +261,21 @@ body,
   left: 50%;
   width: 100vw;
   transform: translateX(-50%);
-  background: color-mix(in srgb, var(--color-paper) 42%, transparent);
-  backdrop-filter: blur(18px) saturate(1.15);
-  -webkit-backdrop-filter: blur(18px) saturate(1.15);
-  border-bottom: 1px solid var(--color-rule);
+  background: var(--color-paper);
+  backdrop-filter: blur(24px) saturate(0.8);
+  -webkit-backdrop-filter: blur(24px) saturate(0.8);
   pointer-events: none;
   z-index: 0;
 }
 
+.nav-scrolled::before {
+  border-bottom: 1px solid var(--color-rule);
+  box-shadow: 0 0.8rem 1.6rem color-mix(in srgb, var(--color-desk) 34%, transparent);
+}
+
 @media (prefers-reduced-transparency: reduce) {
-  .nav-scrolled::before {
-    background: color-mix(in srgb, var(--color-paper) 92%, transparent);
+  .site-nav::before {
+    background: var(--color-paper);
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
   }
@@ -541,7 +545,7 @@ html[data-theme="dark"] .script-sheet::after {
 }
 
 .note-hand {
-  font-family: var(--font-hand), 'Segoe Script', cursive;
+  font-family: Caveat, 'Segoe Print', 'Segoe Script', 'Bradley Hand', cursive;
   font-weight: 600;
   font-size: 1.15rem;
   line-height: 1.2;
@@ -604,6 +608,271 @@ html[data-theme="dark"] .script-sheet::after {
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 28' fill='none'><path d='M2 14 C 14 4, 28 22, 38 12' stroke='%23c43c32' stroke-width='2.4' stroke-linecap='round'/><path d='M32 6 L 44 12 L 33 20' stroke='%23c43c32' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>") no-repeat center / contain;
 }
 
+/* Project 01 — the prototype belongs to the shooting-script page, not a sales page. */
+.living-brief-card {
+  --demo-surface: #f2eee4;
+  --demo-panel: #fbf8f0;
+  --demo-ink: #1d1d1a;
+  --demo-muted: #68665f;
+  --demo-rule: rgba(29, 29, 26, 0.18);
+  --demo-accent: #bd4439;
+  position: relative;
+  container-type: inline-size;
+  margin-left: 10ch;
+  overflow: visible;
+  border: 1px solid rgba(29, 29, 26, 0.3);
+  border-radius: 1.1rem;
+  background: var(--demo-surface);
+  color: var(--demo-ink);
+  box-shadow:
+    0 1.1rem 2.6rem rgba(0, 0, 0, 0.2),
+    0.45rem 0.45rem 0 color-mix(in srgb, var(--mark-red) 14%, transparent);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.living-brief-card__header {
+  min-height: 4.5rem;
+  padding: 1.15rem clamp(1.2rem, 4cqi, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--demo-rule);
+  font-size: 0.74rem;
+  color: var(--demo-muted);
+}
+
+.living-brief-card__header > div {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+}
+
+.living-brief-card__header strong {
+  color: var(--demo-ink);
+  font-size: 0.9rem;
+  letter-spacing: -0.02em;
+}
+
+.living-brief-card__header > div span {
+  padding-left: 0.65rem;
+  border-left: 1px solid var(--demo-rule);
+}
+
+.living-brief-card__live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.living-brief-card__live i {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--demo-accent);
+}
+
+.living-brief-card__body {
+  position: relative;
+  padding: clamp(1.4rem, 5cqi, 2.7rem);
+}
+
+.living-brief-card__note {
+  position: absolute;
+  top: 4.9rem;
+  left: -6.2rem;
+  width: 4.7rem;
+  transform: rotate(-7deg);
+  text-align: right;
+  color: var(--mark-red);
+}
+
+.living-brief-card__note .mark-arrow {
+  left: 2.9rem;
+  top: 1.05rem;
+  transform: rotate(24deg);
+}
+
+.living-brief-card__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(11.5rem, 0.8fr);
+  gap: clamp(1.2rem, 4cqi, 2.2rem);
+  align-items: stretch;
+}
+
+.living-brief-card__question {
+  min-width: 0;
+}
+
+.living-brief-card__eyebrow,
+.living-brief-card__label {
+  color: var(--demo-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.living-brief-card__question h3 {
+  max-width: 18ch;
+  color: var(--demo-ink);
+  font-family: inherit;
+  font-size: clamp(1.55rem, 5cqi, 2.2rem);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+
+.living-brief-card__hint {
+  max-width: 35ch;
+  margin-top: 0.85rem;
+  color: var(--demo-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.living-brief-card__label {
+  display: block;
+  margin-top: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.living-brief-card__textarea {
+  display: block;
+  width: 100%;
+  min-height: 6.5rem;
+  padding: 0.9rem 1rem;
+  resize: vertical;
+  border: 1px solid var(--demo-rule);
+  border-radius: 0.75rem;
+  outline: 0;
+  background: var(--demo-panel);
+  color: var(--demo-ink);
+  font: inherit;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.living-brief-card__textarea::placeholder {
+  color: #8d8a82;
+}
+
+.living-brief-card__textarea:focus {
+  border-color: var(--demo-ink);
+  box-shadow: 0 0 0 3px rgba(29, 29, 26, 0.08);
+}
+
+.living-brief-card__mic {
+  width: auto;
+  min-height: 2.75rem;
+  margin-top: 0.8rem;
+  padding: 0.65rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border: 1px solid var(--demo-ink);
+  border-radius: 999px;
+  background: var(--demo-ink);
+  color: var(--demo-panel);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.living-brief-card__mic:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.living-brief-card__mic-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  flex: 0 0 auto;
+  border: 1px solid var(--demo-panel);
+  border-radius: 50%;
+}
+
+.living-brief-card__mic.is-recording .living-brief-card__mic-dot {
+  background: var(--demo-accent);
+  box-shadow: 0 0 0 0.25rem rgba(189, 68, 57, 0.2);
+}
+
+.living-brief-card__status {
+  margin-top: 0.8rem;
+  color: var(--demo-muted);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.living-brief-card__preview {
+  min-width: 0;
+  min-height: 15rem;
+  overflow: hidden;
+  padding: clamp(1.1rem, 3.4cqi, 1.65rem);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.9rem;
+  background: #20211e;
+  color: #f5f1e7;
+}
+
+.living-brief-card__preview-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+  color: #aaa79f;
+  font-size: 0.6rem;
+  line-height: 1.2;
+}
+
+.living-brief-card__preview-head p {
+  color: #f5f1e7;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.living-brief-card__preview-head span {
+  text-align: right;
+}
+
+.living-brief-card__preview h4 {
+  max-width: 100%;
+  margin-top: clamp(2rem, 7cqi, 3.5rem);
+  overflow-wrap: anywhere;
+  font-size: clamp(1.2rem, 4cqi, 1.55rem);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.living-brief-card__preview > p:last-child {
+  margin-top: 1rem;
+  color: #c7c3ba;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.living-brief-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--demo-rule);
+  color: var(--demo-muted);
+  font-size: 0.72rem;
+}
+
+.living-brief-card__actions .ink-link {
+  color: var(--demo-ink);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
 @media (max-width: 640px) {
   body,
   .desk {
@@ -645,6 +914,23 @@ html[data-theme="dark"] .script-sheet::after {
   .stamp-hero,
   .mark-arrow {
     display: none;
+  }
+
+  .living-brief-card {
+    margin-left: 0;
+    box-shadow: 0.4rem 0.4rem 0 color-mix(in srgb, var(--color-ink) 7%, transparent);
+  }
+
+  .living-brief-card__note {
+    display: none;
+  }
+
+  .living-brief-card__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .living-brief-card__preview {
+    min-height: 12rem;
   }
 }
 

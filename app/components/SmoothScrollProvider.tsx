@@ -70,6 +70,11 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
 
     document.addEventListener('click', onClick);
 
+    const onHashChange = () => {
+      if (window.location.hash) go(window.location.hash);
+    };
+    window.addEventListener('hashchange', onHashChange);
+
     if (window.location.hash) {
       let tries = 0;
       const tick = () => {
@@ -82,6 +87,7 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
     return () => {
       running = false;
       document.removeEventListener('click', onClick);
+      window.removeEventListener('hashchange', onHashChange);
       delete window.__hameliScrollTo;
       lenis.destroy();
       lenisRef.current = null;

@@ -34,13 +34,16 @@ export const hameli = {
   location: 'Abu Dhabi, UAE',
   seriesName: 'Working title',
   tagline:
-    'Short films from the desk where the work happens — sites, apps, video. Watch how it’s made; write when you need one built.',
+    'Sites, apps, and video built from the desk in Abu Dhabi. See the finished work now; follow the films as they are made.',
   copy: {
-    watchHeading: 'Watch — the work, in scenes',
+    workHeading: 'Work — already built',
+    workIntro:
+      'Real projects you can open today. Each one is also source material for the short films that follow.',
+    watchHeading: 'Films — next on the slate',
     watchIntroLive:
       'Each scene is a 30–90 second cut from a real session: desk cam, screen, voiceover. Play one and you get the decision, not a highlight reel.',
     watchIntroEmpty:
-      'The first scenes are lined up but not shot yet. When a short goes live the slugline unlocks — nothing here is a staged embed.',
+      'These are planned films, not published work. Their links will appear only after each film is finished.',
     methodHeading: 'Method — three layers, one session',
     methodIntro:
       'One sitting. Three recordings. The light is whatever the room gives; the point is the decision on screen.',
@@ -50,7 +53,7 @@ export const hameli = {
     contactMessageLabel: 'What are you making?',
     contactSubmit: 'Send it over',
     contactSent: 'It’s on the desk.',
-    ctaWatch: 'Cut to: Watch',
+    ctaWatch: 'Cut to: Work',
     ctaWrite: 'Write to',
     queuedLine: '(not shot yet)',
     liveLine: 'Play the short.',

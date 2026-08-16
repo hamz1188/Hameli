@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Courier_Prime, Caveat } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from './components/ThemeProvider';
 import { Navigation } from './components/Navigation';
@@ -7,21 +6,6 @@ import { SmoothScrollProvider } from './components/SmoothScrollProvider';
 import { ScriptSheet } from './components/ScriptSheet';
 import { GrainOverlay } from './components/GrainOverlay';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-
-const courier = Courier_Prime({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '700'],
-  style: ['normal', 'italic'],
-  variable: '--font-courier',
-});
-
-const caveat = Caveat({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '600'],
-  variable: '--font-hand',
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://hameli.io'),
@@ -61,7 +45,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${courier.variable} ${caveat.variable}`}>
+    <html lang="en" suppressHydrationWarning>
       <body className="desk text-[var(--color-foreground)] antialiased overflow-x-hidden font-sans">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <SmoothScrollProvider>

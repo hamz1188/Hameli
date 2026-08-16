@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { hameli } from '../data/hameli';
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 export function SiteFooter() {
-  const year = new Date().getFullYear();
   const links = [
     hameli.socials.youtube ? { label: 'YouTube', href: hameli.socials.youtube } : null,
     hameli.socials.instagram ? { label: 'Instagram', href: hameli.socials.instagram } : null,
@@ -34,7 +35,7 @@ export function SiteFooter() {
           ))}
         </div>
         <p className="text-label text-[var(--color-ink-faint)]">
-          {hameli.location} · {year}
+          {hameli.location} · {CURRENT_YEAR}
         </p>
       </div>
     </footer>

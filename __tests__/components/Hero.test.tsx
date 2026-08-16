@@ -13,9 +13,9 @@ describe('HeroSection', () => {
     expect(screen.getByText(hameli.tagline)).toBeInTheDocument();
   });
 
-  it('renders watch and contact CTAs', () => {
+  it('renders work and contact CTAs', () => {
     render(<HeroSection />);
-    expect(screen.getByRole('link', { name: /Cut to: Watch/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Cut to: Work/i })).toHaveAttribute('href', '#work');
     expect(screen.getByRole('link', { name: /Write to:/i })).toBeInTheDocument();
   });
 });
