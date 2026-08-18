@@ -22,6 +22,10 @@ Keep reusable project knowledge at the Kalymeero level. Only put something insid
 
 Move local Mac material here only when it becomes useful or necessary to the ongoing source of truth.
 
+## Deployment boundary
+
+Changes inside `projects/` are project knowledge/content changes and should not deploy the Hameli website on Vercel. Website/code changes elsewhere in the repository continue to deploy normally.
+
 ## Related repository
 
 The separate `hamz1188/kalymeero` repository can hold implementation/code or other project-specific technical work. This Hameli folder holds the wider knowledge and content operating system.
