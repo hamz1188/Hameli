@@ -1,95 +1,81 @@
 # Hameli
 
-Portfolio site + social channel for websites, apps, and video — show the work, show how it’s made, ship every week.
+Hameli is the main source-of-truth repository for the content ecosystem, projects, research, and the Hameli portfolio site.
 
 **Live:** [hameli.io](https://hameli.io)  
-**Repo:** [github.com/hamz1188/Hameli](https://github.com/hamz1188/Hameli)  
-**Separate from Kalymeero.** One folder. Stay lean.
+**Repo:** [github.com/hamz1188/Hameli](https://github.com/hamz1188/Hameli)
 
-## Promise
+## Repository model
 
-People who contact you can watch how the work is made. The site is a **working title** — still in progress on purpose. Write when you need something built.
+Hameli is the umbrella. Individual brands/projects live under `projects/`, and each project can publish to its own platform folders.
 
-## Format (channel)
+```text
+Hameli/
+├── projects/
+│   └── kalymeero/
+│       ├── strategy/
+│       ├── research/
+│       ├── recipes/
+│       ├── ideas/
+│       ├── branding/
+│       ├── analytics/
+│       └── platforms/
+│           ├── youtube/
+│           ├── tiktok/
+│           └── instagram-reels/
+├── shared/
+├── app/
+├── CONTENT.md
+├── FILM.md
+└── EMAIL.md
+```
 
-**Series: Working title** — start with **shorts** (30–90s) + voiceover. Natural desk filming (phone propped while working) + screen record. Longer YouTube only after shorts are shipping. Details: [FILM.md](FILM.md).
+### Working rule
 
-## Platforms
+Organize knowledge **project-first**, not platform-first. Shared research, recipes, ideas, branding, and strategy live once inside the project. Only platform-specific adaptations belong under YouTube, TikTok, or Instagram Reels.
 
-| Role | Platform | Use |
-|------|----------|-----|
-| Landing | [hameli.io](https://hameli.io) | Learn + contact |
-| Discovery | Instagram Reels + YouTube Shorts | Primary — 30–90s |
-| Home / depth | YouTube long-form | Later, from the same sessions |
+Local Mac material does not need to be copied here automatically. Move it into GitHub when it becomes useful or necessary for the project source of truth.
 
-Shorts on IG + YT until **4 public posts** exist.
+## Projects
 
-## Links
+### Kalymeero
+
+Cooking content project. Project hub: [`projects/kalymeero/`](projects/kalymeero/).
+
+The implementation/application repository remains separate at [`hamz1188/kalymeero`](https://github.com/hamz1188/kalymeero). Hameli holds the wider project knowledge, content planning, research, and channel material.
+
+Current distribution platforms:
+
+- YouTube
+- TikTok
+- Instagram Reels
+
+More platforms or projects can be added when there is a real need.
+
+## Hameli portfolio site
+
+Hameli also contains the portfolio site and Hameli's own content operations.
+
+**Series: Working title** — start with shorts (30–90s) + voiceover. Natural desk filming + screen recording. Longer YouTube only after shorts are shipping. See [FILM.md](FILM.md).
+
+### Links
 
 - Site: https://hameli.io
-- Email: hello@hameli.io (live — [EMAIL.md](EMAIL.md))
+- Email: hello@hameli.io
 - GitHub: https://github.com/hamz1188
 - YouTube: https://www.youtube.com/@Hameli-yt
-- Instagram: _TBD — create your account first_
 
-## Channel setup checklist (you click)
+### Existing operating docs
 
-### YouTube
+| File | Job |
+|------|-----|
+| [CONTENT.md](CONTENT.md) | Hameli content pillars, cadence, ideas, inventory, posted log |
+| [FILM.md](FILM.md) | Hameli filming/capture workflow |
+| [EMAIL.md](EMAIL.md) | Email setup for hello@hameli.io |
 
-- [x] Create channel named **Hameli** (Google account you control)
-- [x] Custom URL / handle: **@Hameli-yt**
-- [ ] Banner + avatar: simple wordmark later — blank/solid OK for day one
-- [ ] **About** blurb (paste):
+## Site development
 
-> Hameli — Working title. Short films from the desk: websites, apps, video. Watch how it’s made. hameli.io · hello@hameli.io
-
-- [ ] Add website link: https://hameli.io
-- [x] Paste channel URL into README Links + `app/data/hameli.ts` → `socials.youtube`
-
-### Instagram
-
-- [ ] Create professional/creator account named **Hameli** (same handle if free)
-- [ ] Bio (paste):
-
-> Working title · websites, apps, video  
-> Desk shorts + voiceover  
-> hameli.io · hello@hameli.io
-
-- [ ] Paste profile URL into README Links + `app/data/hameli.ts` → `socials.instagram`
-
-## How I ship (anti-stall)
-
-1. **Ship before polish** — one public piece beats a perfect plan.
-2. **Living ops docs:** `CONTENT.md`, `FILM.md`, this README (+ `EMAIL.md` for one-time mail setup).
-3. **Weekly minimum:** 1 short (30–90s). Miss a week → 30s desk/progress VO, not zero.
-4. **Work first:** Natural filming while building. Cut shorts with VO the same day when you can.
-
-## Day 1–14 checklist
-
-### Days 1–2 — Setup
-
-- [ ] Finish channel checklist above
-- [x] Follow [EMAIL.md](EMAIL.md) for Zoho → `hello@hameli.io`
-- [x] List **5 portfolio pieces** in `CONTENT.md` (+ `app/data/hameli.ts` → `portfolio`)
-- [ ] Skim `FILM.md` Short 01 shoot card
-
-### Days 3–5 — Short 01
-
-- [ ] Shoot/cut Short 01 (FILM.md shoot card — 45–75s)
-- [ ] Post IG Reel + YouTube Short
-- [ ] Set `ep-01` to `live` + URL in `app/data/hameli.ts`
-- [ ] Log in `CONTENT.md`
-
-### Days 6–14
-
-- [ ] Two more shorts (Short 02, Short 03)
-- [ ] Reply to inbound with hameli.io + hello@hameli.io
-
-**Two-week success:** 4 posts + working hello@ + learn-first site — not subscriber count.
-
-## Site (dev)
-
-Next.js 16.3 + React 19 + TypeScript + Tailwind CSS 4 + GSAP. Content: `app/data/hameli.ts`.
+Next.js 16.3 + React 19 + TypeScript + Tailwind CSS 4 + GSAP. Site content is in `app/data/hameli.ts`.
 
 ```bash
 npm install
@@ -102,22 +88,4 @@ npm run lint
 npm run outdated
 ```
 
-GitHub Actions runs test, lint, and build on every push. Dependabot opens a weekly PR for npm patches/minors — merge those when CI is green.
-
-Contact form posts to `/api/contact` and lands in `hello@hameli.io`. First live send: confirm the activation mail from FormSubmit in that inbox. Optional later: set `FORMSPREE_ID` on Vercel.
-
-## Docs
-
-| File | Job |
-|------|-----|
-| [CONTENT.md](CONTENT.md) | Pillars, cadence, ideas, inventory, posted log |
-| [FILM.md](FILM.md) | Capture recipe + Short 01 shoot card |
-| [EMAIL.md](EMAIL.md) | Zoho Mail Lite setup for hello@hameli.io |
-
-## Out of scope (for now)
-
-- Kalymeero migration
-- Notion boards beyond CONTENT.md
-- Extra platforms, gear deep-dives, fourth content pillar
-
-Ship the first four posts. Expand only after that.
+GitHub Actions runs test, lint, and build on pushes.
